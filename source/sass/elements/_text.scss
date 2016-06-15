@@ -1,0 +1,42 @@
+/*
+Text
+
+.txt--xxxs - .
+.txt--xxs - .
+.txt--xs - .
+.txt--s - .
+.txt--l - .
+.txt--xl - .
+.txt--xxl - .
+.txt--xxxl - .
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 3.3
+*/
+
+.txt--xxxs {
+	font-size: $font-size--xxxs;
+}
+.txt--xxs {
+	font-size: $font-size--xxs;
+}
+.txt--xs {
+	font-size: $font-size--xs;
+}
+.txt--s {
+	font-size: $font-size--s;
+}
+.txt--l {
+	font-size: $font-size--l;
+}
+.txt--xl {
+	font-size: $font-size--xl;
+}
+.txt--xxl {
+	font-size: $font-size--xxl;
+}
+.txt--xxxl {
+	font-size: $font-size--xxxl;
+}

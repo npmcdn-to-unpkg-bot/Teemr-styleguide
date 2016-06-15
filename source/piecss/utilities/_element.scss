@@ -1,0 +1,183 @@
+// Copyright (C) 2014 Babs Gösgens. Licensed under MIT; see LICENSE.txt
+
+
+// Content:
+// 1. Functions
+//    add-element
+//    add-properties
+// 2. Mixins
+//    element
+//    elements
+
+
+// 1. FUNCTIONS
+
+
+///
+/// Mixes in a new namespace (selector) and css properties into an elements collection.
+///
+/// @access public
+/// @since 0.1
+///
+/// @param {Map} $elements - Map, a collection of $selector: $property pairs
+/// @param {Map} $selector - The selector under which the properties will be rendered, for example: %placeholder
+/// @param {Map} $properties (()) - Map of CSS properties
+///
+/// @return {Map}
+///
+
+@function add-element($elements, $selector, $properties: ())
+{
+    $_: (
+        #{$selector}: $properties
+    );
+    $elements: map-merge($elements, $_);
+    @return $elements;
+}
+
+///
+/// Mixes in properties into a selector namespace
+///
+/// @access public
+/// @since 0.1
+///
+/// @param {Map} $properties - Map of CSS properties
+/// @param {Map} $selector - The selector under which the properties will be rendered, for example: %placeholder
+/// @param {Map} $elements - Map, a collection of $selector: $property pairs
+///
+/// @return {Map}
+///
+
+@function add-properties($properties, $selector, $elements)
+{
+
+    @if not map-has-key($elements, $selector) {
+        $elements: add-element($elements, $selector);
+    }
+
+    // Merge the nested property-map first
+    $element: map-get($elements, $selector);
+    $element: map-merge($element, $properties);
+
+    // Merge the property-map with the element collection
+    $_: (
+        #{$selector}: $element
+    );
+    $elements: map-merge($elements, $_);
+
+    @return $elements;
+}
+
+///
+/// @alias add-properties
+///
+@function add-props($properties, $selector, $elements)
+{
+    $elements: add-properties($properties, $selector, $elements);
+    @return $elements;
+}
+
+///
+/// @alias add-properties
+///
+@function merge-properties($properties, $selector, $elements)
+{
+    $elements: add-properties($properties, $selector, $elements);
+    @return $elements;
+}
+
+///
+/// @alias add-properties
+///
+@function merge-props($properties, $selector, $elements)
+{
+    $elements: add-properties($properties, $selector, $elements);
+    @return $elements;
+}
+
+
+// 2. MIXINS
+
+
+///
+/// Mixes in properties
+///
+/// @access public
+/// @since 0.1
+///
+/// @param {Map} $element - Map of CSS properties
+///
+
+@mixin properties($element)
+{
+    // Lift out properties that have their own mixins
+    @if map-has-key($element, margin) {
+        $value: map-get($element, margin);
+        $element: map-remove($element, margin);
+        @include margin($value);
+    }
+    @if map-has-key($element, padding) {
+        $value: map-get($element, padding);
+        $element: map-remove($element, padding);
+        @include padding($value);
+    }
+    /* Using Autoprefix now */
+    // @if map-has-key($element, border-radius) {
+    //     $value: map-get($element, border-radius);
+    //     $element: map-remove($element, border-radius);
+    //     @include border-radius($value);
+    // }
+    // @if map-has-key($element, box-shadow) {
+    //     $value: map-get($element, box-shadow);
+    //     $element: map-remove($element, box-shadow);
+    //     @include box-shadow($value);
+    // }
+    @if map-has-key($element, font-type) {
+        $value: ();
+        $value: append( $value, map-get($element, font-type));
+        @if map-has-key($element, font-size) {
+            $value: append( ($value), map-get($element, font-size));
+        }
+        @if map-has-key($element, line-height) {
+            $value: append($value, map-get($element, line-height));
+        }
+        $element: map-remove($element, font-family);
+        $element: map-remove($element, font-size);
+        $element: map-remove($element, line-height);
+        $element: map-remove($element, font);
+
+        @include font(nth($value,1), nth($value,2), nth($value,3));
+    }
+    @if map-has-key($element, font) {
+        $value: map-get($element, font);
+        $element: map-remove($element, font);
+        @include font(nth($value,1), nth($value,2), nth($value,3));
+    }
+    
+    $properties: map-keys($element);
+
+    @each $property in $properties {
+        #{$property}: map-get($element, $property);
+    }
+}
+
+
+///
+/// Mixes in all elements from an element collection
+///
+/// @access public
+/// @since 0.1
+///
+/// @param {Map} $elements - Map, a collection of $selector: $property pairs
+///
+
+@mixin elements($elements) {
+    $selectors: map-keys($elements);
+
+    @each $selector in $selectors {
+        #{$selector} {
+            $element: map-get($elements, $selector);
+            @include properties($element);
+        }
+    }
+}

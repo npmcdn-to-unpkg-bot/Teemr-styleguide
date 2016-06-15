@@ -1,0 +1,101 @@
+// I keep mis-referencing some if these typefaces, so define some aliases
+$roboto-thin: $roboto-ultra-light;
+$roboto-light: $roboto-book;
+
+$type-default: $roboto-slab-light;
+$type-heading: $roboto-slab-regular;
+$type-anchor: $roboto-light;
+$type-button: $type-anchor;
+$type-label: $roboto-thin;
+
+$default-font: $type-default;
+
+
+$font-family: $default-font;
+$font-variant: normal;
+$font-style: normal;
+$font-weight: 300;
+
+$font-size: 14px;
+$font-size--xxxs: 9px;
+$font-size--xxs: 10px;
+$font-size--xs: 12px;
+$font-size--s: 13px;
+$font-size--l: 17px;
+$font-size--xl: 24px;
+$font-size--xxl: 36px;
+$font-size--xxxl: 48px;
+
+$line-height: line-height($font-size);
+$line-height--xs: line-height($font-size--xs, 1);
+$line-height--s: line-height($font-size--s, 1);
+$line-height--l: line-height($font-size--l, 1);
+$line-height--xl: line-height($font-size--xl, .5);
+$line-height--xxl: line-height($font-size--xl, 1);
+
+%type--xxxs {
+    font-size: $font-size--xxxs;
+}
+%type--xxs {
+    font-size: $font-size--xxs;
+}
+%type--xs {
+    font-size: $font-size--xs;
+}
+%type--s {
+    font-size: $font-size--s;
+}
+%type--l {
+    font-size: $font-size--l;
+}
+%type--xl {
+    font-size: $font-size--xl;
+}
+%type--xxl {
+    font-size: $font-size--xxl;
+}
+%type--xxxl {
+    font-size: $font-size--xxxl;
+}
+
+%roboto-slab-medium {
+    @include font-family($roboto-slab-medium);
+    @include font-weight($roboto-slab-medium);
+}
+%roboto-slab-regular {
+    @include font-family($roboto-slab-regular);
+    @include font-weight($roboto-slab-regular);
+}
+%roboto-slab-light {
+    @include font-family($roboto-slab-light);
+    @include font-weight($roboto-slab-light);
+}
+%roboto-slab-thin {
+    @include font-family($roboto-slab-thin);
+    @include font-weight($roboto-slab-thin);
+}
+%roboto-regular {
+    @include font-family($roboto-regular);
+    @include font-weight($roboto-regular);
+}
+%roboto-light {
+    @include font-family($roboto-light);
+    @include font-weight($roboto-light);
+}
+%roboto-thin {
+    @include font-family($roboto-thin);
+    @include font-weight($roboto-thin);
+}
+%roboto-medium {
+    @include font-family($roboto-medium);
+    @include font-weight($roboto-medium);
+}
+%roboto-bold {
+    @include font-family($roboto-bold);
+    @include font-weight($roboto-bold);
+}
+
+%type-meta-data,
+%type--button {
+    @extend %roboto-light;
+}

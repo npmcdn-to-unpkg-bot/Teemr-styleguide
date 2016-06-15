@@ -1,0 +1,101 @@
+/*
+Wings
+
+.wings - Percentage padding on left and right side
+.wings--left - Percentage padding on left side
+.wings--right - Percentage padding on right side
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 2.2
+*/
+
+.wings {}
+
+@include breakpoint($gt-small-handheld) {
+	.wings {
+		padding-left: percentage(1/16);
+		padding-right: percentage(1/16);
+		&--left {
+			padding-left: percentage(1/16);
+		}
+		&--right {
+			padding-right: percentage(1/16);
+		}
+	}
+}
+
+@include breakpoint($gt-medium-handheld) {
+	.wings {
+		padding-left: percentage(1/18);
+		padding-right: percentage(1/18);
+		.page--sidebar & {
+			padding-left: percentage(1/14);
+			padding-right: percentage(1/14);
+		}
+		.container--aside & {
+			padding-left: percentage(1/5);
+			padding-right: percentage(1/5);
+		}
+		.container--main & {
+			padding-left: percentage(1/13);
+			padding-right: percentage(1/13);
+			.page--sidebar & {
+				padding-left: percentage(1/9);
+				padding-right: percentage(1/9);
+			}
+		}
+		.container--even & {
+			padding-left: percentage(1/9);
+			padding-right: percentage(1/9);
+			.page--sidebar & {
+				padding-left: percentage(1/7);
+				padding-right: percentage(1/7);
+			}
+		}
+		&--left {
+			padding-left: percentage(1/18);
+		}
+		&--right {
+			padding-right: percentage(1/18);
+		}
+	}
+}
+
+@include breakpoint($gt-large-handheld) {
+	.wings {
+		padding-left: percentage(1/20);
+		padding-right: percentage(1/20);
+		.page--sidebar & {
+			padding-left: percentage(1/16);
+			padding-right: percentage(1/16);
+		}
+		.container--aside & {
+			padding-left: percentage(1/5);
+			padding-right: percentage(1/5);
+		}
+		.container--main & {
+			padding-left: percentage(1/15);
+			padding-right: percentage(1/15);
+			.page--sidebar & {
+				padding-left: percentage(1/11);
+				padding-right: percentage(1/11);
+			}
+		}
+		.container--even & {
+			padding-left: percentage(1/10);
+			padding-right: percentage(1/10);
+			.page--sidebar & {
+				padding-left: percentage(1/8);
+				padding-right: percentage(1/8);
+			}
+		}
+		&--left {
+			padding-left: percentage(1/20);
+		}
+		&--right {
+			padding-right: percentage(1/20);
+		}
+	}
+}

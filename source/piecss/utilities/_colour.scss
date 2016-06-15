@@ -1,0 +1,12 @@
+$shades: (20%, 40%, 60%, 80%, 100%) !default;
+
+@function shade($shade: 100, $color: $color-body, $mix-color: $color-highlight) {
+
+    // Only these shase values are valid
+    @if not( unit($shade) == "%" ) or not( index($shades, $shade) ) {
+        @error "Only these values are excepted: 20%, 40%, 60%, 80% or 100%, assuming 100%";
+        @return $color;
+    }
+
+    @return mix($color, $color-highlight, $shade);
+}

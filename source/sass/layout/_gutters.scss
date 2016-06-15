@@ -1,0 +1,54 @@
+/*
+Gutters
+
+.gutters - Small padding on left and right side
+.gutters--outside - Small margin on left and right side
+.gutters.wings - ! Experimental !
+.gutters.gutters--no-left - Only padding on the right side
+.gutters.gutters--no-right - Only padding on the left side
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 2.3
+*/
+
+.gutters {
+  	@include gutters();
+  	@include breakpoint($gt-small-handheld) {
+    	&.wings {
+			// This will cause either wings, or gutters to be applied - but never both - so fix:
+			// Highly experimental - avoid applying this in the markup, use an additional tag instead!!!
+			display: table;
+			float: left;
+			width: 100%;
+			&::before,
+			&::after {
+		        content: "";
+		        display: table-cell;
+		        width: $gutter-width/2;
+		        vertical-align: top;
+	      	}
+    	}
+  	}
+}
+	.gutters--outside {
+		@include gutters(1/2, true);
+	}
+	.gutters--no-left {
+		&:not(.gutters--outside) {
+			padding-left: 0;
+		}
+		&.gutters--outside {
+			margin-left: 0;
+		}
+	}
+	.gutters--no-right {
+		padding-right: 0;
+		&:not(.gutters--outside) {
+			padding-right: 0;
+		}
+		&.gutters--outside {
+			padding-right: 0;
+		}
+	}

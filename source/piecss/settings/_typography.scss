@@ -1,0 +1,26 @@
+$font-family: $default-font;
+$font-variant: normal;
+$font-style: normal;
+$font-weight: 300;
+
+$type-default: $roboto-slab-light;
+$type-heading: $roboto-slab-regular;
+$type-anchor: $roboto-light;
+$type-button: $type-anchor;
+$type-label: $roboto-thin;
+
+$default-font: $type-default;
+
+$font-size: 14px;
+$font-size--xs: 12px;
+$font-size--s: 13px;
+$font-size--l: 18px;
+$font-size--xl: 24px;
+$font-size--xxl: 36px;
+
+$line-height: line-height($font-size);
+$line-height--xs: line-height($font-size--xs, 1);
+$line-height--s: line-height($font-size--s, 1);
+$line-height--l: line-height($font-size--l, 1);
+$line-height--xl: line-height($font-size--xl);
+$line-height--xxl: line-height($font-size--xl, 2);
