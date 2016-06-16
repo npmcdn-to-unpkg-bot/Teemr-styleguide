@@ -3,8 +3,8 @@ Trailer
 
 .trailer - Adds a margin of 3 rhythms to bottom
 .trailer--tiny - Adds a margin of 1 rhythms to bottom
-.trailer--hero - Adds a margin of 6 rhythms to bottom
-.trailer--giant - Adds a margin of 9 rhythms to bottom
+.trailer--double - Adds a margin of 6 rhythms to bottom
+.trailer--large - Adds a margin of 9 rhythms to bottom
 
 markup:
 <div class="{$modifiers}">I am content inside of a semanticless container</div>
@@ -17,10 +17,10 @@ Styleguide 2.6
 	&--tiny {
 		margin-bottom: rhythm(1);
 	}
-	&--hero {
+	&--double {
 		margin-bottom: rhythm(6);
 	}
-	&--giant {
+	&--large {
 		margin-bottom: rhythm(9);
 	}
 }
@@ -30,8 +30,8 @@ Trailer inside
 
 .trailer-inside - Adds a padding of 3 rhythms to bottom
 .trailer-inside--tiny - Adds a padding of 1 rhythms to bottom
-.trailer-inside--heroe - Adds a padding of 6 rhythms to bottom
-.trailer-inside--giant - Adds a padding of 9 rhythms to bottom
+.trailer-inside--double - Adds a padding of 6 rhythms to bottom
+.trailer-inside--large - Adds a padding of 9 rhythms to bottom
 
 markup:
 <div class="{$modifiers}">I am content inside of a semanticless container</div>
@@ -44,10 +44,10 @@ Styleguide 2.6.1
 	&--tiny {
 		padding-bottom: rhythm(1);
 	}
-	&--hero {
+	&--double {
 		padding-bottom: rhythm(6);
 	}
-	&--giant {
+	&--large {
 		padding-bottom: rhythm(9);
 	}
 }

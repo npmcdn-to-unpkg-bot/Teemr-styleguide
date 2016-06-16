@@ -24,23 +24,13 @@ markup:
 Styleguide 1.3.3
 */
 
-$lt-small-handheld: "(max-width: #{to-unit(319px,$unit,$font-size)})";
-$gt-small-handheld: "(min-width: #{to-unit(320px,$unit,$font-size)})";
+$gtsmall: "(min-width: #{to-unit(768px)})"; // Tablet portrait
+$gtmedium: "(min-width: #{to-unit(1024px)})"; // Tablet landscape, old desktops
+$gtlarge: "(min-width: #{to-unit(1280px)})"; // Desktop
 
-$lt-medium-handheld: "(max-width: #{to-unit(519px,$unit,$font-size)})";
-$gt-medium-handheld: "(min-width: #{to-unit(520px,$unit,$font-size)})";
-
-$lt-large-handheld: "(max-width: #{to-unit(767px,$unit,$font-size)})";
-$gt-large-handheld: "(min-width: #{to-unit(768px,$unit,$font-size)})";
-
-$lt-small-desktop: "(max-width: #{to-unit(1023px,$unit,$font-size)})";
-$gt-small-desktop: "(min-width: #{to-unit(1024px,$unit,$font-size)})";
-
-$lt-medium-desktop: "(max-width: #{to-unit(1259px,$unit,$font-size)})";
-$gt-medium-desktop: "(min-width: #{to-unit(1260px,$unit,$font-size)})";
-
-$lt-large-desktop: "(max-width: #{to-unit(1439px,$unit,$font-size)})";
-$gt-large-desktop: "(min-width: #{to-unit(1440px,$unit,$font-size)})";
+$ltsmall: "(max-width: #{to-unit(767px)})"; // Default
+$ltmedium: "(max-width: #{to-unit(1024px)})"; // Default
+$ltlarge: "(max-width: #{to-unit(1280px)})"; // Default
 
 $portrait: "(orientation: portrait)";
 $landscape: "(orientation: landscape)";

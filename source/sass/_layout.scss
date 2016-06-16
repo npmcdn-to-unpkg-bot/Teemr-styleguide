@@ -95,8 +95,6 @@ $debug-rhythm: true;
     }
 }
 
-
-
 /* 2.1 Container */
 @import "layout/container";
 
@@ -117,3 +115,6 @@ $debug-rhythm: true;
 
 /* 2.7 Grid */
 @import "layout/grid";
+
+/* 2.8 Column */
+@import "layout/column";

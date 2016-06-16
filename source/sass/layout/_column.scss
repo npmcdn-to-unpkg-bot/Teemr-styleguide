@@ -1,0 +1,14 @@
+/*
+Column
+
+Styleguide 2.8
+*/
+
+.column-group {
+    display: table;
+    width: 100%;
+    padding: 0;
+}
+.column-group__cell {
+    display: table-cell;
+}

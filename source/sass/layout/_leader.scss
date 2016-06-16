@@ -3,8 +3,8 @@ Leader
 
 .leader - Adds a margin of 3 rhythms to top
 .leader--tiny - Adds a margin of 1 rhythms to top
-.leader--hero - Adds a margin of 6 rhythms to top
-.leader--giant - Adds a margin of 9 rhythms to top
+.leader--double - Adds a margin of 6 rhythms to top
+.leader--large - Adds a margin of 9 rhythms to top
 
 markup:
 <div class="{$modifiers}">I am content inside of a semanticless container</div>
@@ -17,10 +17,10 @@ Styleguide 2.5
 	&--tiny {
 		margin-top: rhythm(1);
 	}
-	&--hero {
+	&--double {
 		margin-top: rhythm(6);
 	}
-	&--giant {
+	&--large {
 		margin-top: rhythm(9);
 	}
 }
@@ -30,8 +30,8 @@ Leader inside
 
 .leader-inside - Adds a padding of 3 rhythms to top
 .leader-inside--tiny - Adds a padding of 1 rhythms to top
-.leader-inside--hero - Adds a padding of 6 rhythms to top
-.leader-inside--giant - Adds a padding of 9 rhythms to top
+.leader-inside--double - Adds a padding of 6 rhythms to top
+.leader-inside--large - Adds a padding of 9 rhythms to top
 
 markup:
 <div class="{$modifiers}">I am content inside of a semanticless container</div>
@@ -44,10 +44,10 @@ Styleguide 2.5.1
 	&--tiny {
 		padding-top: rhythm(1);
 	}
-	&--hero {
+	&--double {
 		padding-top: rhythm(6);
 	}
-	&--giant {
+	&--large {
 		padding-top: rhythm(9);
 	}
 }

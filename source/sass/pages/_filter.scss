@@ -1,5 +1,105 @@
 /*
 Filter
 
+markup:
+<div class="container box" id="filter">
+	<div class="filter">
+		<p class="leader--double h-page">Filter</p>
+		<p class="leader h-paragraph">Show/Hide</p>
+	</div>
+	<div class="box--light">
+		<div class="filter--show">
+			<div class="filter--even">Projects</div><!--
+			--><div class="filter--even filter--switch">
+				<i class="switch switch--on"></i>
+			</div>
+		</div>
+		<div class="filter--show">
+			<div class="filter--even">Blogs</div><!--
+			--><div class="filter--even filter--switch">
+				<i class="switch switch--on"></i>
+			</div>
+		</div>
+	</div>
+</div>
+
 Styleguide 6.2
 */
+
+.filter {
+	padding: 0 rhythm(12);
+	&--even {
+		display: inline-block;
+		width: 50%;
+	}
+	&--switch {
+		text-align: right;
+	}
+	&--show {
+		padding: rhythm(1) rhythm(12);
+		border-bottom: 1px solid  mix($color-highlight, $color-shadow, 80%);
+	}
+}
+
+.h-page {
+	font-size: to-unit(24px);
+}
+
+.h-paragraph {
+	font-size: to-unit(18px);
+}
+
+.h-paragraph,
+.h-page {
+	line-height: rhythm(5);
+}
+
+// http://hawkins.io/2013/07/ember-toggle-switch/
+.switch {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 28px;
+    height: 16px;
+    background: shade($color-shadow);
+    background: rgba($color-shadow, .3);
+    cursor: pointer;
+    &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 12px;
+        height: 12px;
+        background: $color-highlight;
+    }
+    &--off {
+        &:after {
+        }
+    }
+    &--on {
+        background: shade($color-growth);
+        &:after {
+            left: auto;
+            right: 2px;
+        }
+    }
+    .btn &,
+    .filter__item & {
+        top: to-unit(2px);
+        vertical-align: baseline;
+    }
+}
+.switch, .switch:after {
+	border-radius: 1em;
+}
+
+.checkbox--switch {
+    position: absolute;
+    left: -999em;
+    opacity: 0; 
+    &:checked + .switch {
+        @extend .switch--on;
+    }
+}
