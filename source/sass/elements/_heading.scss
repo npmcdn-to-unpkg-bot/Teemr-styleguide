@@ -1,7 +1,27 @@
 /*
 Heading
 
+.h-page - Page header
+.h-paragraph  - Paragraph header
+
+markup:
+<p class="{$modifiers}">{$modifiers}</p>
+
 Styleguide 3.2
 */
 
 .heading {}
+
+
+.h-page {
+	font-size: to-unit(24px);
+}
+
+.h-paragraph {
+	font-size: to-unit(18px);
+}
+
+.h-paragraph,
+.h-page {
+	line-height: rhythm(5);
+}

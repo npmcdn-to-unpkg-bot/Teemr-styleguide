@@ -5,3 +5,9 @@ Styleguide 3.6
 */
 
 .list {}
+
+.list--inline-block {
+	li {
+		display: inline-block;
+	}
+}

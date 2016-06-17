@@ -33,10 +33,13 @@ Styleguide 3.3
 }
 .txt--xl {
 	font-size: $font-size--xl;
+	line-height: rhythm(4);
 }
 .txt--xxl {
 	font-size: $font-size--xxl;
+	line-height: rhythm(5);
 }
 .txt--xxxl {
 	font-size: $font-size--xxxl;
+	line-height: rhythm(7);
 }
