@@ -3,6 +3,7 @@ Leader
 
 .leader - Adds a margin of 3 rhythms to top
 .leader--tiny - Adds a margin of 1 rhythms to top
+.leader--half - Adds a margin of 1.5 rhythms to top
 .leader--double - Adds a margin of 6 rhythms to top
 .leader--large - Adds a margin of 9 rhythms to top
 
@@ -17,6 +18,9 @@ Styleguide 2.5
 	&--tiny {
 		margin-top: rhythm(1);
 	}
+	&--half {
+		margin-top: rhythm(1.5);
+	}
 	&--double {
 		margin-top: rhythm(6);
 	}
@@ -30,6 +34,7 @@ Leader inside
 
 .leader-inside - Adds a padding of 3 rhythms to top
 .leader-inside--tiny - Adds a padding of 1 rhythms to top
+.leader-inside--half - Adds a padding of 1.5 rhythms to top
 .leader-inside--double - Adds a padding of 6 rhythms to top
 .leader-inside--large - Adds a padding of 9 rhythms to top
 
@@ -43,6 +48,9 @@ Styleguide 2.5.1
 	padding-top: rhythm(3);
 	&--tiny {
 		padding-top: rhythm(1);
+	}
+	&--half {
+		padding-top: rhythm(1.5);
 	}
 	&--double {
 		padding-top: rhythm(6);

@@ -3,6 +3,7 @@ Trailer
 
 .trailer - Adds a margin of 3 rhythms to bottom
 .trailer--tiny - Adds a margin of 1 rhythms to bottom
+.trailer--half - Adds a margin of 1.5 rhythms to bottom
 .trailer--double - Adds a margin of 6 rhythms to bottom
 .trailer--large - Adds a margin of 9 rhythms to bottom
 
@@ -17,6 +18,9 @@ Styleguide 2.6
 	&--tiny {
 		margin-bottom: rhythm(1);
 	}
+	&--half {
+		margin-bottom: rhythm(1.5);
+	}
 	&--double {
 		margin-bottom: rhythm(6);
 	}
@@ -30,6 +34,7 @@ Trailer inside
 
 .trailer-inside - Adds a padding of 3 rhythms to bottom
 .trailer-inside--tiny - Adds a padding of 1 rhythms to bottom
+.trailer-inside--half - Adds a padding of 1 rhythms to bottom
 .trailer-inside--double - Adds a padding of 6 rhythms to bottom
 .trailer-inside--large - Adds a padding of 9 rhythms to bottom
 
@@ -43,6 +48,9 @@ Styleguide 2.6.1
 	padding-bottom: rhythm(3);
 	&--tiny {
 		padding-bottom: rhythm(1);
+	}
+	&--half {
+		padding-bottom: rhythm(1.5);
 	}
 	&--double {
 		padding-bottom: rhythm(6);
