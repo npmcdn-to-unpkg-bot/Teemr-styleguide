@@ -1,7 +1,50 @@
 /*
 Tile
 
+markup:
+<div class="tile">
+	<img class="avatar avatar--l" src="https://images.unsplash.com/photo-1466065478348-0b967011f8e0?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1291&h=868&q=80" />
+	<p class="h-paragraph">
+		Pete McCormick
+	</p>
+	<p class="txt-meta">Urban Photography</p>
+	<div class="tag-phrase leader--half">
+		<p class="quote">
+			Add a catchy tag phrase, your motto, a poem or your favourite food...
+		</p>
+	</div>
+</div>
+
 Styleguide 4.1
 */
 
-.tile {}
+.tile {
+	text-align: center;
+	.h-paragraph {
+		font-size: to-unit(20px);
+		&:after {
+			content: "\f006  202";
+			color: mix($teemr-brown, $color-highlight, 60%);
+			font-size: rhythm(2);
+		}
+	}
+	p {
+		margin: 0; /* Removed margin between name & job title */
+	}
+}
+
+.txt-meta {
+	color: mix($color-shadow, $color-highlight, 60%);
+}
+
+.tag-phrase {
+	font-size: to-unit(28px);
+	line-height: rhythm(5);
+	color: mix($teemr-brown, $color-highlight, 60%);
+	border-top: 1px dashed mix($teemr-brown, $color-highlight, 60%);
+	border-bottom: 1px dashed mix($teemr-brown, $color-highlight, 60%);
+	.quote {
+		@include column-width(10/20);
+		margin: 0 auto;
+	}
+}
