@@ -1,7 +1,16 @@
 /*
 Label
 
+markup:
+<a class="lbl" href="javascript:void(0)">Urban Photography</a>
+
 Styleguide 4.4
 */
 
-.label {}
+.lbl {
+	color: $black;
+	background: mix($color-highlight, $color-shadow, 90%);
+	border-radius: rhythm(3);
+	padding: 0 rhythm(1);
+	font-size: $font-size--xs;
+}
