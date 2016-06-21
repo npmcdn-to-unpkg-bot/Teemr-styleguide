@@ -2,7 +2,7 @@
 Breadcrumbs
 
 markup:
-<ul class="list--inline-block leader trailer wings breadcrumbs">
+<ul class="list--inline-block breadcrumbs">
 	<li>
 		<a class="breadcrumb" href="javascript:void(0);">Activity</a>
 	</li>
@@ -15,11 +15,11 @@ Styleguide 4.7
 */
 
 .breadcrumbs > :last-child {
-	color: mix($color-highlight, $color-shadow, 80%);
+	@extend .anchor--gentle;
 }
 
 .breadcrumbs {
-	color: mix($teemr-green, $color-highlight, 80%);
+	@extend .anchor;
 	li {
 		&:after {
 			content: ">";

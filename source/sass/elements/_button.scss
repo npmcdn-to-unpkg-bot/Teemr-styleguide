@@ -1,10 +1,12 @@
 /*
 Button
 
-.pill--assist - Brown, rounded button
-.pill--social - Orange, rounded button
-.pill--growth - Green, rounded button
-.pill--trust - Blue, rounded button
+.pill--assist - Brown, rounded pill
+.pill--social - Orange, rounded pill
+.pill--growth - Green, rounded pill
+.pill--trust - Blue, rounded pill
+.pill.pill--l - Pill with double padding
+.pill.pill--stretch - Full width pill
 
 markup:
 <a class="pill {$modifiers}" href="javascript:void(0);">I am a {$modifiers}</a>
@@ -15,15 +17,22 @@ Styleguide 3.5
 .pill {
 	@extend %roboto-light;
 	display: inline-block;
-	padding: 0 to-unit(28px);
+	padding: 0 rhythm(4);
 	color: $color-theme;
 	border: $border-thin solid mix($teemr-green, $color-shadow, 80%);
 	border-radius: 2em;
 	line-height: 2.5;
+    text-align: center;
 	&:hover {
 		background: $color-theme;
 		color: $white;
 	}
+    &--l {
+        padding: 0 rhythm(8);
+    }
+    &--stretch {
+        width: 100%;
+    }
 }
 
 .pill--social {
