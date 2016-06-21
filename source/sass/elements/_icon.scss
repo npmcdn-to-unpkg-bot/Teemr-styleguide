@@ -8,5 +8,9 @@ Styleguide 3.9
 */
 
 .icn {
-	text-align: center;
+	vertical-align: bottom;
+	height: rhythm(3);
+	width: rhythm(3);
+	max-height: rhythm(3);
+	max-width: rhythm(3);
 }

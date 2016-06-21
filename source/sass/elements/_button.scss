@@ -60,6 +60,23 @@ Styleguide 3.5
 
 
 /*
+Btn with icon
+
+markup:
+<a class="pill pill-icon" href="javascript:void(0);">I am a pill</a>
+
+Styleguide 3.5.1
+*/
+
+.pill-icon {
+    &:before {
+        content: "\fd43"; /* Placeholder icon */
+        margin-left: rhythm(-1);
+        padding-right: rhythm(1);
+    }
+}
+
+/*
 Switch
 
 .switch.switch--off - Turned off switch
@@ -68,7 +85,7 @@ Switch
 markup:
 <i class="{$modifiers}"></i>
 
-Styleguide 3.5.1
+Styleguide 3.5.2
 */
 
 // http://hawkins.io/2013/07/ember-toggle-switch/
@@ -90,10 +107,6 @@ Styleguide 3.5.1
         height: 17px;
         background: mix($color-shadow, $color-highlight, 10%);
     }
-    // &--off {
-    //     &:after {
-    //     }
-    // }
     &--on {
         background: mix($teemr-green, $color-highlight, 40%);
         &:after {
