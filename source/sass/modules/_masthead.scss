@@ -12,7 +12,7 @@ markup:
 			</svg>
 		</a>
 	</div>
-	<div class="masthead--search">
+	<div class="search search--masthead">
 		<input placeholder="Find people, teams, projects and posts" />
 	</div>
 	<div class="masthead--user">
@@ -63,15 +63,6 @@ Styleguide 5.1.1
         svg {
             height: rhythm(3);
         }
-    }
-    &--search {
-    	flex: 1;
-    	padding-left: rhythm(2);
-    	input {
-    		height: rhythm(7) - 1;
-    		width: 100%;
-    		border: 0;
-    	}
     }
     &--user {
     	flex: 1;

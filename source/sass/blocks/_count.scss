@@ -1,10 +1,11 @@
 /*
 Count & icon
 
-Placeholder icon used
+! - Placeholder icon used - !
 
 .count - Icon + count
 .count--light - In case of dark background
+.count.count--s - Smaller count
 
 markup:
 <ul class="{$modifiers} list--inline-block">
@@ -23,6 +24,9 @@ Styleguide 4.11
 	color: mix($teemr-brown, $color-highlight, 60%);
 	&--light {
 		color: $white;
+	}
+	&--s {
+		font-size: to-unit(12px);
 	}
 }
 
