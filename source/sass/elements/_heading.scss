@@ -1,6 +1,7 @@
 /*
 Heading
 
+.heading - Landingspage heading
 .h-page - Page header
 .h-paragraph  - Paragraph header
 
@@ -10,8 +11,28 @@ markup:
 Styleguide 3.2
 */
 
-.heading {}
+.heading {
+	font-size: to-unit(28px);
+}
 
+@include breakpoint($gtsmall) {
+	.heading {
+		font-size: to-unit(35px);
+		line-height: rhythm(5);
+	}
+}
+@include breakpoint($gtmedium) {
+	.heading {
+		font-size: to-unit(49px);
+		line-height: rhythm(9);
+	}
+}
+@include breakpoint($gtlarge) {
+	.heading {
+		font-size: to-unit(64px);
+		line-height: rhythm(12);
+	}
+}
 
 .h-page {
 	font-size: to-unit(24px);
