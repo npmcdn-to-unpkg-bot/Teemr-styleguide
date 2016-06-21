@@ -4,6 +4,7 @@ Count & icon
 Placeholder icon used
 
 .count - Icon + count
+.count--light - In case of dark background
 
 markup:
 <ul class="{$modifiers} list--inline-block">
@@ -20,6 +21,9 @@ Styleguide 4.11
 
 .count {
 	color: mix($teemr-brown, $color-highlight, 60%);
+	&--light {
+		color: $white;
+	}
 }
 
 .count {
