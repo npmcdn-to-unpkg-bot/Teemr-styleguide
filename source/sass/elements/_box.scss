@@ -33,4 +33,13 @@ Styleguide 3.10
 	&--growth {
 		background: mix($teemr-green, $color-highlight, 80%);
 	}
+	&--dark,
+	&--trust,
+	&--social,
+	&--growth {
+		color: #FFF;
+	}
+	&--light {
+		color: #000;
+	}
 }

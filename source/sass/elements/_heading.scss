@@ -13,24 +13,39 @@ Styleguide 3.2
 
 .heading {
 	font-size: to-unit(28px);
+	&--small {
+		font-size: to-unit(21px);
+	}
 }
 
 @include breakpoint($gtsmall) {
 	.heading {
 		font-size: to-unit(35px);
 		line-height: rhythm(5);
+		&--small {
+			font-size: to-unit(28px);
+			line-height: rhythm(4);
+		}
 	}
 }
 @include breakpoint($gtmedium) {
 	.heading {
 		font-size: to-unit(49px);
 		line-height: rhythm(9);
+		&--small {
+			font-size: to-unit(35px);
+			line-height: rhythm(5);
+		}
 	}
 }
 @include breakpoint($gtlarge) {
 	.heading {
 		font-size: to-unit(64px);
 		line-height: rhythm(12);
+		&--small {
+			font-size: to-unit(49px);
+			line-height: rhythm(7);
+		}
 	}
 }
 

@@ -19,7 +19,7 @@ Styleguide 3.5
 	display: inline-block;
 	padding: 0 rhythm(4);
 	color: $color-theme;
-	border: $border-thin solid mix($teemr-green, $color-shadow, 80%);
+	border: $border-thin solid $color-theme;
 	border-radius: 2em;
 	line-height: 2.5;
     text-align: center;

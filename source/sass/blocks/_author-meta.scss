@@ -1,6 +1,12 @@
-// Author Meta
+/*
+Author Meta
 
-// media object
+markup:
+<sg-insert>3.8.1-2</sg-insert>
+<div class="author-meta">Firstname Lastname</div>
+
+Styleguide 4.12
+*/
 
 .author-meta {
   margin:10px;
@@ -17,7 +23,7 @@
   margin-right:10px;
 }
 
-.author-meta .avatar img{
+.author-meta .avatar{
   display:block;
 }
 
@@ -28,6 +34,7 @@
 // change Font-color according to background
 $bg-color: #FFFFFF;
 
+
 @function define-text-color($color) {
   @if (lightness($color) > 50) {
     @return #000000; // Lighter backgorund, return dark color
@@ -37,5 +44,10 @@ $bg-color: #FFFFFF;
 }
 
 .author-meta {
-  define-text-color($bg-color);
+  .box--trust & {
+      color: define-text-color( mix($teemr-blue, $color-highlight, 80%) );
+  }
+  .box--light & {
+      color: define-text-color( mix($color-highlight, $color-shadow, 95%) );
+  }
 }

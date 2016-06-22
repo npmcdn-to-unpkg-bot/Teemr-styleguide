@@ -17,7 +17,7 @@ Styleguide 4.0
 @import "blocks/label";
 
 /* 4.5 Rating */
-@import "blocks/rating";
+@import "blocks/count";
 
 /* 4.6 Pagination */
 @import "blocks/pagination";
@@ -34,8 +34,8 @@ Styleguide 4.0
 /* 4.10 Blog preview */
 @import "blocks/blog-preview";
 
-/* 4.11 Count */
-@import "blocks/count";
-
-/* 4.12 Post */
+/* 4.11 Post */
 @import "blocks/post";
+
+/* 4.12 Author meta */
+@import "blocks/author-meta";

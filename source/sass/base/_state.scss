@@ -1,0 +1,15 @@
+/* 
+States
+
+.is-narrative - Hidden from screen, screen reader friendly
+
+markup:
+<span class="{$modifiers}">{$modifiers}</span>
+
+Styleguide 1.5
+*/
+
+.is-narrative {
+	position: absolute;
+	left: -999em;
+}

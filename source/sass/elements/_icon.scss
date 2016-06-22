@@ -6,7 +6,6 @@ Icon
 .icn.icn--s - 16 x 16 pixels icon
 .icn - 21 x 21 pixels icon
 .icn.icn--l - 25 x 25 pixels icon
-.icn.icn--social - 36 x 36 pixels icons, used for social media icons
 
 markup:
 <img class="{$modifiers}" src="https://app.getfloop.com/img/dashboard/app/placeholder-app-icon.png" />
@@ -15,7 +14,8 @@ Styleguide 3.9
 */
 
 .icn {
-	vertical-align: bottom;
+	display: inline-block;
+	vertical-align: middle;
 	height: 21px;
 	width: 21px;
 	&--l {
@@ -26,8 +26,14 @@ Styleguide 3.9
 		height: 16px;
 		width: 16px;
 	}
-	&--social {
-		height: 36px;
-		width: 36px;
+	&-label {
+		vertical-align: middle;
 	}
+}
+
+.icn + .icn-label {
+	padding-left: rhythm();
+}
+.icn-label + .icn {
+	margin-left: rhythm();
 }
