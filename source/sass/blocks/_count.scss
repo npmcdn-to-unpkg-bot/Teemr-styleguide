@@ -1,25 +1,30 @@
 /*
-Count & icon
+Count
 
-Placeholder icon used..!
+Placeholder icon used
+
+.icn.icn--s - Counter with small icon
+.icn - Counter
+.icn.icn--l - Counter with large icon
 
 markup:
 <div>
-	<img class="icn" alt="Followers:" src="https://app.getfloop.com/img/dashboard/app/placeholder-app-icon.png" />
-	<span class="icn-label txt-meta">229</span>
+	<img class="{$modifiers}" alt="Followers:" src="https://app.getfloop.com/img/dashboard/app/placeholder-app-icon.png" />
+	<span class="icn-label txt-meta">222</span>
 </div>
 
 Styleguide 4.5
 */
 
 /*
-Icon & count
+Reversed count
 
-Placeholder icon used
+Placeholder icon used<br />
+Reversed font-size required.
 
 markup:
 <div>
-	<span class="icn-label">202</span>
+	<span class="icn-label txt-meta">222</span>
 	<img class="icn" src="https://app.getfloop.com/img/dashboard/app/placeholder-app-icon.png" />
 </div>
 

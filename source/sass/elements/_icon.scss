@@ -1,7 +1,7 @@
 /*
 Icon
 
-! - Placeholder icon used - !
+Placeholder icon used..!
 
 .icn.icn--s - 16 x 16 pixels icon
 .icn - 21 x 21 pixels icon
@@ -27,7 +27,11 @@ Styleguide 3.9
 		width: 16px;
 	}
 	&-label {
+		display: inline-block; /* Aligning label next to icon */
 		vertical-align: middle;
+		&--light {
+			color: $white; /* Light text on dark background to increase readability */
+		}
 	}
 }
 
@@ -36,4 +40,12 @@ Styleguide 3.9
 }
 .icn-label + .icn {
 	margin-left: rhythm();
+}
+
+.icn--s + .icn-label {
+	font-size: to-unit(12px);
+}
+
+.icn--l + .icn-label {
+	font-size: to-unit(16px);
 }
