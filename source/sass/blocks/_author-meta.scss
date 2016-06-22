@@ -1,0 +1,41 @@
+// Author Meta
+
+// media object
+
+.author-meta {
+  margin:10px;
+}
+
+.author-meta .text {
+  overflow: hidden;
+  _overflow:visible;
+  zoom:1;
+}
+
+.author-meta .avatar {
+  float: left;
+  margin-right:10px;
+}
+
+.author-meta .avatar img{
+  display:block;
+}
+
+.author-meta .avatarExt {
+  float:right;
+  margin-left: 10px;
+}
+// change Font-color according to background
+$bg-color: #FFFFFF;
+
+@function define-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000000; // Lighter backgorund, return dark color
+  } @else {
+    @return #ffffff; // Darker background, return light color
+  }
+}
+
+.author-meta {
+  define-text-color($bg-color);
+}
