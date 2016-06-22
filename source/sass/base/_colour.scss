@@ -10,7 +10,7 @@ Base colours
 $color-trust - Blue, trusting (business) elements
 $color-growth - Green, educative elements
 $color-social - Orange, social elements
-$color-productive - Brown, productive elements
+$color-assist - Brown, productive elements
 
 markup:
 <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
@@ -88,6 +88,17 @@ $colors: (
         d60: mix($teemr-orange, $color-shadow, 40%),
         d80: mix($teemr-orange, $color-shadow, 20%)
     ),
+    assist: (
+        l80: mix($teemr-brown, $color-highlight, 20%),
+        l60: mix($teemr-brown, $color-highlight, 40%),
+        l40: mix($teemr-brown, $color-highlight, 60%),
+        l20: mix($teemr-brown, $color-highlight, 80%),
+        100: $teemr-brown,
+        d20: mix($teemr-brown, $color-shadow, 80%),
+        d40: mix($teemr-brown, $color-shadow, 60%),
+        d60: mix($teemr-brown, $color-shadow, 40%),
+        d80: mix($teemr-brown, $color-shadow, 20%)
+    ),
     highlight: (
         l80: mix($color-highlight, $white, 20%),
         l60: mix($color-highlight, $white, 40%),
@@ -110,6 +121,31 @@ $colors: (
 // Notification colours
 $color-notification: mix($teemr-blue, $color-highlight, 20%);
 $color-close: #1AACBD;
+
+
+/* Background colors */
+%bg--light {
+    background-color: mix($color-highlight, $white, 20%); // Light grey
+}
+%bg--default {
+    background-color: mix($color-highlight, $white, 20%); // Grey
+}
+%bg--dark {
+    background-color: mix($teemr-blue, $color-shadow, 60%); // Slightly darker blue
+}
+%bg--content {
+    background-color: $white; // White
+}
+%bg--focus {
+    background-color: $color-growth // Green
+}
+%bg--top-bar {
+    background-color: mix($teemr-blue, $color-shadow, 80%); // Slightly lighter blue
+}
+%bg--search-bar {
+    @extend %bg--content; //white
+}
+
 
 /* 
 Applied colours

@@ -10,92 +10,90 @@ Debug layout
 Styleguide 2.0.1
 */
 
-$debug-layout: true;
-$debug-rhythm: true;
+// $debug-layout: true;
+// $debug-rhythm: true;
 
-@mixin debug-rhythm($rhythm: $rhythm)
-{
-    &:after {
+// @mixin debug-rhythm($rhythm: $rhythm)
+// {
+//     &:after {
 
-        $to: transparent;
-        $from: rgba(226, 255, 255, .25);
+//         $to: transparent;
+//         $from: rgba(226, 255, 255, .25);
 
-        pointer-events: none;
-        display: block;
-        position: absolute;
-        left: 0; top: 0; right: 0; bottom: 0;
-        content: "";
-        background-image: -webkit-linear-gradient($from 50%, $to 50%);
-        background-image: linear-gradient($from 50%, $to 50%);
-        background-size: 2*$rhythm 2*$rhythm;
-    }
-}
+//         pointer-events: none;
+//         display: block;
+//         position: absolute;
+//         left: 0; top: 0; right: 0; bottom: 0;
+//         content: "";
+//         background-image: -webkit-linear-gradient($from 50%, $to 50%);
+//         background-image: linear-gradient($from 50%, $to 50%);
+//         background-size: 2*$rhythm 2*$rhythm;
+//     }
+// }
 
-@mixin debug-layout($columns: $columns, $color: #000, $gutter-width: $gutter-width)
-{
-    background-size: percentage(1 / $columns) 100%;
-    background-image: 
-        linear-gradient(to right, 
-            rgba($color,.1) 0,
-            rgba($color,.1) $gutter-width / 2,
-            transparent $gutter-width / 2,
-            transparent percentage($columns / $columns)
-        ),
-        linear-gradient(to left, 
-            rgba($color,.1) 0,
-            rgba($color,.1) $gutter-width / 2,
-            transparent $gutter-width / 2,
-            transparent percentage($columns / $columns)
-        ),
-        linear-gradient(to left, 
-            transparent 0%,
-            rgba(0,0,0,.5) 1px,
-            transparent 1px,
-            transparent  percentage($columns / $columns)
-        )
-    ;
-}
+// @mixin debug-layout($columns: $columns, $color: #000, $gutter-width: $gutter-width)
+// {
+//     background-size: percentage(1 / $columns) 100%;
+//     background-image: 
+//         linear-gradient(to right, 
+//             rgba($color,.1) 0,
+//             rgba($color,.1) $gutter-width / 2,
+//             transparent $gutter-width / 2,
+//             transparent percentage($columns / $columns)
+//         ),
+//         linear-gradient(to left, 
+//             rgba($color,.1) 0,
+//             rgba($color,.1) $gutter-width / 2,
+//             transparent $gutter-width / 2,
+//             transparent percentage($columns / $columns)
+//         ),
+//         linear-gradient(to left, 
+//             transparent 0%,
+//             rgba(0,0,0,.5) 1px,
+//             transparent 1px,
+//             transparent  percentage($columns / $columns)
+//         )
+//     ;
+// }
 
-@if $debug-layout {
-    %debug-layout {
-        position: relative;
-        &::before {
-            pointer-events: none;
-            content: '';
-            display: block;
-            position: absolute;
-            z-index: -1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
+// @if $debug-layout {
+//     %debug-layout {
+//         position: relative;
+//         &::before {
+//             pointer-events: none;
+//             content: '';
+//             display: block;
+//             position: absolute;
+//             z-index: -1;
+//             left: 0;
+//             top: 0;
+//             width: 100%;
+//             height: 100%;
 
-            background-color: transparent;
-            background-repeat: repeat-x;
-            background-position: 0 0;
+//             background-color: transparent;
+//             background-repeat: repeat-x;
+//             background-position: 0 0;
 
-            @include debug-layout();
+//             @include debug-layout();
 
-            @each $breakpoint, $layout in $layouts {
-                @include breakpoint($breakpoint) {
-                    $columns: map-get($layout, "columns");
-                    $color: map-get($layout, "debug-color");
-                    @include debug-layout($columns, $color, $gutter-width);
-                    content: '#{$breakpoint}';
-                }
-            }
-        }
-}
+//             @each $breakpoint, $layout in $layouts {
+//                 @include breakpoint($breakpoint) {
+//                     $columns: map-get($layout, "columns");
+//                     $color: map-get($layout, "debug-color");
+//                     @include debug-layout($columns, $color, $gutter-width);
+//                     content: '#{$breakpoint}';
+//                 }
+//             }
+//         }
+// }
 
-    .debug-layout {
-        @extend %debug-layout;
-    }
-    .debug-rhythm {
-        @include debug-rhythm();
-    }
-}
-
-
+//     .debug-layout {
+//         @extend %debug-layout;
+//     }
+//     .debug-rhythm {
+//         @include debug-rhythm();
+//     }
+// }
 
 /* 2.1 Container */
 @import "layout/container";
@@ -117,3 +115,6 @@ $debug-rhythm: true;
 
 /* 2.7 Grid */
 @import "layout/grid";
+
+/* 2.8 Column */
+@import "layout/column";

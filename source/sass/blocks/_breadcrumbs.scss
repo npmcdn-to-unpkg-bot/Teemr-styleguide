@@ -1,5 +1,39 @@
 /*
 Breadcrumbs
 
+markup:
+<ul class="list--inline-block breadcrumbs">
+	<li>
+		<a class="breadcrumb" href="javascript:void(0);">Activity</a>
+	</li>
+	<li>
+		<a class="breadcrumb" href="javascript:void(0);">Pete McCormick</a>
+	</li>
+</ul>
+
 Styleguide 4.7
 */
+
+.breadcrumbs > :last-child {
+	@extend .anchor--gentle;
+}
+
+.breadcrumbs {
+	@extend .anchor;
+	li {
+		&:after {
+			content: ">";
+			color: mix($color-highlight, $color-shadow, 80%);
+		}
+	}
+}
+
+.breadcrumbs > :last-child {
+	&:after {
+		display: none; /* Hide icon from last child */
+	}
+}
+
+.breadcrumb {
+	color: inherit; /* Inherit color from .breadcrumbs */
+}

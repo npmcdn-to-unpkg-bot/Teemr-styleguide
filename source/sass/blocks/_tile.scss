@@ -1,7 +1,80 @@
 /*
 Tile
 
+Personal tile
+
+markup:
+<div class="tile tile--edit">
+	<img class="avatar avatar--l" src="https://images.unsplash.com/photo-1466065478348-0b967011f8e0?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1291&h=868&q=80" />
+	<p class="h-paragraph">
+		Pete McCormick
+		<span class="count">202</span>
+	</p>
+	<p class="txt-meta">Urban Photography</p>
+	<div class="catch-phrase catch-phrase-edit leader--half">
+		<p class="quote--edit">
+			Add a catchy tag phrase, your motto, a poem or your favourite food...
+		</p>
+	</div>
+</div>
+
 Styleguide 4.1
 */
 
-.tile {}
+.tile {
+	text-align: center;
+	p {
+		margin: 0; /* Removed margin between name & job title */
+	}
+}
+
+.tile--edit {
+	.h-paragraph {
+		font-size: to-unit(20px);
+	}
+}
+
+.catch-phrase {
+	font-size: to-unit(28px);
+	line-height: rhythm(5);
+	&-edit {
+		color: mix($teemr-brown, $color-highlight, 60%);
+		border-top: 1px dashed mix($teemr-brown, $color-highlight, 60%);
+		border-bottom: 1px dashed mix($teemr-brown, $color-highlight, 60%);
+	}
+	.quote,
+	.quote--edit {
+		@include column-width(14/20);
+		margin: 0 auto;
+	}
+	.quote {
+		&:before {
+			content: "“";
+			margin-right: -5px;
+		}
+		&:after {
+			content: "”";
+			margin-left: -5px;
+		}
+	}
+}
+
+/*
+Public tile
+
+markup:
+<div class="tile">
+	<img class="avatar avatar--l" src="https://images.unsplash.com/photo-1466065478348-0b967011f8e0?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1291&h=868&q=80" />
+	<p class="h-paragraph">
+		Pete McCormick
+	</p>
+	<p class="txt-meta">Urban Photography</p>
+	<div class="catch-phrase leader--half">
+		<p class="quote">
+			Photography is the only language that can be understood anywhere in the world.
+		</p>
+	</div>
+</div>
+
+Styleguide 4.1.1
+*/

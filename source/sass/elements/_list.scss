@@ -1,7 +1,19 @@
 /*
 List
 
+.list--inline-block - List items are inline-block
+
+markup:
+<ul class="{$modifiers}">
+	<li>{$modifiers} - List item 1</li>
+	<li>{$modifiers} - List item 2</li>
+</ul>
+
 Styleguide 3.6
 */
 
-.list {}
+.list--inline-block {
+	li {
+		display: inline-block;
+	}
+}

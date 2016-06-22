@@ -1,0 +1,20 @@
+/*
+Posts
+
+.post--title - Post title
+.post--date - Post date
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 4.12
+*/
+
+.post--title {
+	font-size: to-unit(20px);
+	line-height: rhythm(5);
+}
+
+.post--date {
+	@extend .txt--whisper;
+}

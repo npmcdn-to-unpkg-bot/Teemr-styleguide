@@ -10,7 +10,7 @@ Styleguide 3.8
 Avatar
 
 .avatar.avatar--s - Small rounded avatar
-.avatar.avatar--m - Medium rounded avatar
+.avatar - Medium rounded avatar
 .avatar.avatar--l - Large rounded avatar
 
 markup:
@@ -24,6 +24,15 @@ Styleguide 3.8.1
 	border-radius: 50%;
 	width: 100%;
 	height: 100%;
+    $size: 9;
+    height: rhythm($size);
+    width: rhythm($size);
+    max-height: rhythm($size);
+    max-width: rhythm($size);
+    border: 3px solid $white;
+    & + & {
+        margin-left: rhythm(-3);
+    }
 	&--s {
         $size: 3;
         height: rhythm($size);
@@ -33,17 +42,6 @@ Styleguide 3.8.1
         border: 2px solid $white;
         & + & {
             margin-left: rhythm(-1.5);
-        }
-	}
-	&--m {
-        $size: 9;
-        height: rhythm($size);
-        width: rhythm($size);
-        max-height: rhythm($size);
-        max-width: rhythm($size);
-        border: 3px solid $white;
-        & + & {
-            margin-left: rhythm(-3);
         }
 	}
 	&--l {
@@ -63,8 +61,8 @@ Styleguide 3.8.1
 Avatar list
 
 .avatar.avatar--s - Small
-.avatar.avatar--m - Small
-.avatar.avatar--l - Small
+.avatar - Normal
+.avatar.avatar--l - Large
 
 markup:
 <img class="{$modifiers}" src="https://images.unsplash.com/photo-1462910211773-a9847b1f0e40?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=320&h=180&q=80" alt="" />

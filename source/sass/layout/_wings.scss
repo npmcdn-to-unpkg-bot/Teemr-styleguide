@@ -13,7 +13,7 @@ Styleguide 2.2
 
 .wings {}
 
-@include breakpoint($gt-small-handheld) {
+@include breakpoint($gtsmall) {
 	.wings {
 		padding-left: percentage(1/16);
 		padding-right: percentage(1/16);
@@ -26,7 +26,7 @@ Styleguide 2.2
 	}
 }
 
-@include breakpoint($gt-medium-handheld) {
+@include breakpoint($gtmedium) {
 	.wings {
 		padding-left: percentage(1/18);
 		padding-right: percentage(1/18);
@@ -63,7 +63,7 @@ Styleguide 2.2
 	}
 }
 
-@include breakpoint($gt-large-handheld) {
+@include breakpoint($gtlarge) {
 	.wings {
 		padding-left: percentage(1/20);
 		padding-right: percentage(1/20);

@@ -3,10 +3,10 @@ Anchor
 	
 .anchor - Anchor
 .anchor:hover - Anchor with hover state
-.anchor--social - Social anchor
-.anchor--social:hover - Social anchor with hover state
 .anchor--gentle - Gentle anchor
 .anchor--gentle:hover - Gentle anchor with hover state
+.anchor.anchor--main - Anchor with underlining 
+.anchor.anchor--main:hover - Anchor with underlining with hover state
 
 markup:
 <a class="{$modifiers}" href="javascript:void(0);">{$modifiers}</a>
@@ -19,13 +19,14 @@ Styleguide 3.1
 	&:hover {
 		color: inherit;
 	}
-	&--social {
-		color: $color-social;
-	}
 	&--gentle {
 		color: mix($color-highlight, $color-shadow, 80%);
 		&:hover {
 			color: mix($teemr-green, $color-highlight, 80%);
 		}
 	}
+}
+
+.anchor--main {
+	text-decoration: underline;
 }

@@ -1,14 +1,15 @@
 /*
 Text
 
-.txt--xxxs - .
-.txt--xxs - .
-.txt--xs - .
-.txt--s - .
-.txt--l - .
-.txt--xl - .
-.txt--xxl - .
-.txt--xxxl - .
+.txt--xxxs - 9px
+.txt--xxs - 10px
+.txt--xs - 12px
+.txt--s - 13px
+.txt--l - 17px
+.txt--xl - 24px & 28px lh
+.txt--xxl - 36px & 35px lh
+.txt--xxxl - 48px & 49px lh
+.txt--whisper - .
 
 markup:
 <div class="{$modifiers}">{$modifiers}</div>
@@ -33,10 +34,22 @@ Styleguide 3.3
 }
 .txt--xl {
 	font-size: $font-size--xl;
+	line-height: rhythm(4);
 }
 .txt--xxl {
 	font-size: $font-size--xxl;
+	line-height: rhythm(5);
 }
 .txt--xxxl {
 	font-size: $font-size--xxxl;
+	line-height: rhythm(7);
+}
+
+.txt--whisper {
+	color: mix($teemr-brown, $color-highlight, 60%);
+	font-size: $font-size--xs;
+}
+
+.txt-meta {
+	color: mix($color-shadow, $color-highlight, 60%);
 }

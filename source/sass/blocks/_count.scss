@@ -1,0 +1,55 @@
+/*
+Count & icon
+
+! - Placeholder icon used - !
+
+.count - Icon + count
+.count--light - In case of dark background
+.count.count--s - Smaller count
+
+markup:
+<ul class="{$modifiers} list--inline-block">
+	<li>
+		<img class="icn" src="https://app.getfloop.com/img/dashboard/app/placeholder-app-icon.png" />
+	</li>
+	<li>
+		<span>229</span>
+	</li>
+</ul>	
+
+Styleguide 4.11
+*/
+
+.count {
+	color: mix($teemr-brown, $color-highlight, 60%);
+	&--light {
+		color: $white;
+	}
+	&--s {
+		font-size: to-unit(12px);
+	}
+}
+
+.count {
+	li:last-child {
+		padding-left: rhythm(1);
+	}	
+}
+
+/* 
+Icon & count
+
+Placeholder icon used
+
+markup:
+<ul class="count list--inline-block">
+	<li>
+		<span>202</span>
+	</li>
+	<li>
+		<img class="icn" src="https://app.getfloop.com/img/dashboard/app/placeholder-app-icon.png" />
+	</li>
+</ul>
+
+Styleguide 4.11.1
+*/

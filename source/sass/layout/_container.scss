@@ -53,7 +53,7 @@ markup:
 Styleguide 2.1.1
 */
 
-@include breakpoint($gt-small-handheld) {
+@include breakpoint($gtsmall) {
 	.container--aside {
 		@include column-width(5/16);
 		.page--sidebar & {
@@ -77,7 +77,7 @@ Styleguide 2.1.1
     }
 }
 
-@include breakpoint($gt-medium-handheld) {
+@include breakpoint($gtmedium) {
 	// The container-cluster--level class allows for child containers to be leveled in height
 	// @todo check on nested containers
 	.container--aside {
@@ -103,7 +103,7 @@ Styleguide 2.1.1
   	}
 }
 
-@include breakpoint($gt-large-handheld) {
+@include breakpoint($gtlarge) {
   	.container--aside {
     	@include column-width(5/20);
     	.page--sidebar & {

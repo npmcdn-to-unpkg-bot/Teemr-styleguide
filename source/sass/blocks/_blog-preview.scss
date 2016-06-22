@@ -1,0 +1,69 @@
+/*
+Blog preview
+
+Preview with background image
+
+markup:
+<div class="leader preview">
+	<div class="blog-count right leader-inside--double">[  ] 206</div>
+	<div class="preview--title">Detroit</div>
+	<div class="preview--text leader trailer--double">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+</div>
+
+Styleguide 4.10
+*/
+
+.preview {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: rhythm(75);
+	padding: 0 15%;
+	color: $white;
+	text-shadow: -1px 1px black;
+	background: url(https://images.unsplash.com/photo-1465205568425-23fdd3805e49?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1211&h=807&q=80) center no-repeat;
+	background-size: cover;
+	&--title {
+		font-size: $font-size--xxl;
+		line-height: rhythm(5);
+	}
+	&--text {
+		font-size: to-unit(18px);
+		line-height: rhythm(3);
+	}
+}
+
+.blog-count {
+	flex: 1;
+}
+
+.right {
+	text-align: right;
+}
+
+/*
+Article preview without image
+
+markup:
+<div class="article leader">
+	<div class="preview--title">Detroit</div><!--
+	--><div class="article-count right leader-inside">[  ] 206</div>
+	<div class="preview--text leader trailer--double">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+</div>
+
+Styleguide 4.10.1
+*/
+
+.article {
+	width: 100%;
+	padding: 0 15%;
+	.preview--title {
+		vertical-align: middle;
+		width: 50%;
+		display: inline-block;
+	}
+	&-count {
+		width: 50%;
+		display: inline-block;
+	}
+}

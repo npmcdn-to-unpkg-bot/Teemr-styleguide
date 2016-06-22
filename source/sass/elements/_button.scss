@@ -1,32 +1,144 @@
 /*
 Button
 
-.btn - Rounded pill-like button
-.btn.btn--assist - Productive
+.pill--assist - Brown, rounded pill
+.pill--social - Orange, rounded pill
+.pill--growth - Green, rounded pill
+.pill--trust - Blue, rounded pill
+.pill.pill--l - Pill with double padding
+.pill.pill--stretch - Full width pill
 
 markup:
-<a class="{$modifiers}" href="javascript:void(0);">I am a {$modifiers}</a>
+<a class="pill {$modifiers}" href="javascript:void(0);">I am a {$modifiers}</a>
 
 Styleguide 3.5
 */
 
-.btn {
+.pill {
 	@extend %roboto-light;
 	display: inline-block;
-	padding: 0 to-unit(28px);
+	padding: 0 rhythm(4);
 	color: $color-theme;
 	border: $border-thin solid mix($teemr-green, $color-shadow, 80%);
 	border-radius: 2em;
 	line-height: 2.5;
+    text-align: center;
 	&:hover {
 		background: $color-theme;
 		color: $white;
 	}
+    &--l {
+        padding: 0 rhythm(8);
+    }
+    &--stretch {
+        width: 100%;
+    }
 }
 
-.btn--assist {
+.pill--social {
+	border-color: $color-social;
+	color: $color-social;
+	&:hover {
+		background: $color-social;
+	}	
+}
+
+.pill--growth {
+	border-color: $color-growth;
+	color: $color-growth;
+	&:hover {
+		background: $color-growth;
+	}	
+}
+
+.pill--trust {
+	border-color: $color-trust;
+	color: $color-trust;
+	&:hover {
+		background: $color-trust;
+	}	
+}
+
+.pill--assist {
 	border-color: $color-assist;
 	color: $color-assist;
+	&:hover {
+		background: $color-assist;
+	}
 }
 
-.pill {}
+
+/*
+Btn with icon
+
+markup:
+<a class="pill pill-icon" href="javascript:void(0);">I am a pill</a>
+
+Styleguide 3.5.1
+*/
+
+.pill-icon {
+    &:before {
+        content: "\fd43"; /* Placeholder icon */
+        margin-left: rhythm(-1);
+        padding-right: rhythm(1);
+    }
+}
+
+/*
+Switch
+
+.switch.switch--off - Turned off switch
+.switch.switch--on - Turned on switch
+
+markup:
+<i class="{$modifiers}"></i>
+
+Styleguide 3.5.2
+*/
+
+// http://hawkins.io/2013/07/ember-toggle-switch/
+.switch {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 38px;
+    height: 21px;
+    background: mix($color-shadow, $color-highlight, 20%);
+    cursor: pointer;
+    &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 17px;
+        height: 17px;
+        background: mix($color-shadow, $color-highlight, 10%);
+    }
+    &--on {
+        background: mix($teemr-green, $color-highlight, 40%);
+        &:after {
+            left: auto;
+            right: 2px;
+            background: mix($teemr-green, $color-highlight, 70%);
+        }
+    }
+    .btn &,
+    .filter__item & {
+        top: to-unit(2px);
+        vertical-align: baseline;
+    }
+}
+.switch, .switch:after {
+	border-radius: 1em;
+}
+
+.checkbox--switch {
+    position: absolute;
+    left: -999em;
+    opacity: 0; 
+    &:checked + .switch {
+        @extend .switch--on;
+    }
+}

@@ -1,9 +1,28 @@
 /*
 Icon
 
+! - Placeholder icon used - !
+
+.icn.icn--s - 16 x 16 pixels icon
+.icn - 21 x 21 pixels icon
+.icn.icn--l - 25 x 25 pixels icon
+
+markup:
+<img class="{$modifiers}" src="https://app.getfloop.com/img/dashboard/app/placeholder-app-icon.png" />
+
 Styleguide 3.9
 */
 
 .icn {
-	text-align: center;
+	vertical-align: bottom;
+	height: 21px;
+	width: 21px;
+	&--l {
+		height: 25px;
+		width: 25px;
+	}
+	&--s {
+		height: 16px;
+		width: 16px;
+	}
 }

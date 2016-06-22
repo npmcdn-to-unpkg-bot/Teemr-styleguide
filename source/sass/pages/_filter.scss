@@ -1,5 +1,70 @@
 /*
 Filter
 
+markup:
+<div class="container box" id="filter">
+	<div class="filter">
+		<p class="leader--double h-page">Filter</p>
+		<p class="leader h-paragraph">Show/Hide</p>
+	</div>
+	<div class="box--light">
+		<div class="filter--show">
+			<div class="filter--even">Projects</div><!--
+			--><div class="filter--even filter--switch">
+				<i class="switch switch--on"></i>
+			</div>
+		</div>
+		<div class="filter--show">
+			<div class="filter--even">Blogs</div><!--
+			--><div class="filter--even filter--switch">
+				<i class="switch switch--off"></i>
+			</div>
+		</div>
+	</div>
+	<div class="filter">
+		<p class="leader h-paragraph">Limit posts</p>
+	</div>
+	<div class="box--light">
+		<div class="filter--show">
+			<div class="filter--even">Blogs</div><!--
+			--><div class="filter--even filter--switch">
+				<i class="switch switch--off"></i>
+			</div>
+		</div>
+	</div>
+	<div class="filter">
+		<p class="leader h-paragraph">Keyword</p>
+	</div>
+	<div class="box--light">
+		<div class="filter--show">
+			<input class="filter__input">
+		</div>
+	</div>
+</div>
+
 Styleguide 6.2
 */
+
+.filter__input {
+	width: 100%;
+	border: 1px solid #D9D5CD;
+	border-radius: 3px;
+	line-height: rhythm(4);
+}
+
+.filter {
+	padding: 0 rhythm(12);
+	&--even {
+		display: inline-block;
+		width: 50%;
+	}
+	&--switch {
+		text-align: right;
+	}
+	&--show {
+		padding: rhythm(2) rhythm(12);
+		border-bottom: 1px solid  mix($color-highlight, $color-shadow, 80%);
+	}
+}
+
+
