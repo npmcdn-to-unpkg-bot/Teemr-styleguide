@@ -16,7 +16,7 @@ Styleguide 2.6
 .trailer {
 	margin-bottom: rhythm(3);
 	&--tiny {
-		margin-bottom: rhythm(1);
+		margin-bottom: rhythm();
 	}
 	&--half {
 		margin-bottom: rhythm(1.5);
@@ -47,7 +47,7 @@ Styleguide 2.6.1
 .trailer-inside {
 	padding-bottom: rhythm(3);
 	&--tiny {
-		padding-bottom: rhythm(1);
+		padding-bottom: rhythm();
 	}
 	&--half {
 		padding-bottom: rhythm(1.5);

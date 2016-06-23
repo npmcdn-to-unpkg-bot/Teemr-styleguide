@@ -1,6 +1,23 @@
 /*
 Button
 
+.btn - .
+
+markup:
+<button class="{$modifiers}" href="javascript:void(0);">{$modifiers}</button>
+
+Styleguide 3.5
+*/
+
+.btn {
+    padding: rhythm() rhythm(4);
+    background: none;
+    border: none;
+}
+
+/* 
+Pill
+
 .pill--assist - Brown, rounded pill
 .pill--social - Orange, rounded pill
 .pill--growth - Green, rounded pill
@@ -11,7 +28,7 @@ Button
 markup:
 <a class="pill {$modifiers}" href="javascript:void(0);">I am a {$modifiers}</a>
 
-Styleguide 3.5
+Styleguide 3.5.1
 */
 
 .pill {
@@ -69,12 +86,12 @@ Styleguide 3.5
 
 
 /*
-Btn with icon
+Pill with icon
 
 markup:
 <a class="pill pill-icon" href="javascript:void(0);">I am a pill</a>
 
-Styleguide 3.5.1
+Styleguide 3.5.1.1
 */
 
 .pill-icon {

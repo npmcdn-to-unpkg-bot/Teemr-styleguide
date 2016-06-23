@@ -16,7 +16,7 @@ Styleguide 2.5
 .leader {
 	margin-top: rhythm(3);
 	&--tiny {
-		margin-top: rhythm(1);
+		margin-top: rhythm();
 	}
 	&--half {
 		margin-top: rhythm(1.5);
@@ -47,7 +47,7 @@ Styleguide 2.5.1
 .leader-inside {
 	padding-top: rhythm(3);
 	&--tiny {
-		padding-top: rhythm(1);
+		padding-top: rhythm();
 	}
 	&--half {
 		padding-top: rhythm(1.5);

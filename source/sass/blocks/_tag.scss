@@ -20,7 +20,7 @@ Styleguide 4.3
 	border: 1px solid mix($color-highlight, $color-shadow, 90%);
 	border-top-left-radius: $border-radius;
 	border-bottom-left-radius: $border-radius;
-	padding: rhythm(1) rhythm(2);
+	padding: rhythm() rhythm(2);
 	&--close {
 		background: mix($color-highlight, $color-shadow, 90%);
 		border-radius: 0;

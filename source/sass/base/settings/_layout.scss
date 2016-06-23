@@ -14,7 +14,7 @@ $layouts: (
 		default: false,
 		columns: 14,
 		gutter-width: rhythm(3),
-		rhythm: rhythm(1),
+		rhythm: rhythm(),
 		debug-color: #FF1493, // DeepPink
 		grids: (
 			split: (
