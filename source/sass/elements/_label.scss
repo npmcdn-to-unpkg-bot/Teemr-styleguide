@@ -1,10 +1,12 @@
 /*
 Label
 
-markup:
-<a class="lbl" href="javascript:void(0)">Urban Photography</a>
+.lbl - Grey label
 
-Styleguide 4.4
+markup:
+<a class="{$modifiers}" href="javascript:void(0)">{$modifiers}</a>
+
+Styleguide 3.7
 */
 
 .lbl {

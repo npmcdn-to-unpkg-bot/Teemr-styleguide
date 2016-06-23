@@ -1,0 +1,64 @@
+/*
+Avatar
+
+.avatar.avatar--s - Small rounded avatar - 21 x 21 pixels
+.avatar - Medium rounded avatar - 63 x 63 pixels
+.avatar.avatar--l - Large rounded avatar - 112 x 112 pixels
+
+markup:
+<img class="{$modifiers}" src="https://images.unsplash.com/photo-1460804198264-011ca89eaa43?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=500&h=500&q=80" alt="" />
+
+Styleguide 3.12
+*/
+
+.avatar {
+    display: inline-block;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+    $size: 9;
+    height: rhythm($size);
+    width: rhythm($size);
+    border: 3px solid $white;
+    & + & {
+        margin-left: rhythm(-3);
+    }
+	&--s {
+        $size: 3;
+        height: rhythm($size);
+        width: rhythm($size);
+        border: 2px solid $white;
+        & + & {
+            margin-left: rhythm(-1.5);
+        }
+	}
+	&--l {
+        $size: 16;
+        height: rhythm($size);
+        width: rhythm($size);
+        border: 4px solid $white;
+        & + & {
+            margin-left: rhythm(-6);
+        }
+	}
+}
+
+/* 
+Avatar list
+
+.avatar.avatar--s - Small
+.avatar - Normal
+.avatar.avatar--l - Large
+
+markup:
+<img class="{$modifiers}" src="https://images.unsplash.com/photo-1462910211773-a9847b1f0e40?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=320&h=180&q=80" alt="" />
+<img class="{$modifiers}" src="https://images.unsplash.com/photo-1462910211773-a9847b1f0e40?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=320&h=180&q=80" alt="" />
+<img class="{$modifiers}" src="https://images.unsplash.com/photo-1462910211773-a9847b1f0e40?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=320&h=180&q=80" alt="" />
+
+sg-wrapper:
+<div style="background-color: lightgrey">
+    <sg-wrapper-content/>
+</div>    
+
+Styleguide 3.12.1
+*/
