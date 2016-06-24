@@ -1,18 +1,32 @@
 /*
 Button
 
-.btn - .
+.btn - Bland button with least amount of styling possible. Used as a base for button.
+.btn.btn--theme - .
+.btn.btn--l - .
+.btn.btn--theme.btn--l - .
 
 markup:
-<button class="{$modifiers}" href="javascript:void(0);">{$modifiers}</button>
+<button class="{$modifiers}">{$modifiers} button tag</button>
+<a class="{$modifiers}" href="javascript:void(0);">{$modifiers} a tag</a>
+<p class="{$modifiers}">{$modifiers} p tag</p>
+<input class="{$modifiers}" type="submit" value="{$modifiers} input tag" />
 
 Styleguide 3.5
 */
 
 .btn {
-    padding: rhythm() rhythm(4);
+    display: inline-block;
+    text-align: center;
+    padding: rhythm() rhythm(3);
     background: none;
     border: none;
+    &--l {
+        width: 100%;
+    }
+    &--theme {
+        border: 1px solid $color-theme;
+    }
 }
 
 /* 
