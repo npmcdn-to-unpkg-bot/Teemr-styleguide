@@ -11,6 +11,7 @@ markup:
 <a class="{$modifiers}" href="javascript:void(0);">{$modifiers} a tag</a>
 <p class="{$modifiers}">{$modifiers} p tag</p>
 <input class="{$modifiers}" type="submit" value="{$modifiers} input tag" />
+<span class="{$modifiers}">{$modifiers} span tag</span>
 
 Styleguide 3.5
 */
@@ -21,6 +22,7 @@ Styleguide 3.5
     padding: rhythm() rhythm(3);
     background: none;
     border: none;
+    margin: 0;
     &--l {
         width: 100%;
     }
@@ -119,8 +121,10 @@ Styleguide 3.5.1.1
 /*
 Switch
 
-.switch.switch--off - Turned off switch
-.switch.switch--on - Turned on switch
+<a style="color: #19988B;" href="http://hawkins.io/2013/07/ember-toggle-switch/">Switch source</a>
+
+.switch - Switch turned off
+.switch.switch--on - Switch turned on
 
 markup:
 <i class="{$modifiers}"></i>
@@ -128,17 +132,14 @@ markup:
 Styleguide 3.5.2
 */
 
-// http://hawkins.io/2013/07/ember-toggle-switch/
 .switch {
     display: inline-block;
-    vertical-align: middle;
     position: relative;
     width: 38px;
     height: 21px;
     background: mix($color-shadow, $color-highlight, 20%);
     cursor: pointer;
     &:after {
-        display: block;
         content: "";
         position: absolute;
         top: 2px;
@@ -150,26 +151,12 @@ Styleguide 3.5.2
     &--on {
         background: mix($teemr-green, $color-highlight, 40%);
         &:after {
-            left: auto;
+            left: auto; /* Forces icon to the right position */
             right: 2px;
             background: mix($teemr-green, $color-highlight, 70%);
         }
     }
-    .btn &,
-    .filter__item & {
-        top: to-unit(2px);
-        vertical-align: baseline;
-    }
 }
 .switch, .switch:after {
 	border-radius: 1em;
-}
-
-.checkbox--switch {
-    position: absolute;
-    left: -999em;
-    opacity: 0; 
-    &:checked + .switch {
-        @extend .switch--on;
-    }
 }
