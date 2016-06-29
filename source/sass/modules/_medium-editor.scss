@@ -1,0 +1,727 @@
+/*
+Medium editor
+
+Cleaning up required!
+
+Styleguide 5.99
+*/
+
+
+.data-medium-element sup {
+  vertical-align: super;
+}
+
+.data-medium-element sub {
+  vertical-align: sub;
+}
+
+.data-medium-element img {
+  max-width: 100%;
+}
+
+.medium-editor-hidden {
+  display: none;
+}
+
+.medium-toolbar-arrow-over:before, .medium-toolbar-arrow-under:after {
+  position: absolute;
+  left: 50%;
+  display: block;
+  margin-left: -8px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  content: "";
+}
+
+.medium-toolbar-arrow-under:after {
+  border-width: 8px 8px 0;
+}
+
+.medium-toolbar-arrow-over:before {
+  top: -8px;
+  border-width: 0 8px 8px;
+}
+
+.medium-editor-anchor-preview, .medium-editor-toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  visibility: hidden;
+  font-size: 16px;
+  font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+}
+
+.medium-editor-anchor-preview ul, .medium-editor-toolbar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.medium-editor-anchor-preview li, .medium-editor-toolbar li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.medium-editor-anchor-preview li button, .medium-editor-toolbar li button {
+  display: block;
+  margin: 0;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.33;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.medium-editor-anchor-preview li button:focus, .medium-editor-toolbar li button:focus {
+  outline: 0;
+}
+
+.medium-editor-anchor-preview li .medium-editor-action-underline, .medium-editor-toolbar li .medium-editor-action-underline {
+  text-decoration: underline;
+}
+
+.medium-editor-anchor-preview li .medium-editor-action-pre, .medium-editor-toolbar li .medium-editor-action-pre {
+  padding: 15px 0;
+  font-weight: 100;
+  font-size: 12px;
+  font-family: Menlo,monospace;
+}
+
+.medium-editor-anchor-preview {
+  max-width: 280px;
+  word-break: break-all;
+  word-wrap: break-word;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.medium-editor-anchor-preview a {
+  display: inline-block;
+  margin: 5px 5px 5px 10px;
+  color: #fff;
+}
+
+.medium-editor-anchor-preview-active, .medium-editor-toolbar-active {
+  visibility: visible;
+}
+
+.sticky-toolbar {
+  position: fixed;
+  top: 1px;
+}
+
+.medium-editor-toolbar-active.stalker-toolbar {
+  -webkit-animation: pop-upwards 160ms forwards linear;
+  animation: pop-upwards 160ms forwards linear;
+}
+
+.medium-editor-action-bold {
+  font-weight: bolder;
+}
+
+.medium-editor-action-italic {
+  font-style: italic;
+}
+
+.medium-editor-toolbar-form {
+  display: none;
+}
+
+.medium-editor-toolbar-form a, .medium-editor-toolbar-form input {
+  font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+}
+
+.medium-editor-toolbar-form .medium-editor-toolbar-input, .medium-editor-toolbar-form label {
+  margin: 0;
+  padding: 6px;
+  width: 316px;
+  border: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.medium-editor-toolbar-form .medium-editor-toolbar-input:focus, .medium-editor-toolbar-form label:focus {
+  outline: 0;
+  border: none;
+  box-shadow: none;
+  appearance: none;
+}
+
+.medium-editor-toolbar-form label {
+  display: block;
+}
+
+.medium-editor-toolbar-form a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+.medium-editor-dragover {
+  background: #ddd;
+}
+
+.medium-image-loading {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  display: inline-block;
+  border-radius: 100%;
+  -webkit-animation: medium-image-loading-animation 1s infinite ease-in-out;
+  animation: medium-image-loading-animation 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes medium-image-loading-animation {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes medium-image-loading-animation {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@mixin winging-it() {
+  // -----------------------------------
+  // wings
+  // -----------------------------------
+    margin-left: percentage(1/12);
+    margin-right: percentage(1/12);
+    @include gutters();
+
+  // -----------------------------------
+  // wings/breakpoints
+  // -----------------------------------
+  @include breakpoint($gtsmall) {
+    margin-left: percentage(1/16);
+    margin-right: percentage(1/16);
+    &--left {
+      margin-left: percentage(1/16);
+    }
+    &--right {
+      margin-right: percentage(1/16);
+    }
+  }
+  
+  @include breakpoint($gtmedium) {
+    margin-left: percentage(3/18);
+    margin-right: percentage(3/18);
+    .page--sidebar & {
+      margin-left: percentage(3/14);
+      margin-right: percentage(3/14);
+    }
+    .container--aside & {
+      margin-left: percentage(3/5);
+      margin-right: percentage(3/5);
+    }
+    .container--main & {
+      margin-left: percentage(3/13);
+      margin-right: percentage(3/13);
+      .page--sidebar & {
+        margin-left: percentage(3/9);
+        margin-right: percentage(3/9);
+      }
+    }
+    .container--even & {
+      margin-left: percentage(3/9);
+      margin-right: percentage(3/9);
+      .page--sidebar & {
+        margin-left: percentage(3/7);
+        margin-right: percentage(3/7);
+      }
+    }
+    &--left {
+      margin-left: percentage(3/18);
+    }
+    &--right {
+      margin-right: percentage(3/18);
+    }
+  }
+
+  @include breakpoint($gtlarge) {
+    margin-left: percentage(5/20);
+    margin-right: percentage(5/20);
+    .page--sidebar & {
+      margin-left: percentage(3/16);
+      margin-right: percentage(3/16);
+    }
+    &--left {
+      margin-left: percentage(5/20);
+    }
+    &--right {
+      margin-right: percentage(5/20);
+    }
+  }
+  .container--main &,
+  .container--even & {
+    margin-left: percentage(2/15);
+    margin-right: percentage(2/15);
+    .page--sidebar & {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .container--even & {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+.medium-editor {
+  position: relative;
+  min-height: 200px;
+}
+.postr-section-controls {
+  position: absolute;
+  right: 100%;
+}
+
+.container--medium-editor,
+.medium-editor h1,
+.medium-editor h2,
+.medium-editor h3,
+.medium-editor h4,
+.medium-editor p,
+.medium-editor ul,
+.medium-editor ol,
+.medium-editor blockquote,
+.medium-editor div,
+.medium-insert-images,
+.medium-editor-placeholder::after,
+.medium-insert-embeds,
+.medium-insert-embeds-placeholder::after,
+.medium-insert-buttons {
+  @include winging-it;
+  /* Reset nested elements */
+  h1, h2, h3, h4, p, ul, ol, blockquote, figure, &.medium-insert-embeds-active::after {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.medium-insert-embeds-active>p {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+.medium-insert-embeds-active::after {
+  @include padding((top: 1/2, bottom: 1/2));
+}
+
+.container--medium-editor {
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
+}
+
+// Add some top and bottom spacing
+.medium-editor h1,
+.medium-editor h2,
+.medium-editor h3,
+.medium-editor h4,
+.medium-editor p,
+.medium-editor div,
+.medium-editor blockquote {
+  &:first-child {
+    margin-top: rhythm(3);
+  }
+}
+.medium-editor figure {
+  &:first-child {
+    + h1,
+    + h2,
+    + h3,
+    + h4,
+    + p,
+    + ul,
+    + ol,
+    + div,
+    + blockquote {
+      margin-top: rhythm(3);
+    }
+  }
+}
+.medium-editor-placeholder::after {
+    margin-top: rhythm(3);
+}
+.medium-editor {
+  @include clearfix();
+}
+
+.medium-editor h1,
+.medium-editor h2,
+.medium-editor h3,
+.medium-editor h4,
+.medium-editor p,
+.medium-editor ul,
+.medium-editor ol,
+.medium-editor div,
+.medium-editor blockquote,
+.medium-insert-images-wide figcaption,
+.medium-editor-placeholder::after {
+  padding-top: rhythm(1/2);
+  padding-bottom: rhythm(1/2);
+}
+
+.medium-editor-placeholder {
+  position: relative;
+}
+
+.medium-editor-placeholder:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include gutters();
+  content: attr(data-placeholder) !important;
+  white-space: pre;
+}
+.medium-editor li {
+  display: list-item;
+}
+.medium-editor ul li {
+  list-style-type: disc;
+}
+.medium-editor ol li {
+  list-style-type: decimal;
+}
+.medium-insert-images {
+
+}
+.medium-insert-images-wide {
+
+}
+.medium-insert-images-wide figcaption {
+
+}
+.medium-insert-images-left {
+
+}
+.medium-insert-images-right {
+
+}
+.medium-insert-images-grid {
+
+}
+.medium-editor p br {
+  display: block;
+  border-top: 1px solid black;
+}
+
+/*Teemr*/
+
+.medium-editor {
+  outline: 0 solid transparent;
+  &:focus {
+    outline: 0 solid transparent;
+  }
+}
+
+.medium-editor span {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+.medium-editor {
+  /*
+   * Small viewport
+   */
+  b {
+    font-weight: 500;
+  }
+  i {
+    font-weight: 100;
+  }
+  p {
+  }
+  h1, h2 {
+    $_context: 24px;
+    margin-top: to-unit(2, 1em, $_context);
+    font-weight: 300;
+    font-size: to-unit($_context, 1em);
+    line-height: to-unit(5/3, 1em, $_context);
+    &+h2,
+    &+h3 {
+      margin-top: 0;
+    }
+  }
+
+  h3 {
+    $_context: 22px;
+    margin-top: to-unit(5/3, 1em, $_context);
+    font-weight: 100;
+    font-size: to-unit($_context, 1em);
+    line-height: to-unit(5/3, 1em, $_context);
+  }
+
+  blockquote {
+    $_context: 20px;
+    margin-top: to-unit(6/3, 1em, $_context);
+    margin-bottom: to-unit(6/3, 1em, $_context);
+    padding-left: $gutter-width * 2;
+    padding-right: $gutter-width * 2;
+    font-weight: 100;
+    font-size: to-unit($_context, 1em);
+    line-height: to-unit(4/3, 1em, $_context);
+    position: relative;
+    &::before {
+      text-indent: -1 * $gutter-width;
+      display: inline-block;
+      vertical-align: top;
+      position: absolute;
+      color: color-get(growth, l80);
+      font-size: 1em;
+      font-weight: 500;
+      line-height: 0;
+      content: "”";
+    }
+  }
+
+  figcaption {
+    @extend %type-meta-data;
+    color: color-get(highlight, d60);
+  }
+
+  .medium-insert-images {
+    margin-top: to-unit(1);
+    margin-bottom: to-unit(1);
+  }
+
+  .medium-insert-images-wide {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+    .medium-editor--short &,
+    figcaption {
+      @include winging-it();
+    }
+  }
+
+  figure.medium-insert-images-grid,
+  .medium-insert-images-grid figure {
+    margin-left: 0;
+    margin-right: 0;
+
+    @include column(1/2);
+
+    &:nth-child(even) {
+      padding-right: 0;
+    }
+    &:nth-child(odd) {
+      padding-left: 0;
+    }
+  }
+
+  //    &.medium-insert-images-left {
+  //        max-width: 33.33%;
+  //        float: left;
+  //        margin: 0 30px 20px 0;
+  //    }
+  //    &.medium-insert-images-right {
+  //        max-width: 33.33%;
+  //        float: right;
+  //        margin: 0 0 20px 30px;
+  //    }
+  //    &.medium-insert-images-grid {
+  //        display: flex;
+  //        flex-wrap: wrap;
+  //        align-items: flex-start;
+  //        justify-content: center;
+  //        margin: 0.5em -0.5em;
+  //        figure {
+  //            width: 33.33%;
+  //            display: inline-block;
+  //            img {
+  //                max-width: calc(100% - 1em);
+  //                margin: 0.5em;
+  //            }
+  //        }
+  //    }
+
+  .medium-insert-images-wide {
+
+  }
+  .medium-insert-buttons {
+    left: 0 !important;
+  }
+
+  /*
+   * Medium viewport - e.g. tablet portrait
+   */
+  @include breakpoint($gtsmall) {
+
+    p {
+      margin-top: to-unit(1/3, 1em);
+    }
+
+    $_font-size: 16px;
+    font-size: to-unit($_font-size, 1em);
+    line-height: to-unit(7/6, 1em, $_font-size);
+
+    h1, h2 {
+      $_context: 36px;
+      margin-top: to-unit(6/3, 1em, $_context);
+      font-size: to-unit($_context, 1em, $_font-size);
+      line-height: to-unit(6/3, 1em, $_context);
+    }
+
+    h3 {
+      $_context: 30px;
+      margin-top: to-unit(6/3, 1em, $_context);
+      bottom: to-unit(1/3, 1em, $_context);
+      font-size: to-unit($_context, 1em, $_font-size);
+      line-height: to-unit(6/3, 1em, $_context);
+    }
+
+    figcaption {
+      font-size: to-unit(14px, 1em, $_font-size);
+    }
+
+    .medium-insert-images {
+      margin-top: to-unit(2, 1em, $_font-size);
+      margin-bottom: to-unit(2, 1em, $_font-size);
+    }
+
+    .medium-insert-images-left,
+    .medium-insert-images-right {
+      width: 40%;
+      display: inline-block;
+    }
+
+    .medium-insert-images-left {
+      margin-left: 0;
+      margin-right: to-unit(2, 1em, $_font-size);
+      float: left;
+      text-align: right;
+    }
+
+    .medium-insert-images-right {
+      margin-right: 0;
+      margin-left: to-unit(2, 1em, $_font-size);
+      float: right;
+      text-align: left;
+    }
+  }
+
+  /*
+   * Normal viewport - e.g. tablet landscape & small desktop
+   */
+  @include breakpoint($gtmedium) {
+
+    $_font-size: 18px;
+    font-size: to-unit($_font-size, 1em);
+    line-height: to-unit(8/6, 1em, $_font-size);
+
+    p {
+      margin-top: to-unit(1/3, 1em);
+    }
+
+    h1, h2 {
+      $_context: 42px;
+      margin-top: to-unit(6/3, 1em, $_context);
+      font-size: to-unit($_context, 1em, $_font-size);
+      line-height: to-unit(8/3, 1em, $_context);
+    }
+
+    h3 {
+      $_context: 36px;
+      margin-top: to-unit(6/3, 1em, $_context);
+      bottom: to-unit(1/3, 1em, $_context);
+      font-size: to-unit($_context, 1em, $_font-size);
+      line-height: to-unit(7/3, 1em, $_context);
+    }
+
+    blockquote {
+      padding-left: $gutter-width * 4;
+      padding-right: $gutter-width * 4;
+      &::before {
+        text-indent: -2 * $gutter-width;
+      }
+    }
+
+    .medium-insert-images-left,
+    .medium-insert-images-right {
+      margin-left: to-unit(2, 1em, $_font-size);
+      margin-right: to-unit(2, 1em, $_font-size);
+      width: 40%;
+      display: inline-block;
+    }
+
+    .medium-insert-images-left {
+      float: left;
+    }
+
+    .medium-insert-images-right {
+      float: right;
+    }
+  }
+
+  /*
+   * Large viewport
+   */
+}
+
+.medium-editor.medium-editor--short {
+  h1, h2, h3, p, div, blockquote, ul, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  a {
+     color: inherit;
+  }
+}
+//.medium-editor.medium-editor--short {
+//  h1, h2 {
+//    font-weight: 400;
+//    $_context: 24px;
+//    line-height: to-unit(4/3, 1em, $_context);
+//    margin-bottom: to-unit(2/3, 1em, $_context);
+//  }
+//  h1, h2, p {
+//    margin-top: 0;
+//    padding-top: 0;
+//    padding-bottom: 0;
+//    a {
+//      color: inherit;
+//    }
+//  }
+//  .medium-insert-images {
+//    margin-top: rhythm(1/3);
+//    margin-bottom: rhythm(2/3);
+//  }
+//  blockquote {
+//    font-size: $default-font-size;
+//    line-height: to-unit($default-line-height, 1%);
+//  }
+//
+//  @include breakpoint($gtsmall) {
+//
+//    $_font-size: 18px;
+//    font-size: to-unit($_font-size, 1em, $_font-size);
+//
+//  }
+//}
+
+[id="^warning"] {
+  display: none !important;
+}
