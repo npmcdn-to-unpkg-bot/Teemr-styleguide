@@ -3,9 +3,26 @@ Medium editor
 
 Cleaning up required!
 
+markup:
+<div class="postr medium-editor" data-teemr-social-share="">
+    <h1>Weg met de urenmachine!</h1>
+    <p>Door ‘het nieuwe werken’, is de indeling van werktijd enorm veranderd. Als mensen thuis werken of de vrijheid hebben om hun werk af te krijgen op variabele tijden, verandert de productiviteit. Die neemt toe. Je hoort mensen steeds vaker zeggen, dat zij op de dagen dat ze thuis werken veel meer af krijgen dan wanneer zij steeds door collega’s op kantoor worden afgeleid voor een praatje of door de vele overleggen.</p>
+    <p>Op een kantoordag ben je al snel 8 tot 9 uur aanwezig, terwijl je op een thuiswerkdag bergen werk verzet in de helft van de tijd. Overleggen blijken ook veel effectiever als je via chat of skype besluiten neemt. Dat kan namelijk overal, ook als je even koffie drinkt op een terras. Je hoeft niet voor ieder wissewasje bij elkaar te komen met de hele goegemeente of slechts bij elkaar te komen, ‘omdat we iedere maandag nu eenmaal overleg hebben’.</p>
+    <h2>Slimmer werken, dus minder inkomen?</h2>
+    <p>Het geeft mensen ruimte om zonder schuldgevoel een middagje te gaan tennissen onder kantoortijd of iets anders te doen. Het zou mij niet verbazen als fulltime medewerkers die voorheen 40 uur per week aanwezig waren op kantoor, nu – door variabele tijd en plaats – met slechts 30 uur dezelfde hoeveelheid werk verzetten of zelfs meer. Zij krijgen nog steeds fulltime betaald en dat motiveert. Het zou toch ook heel vreemd zijn om mensen met een fulltime contract ineens over te zetten in een parttime contract, tegen een salaris naar rato daarvan, omdat zij slimmer zijn gaan werken? Minder inkomen door slimmer te werken, motiveert namelijk niet. Het werkt alleen maar inefficiëntie in de hand, zodat je inkomen onveranderd blijft.</p>
+    <h2>Marge op uren, best wel frauduleus</h2>
+    <p>Voor zelfstandig ondernemers is het nieuwe werken een minder voordelige ontwikkeling, want de meeste zzp-ers, zeker als zij bemiddeld zijn door een intermediair, krijgen per uur betaald. Je snijdt jezelf dus in de vingers als je snelheid maakt of super effectief met je tijd omgaat. Het creëert frauduleuze uren schrijven, die niet worden herkend als fraude. Want als je bijvoorbeeld 30 uur per week hebt afgesproken met de intermediair, sturen zij erop aan om de ‘aangenomen uren’ ook te schrijven. Anders missen zíj marge. En jij mist inkomen.</p>
+    <h2>Anders denken</h2>
+    <p>Het denken over uren moet veranderen. In het vaststellen van de opdracht, moeten intermediairs niet meer klakkeloos aannemen, dat hun klant verwacht dat er 40 uur per week voor een opdracht staat. Organisaties vergeten vaak, dat een externe direct productief is, omdat je juist een externe erbij haalt vanwege zijn expertise in het vakgebied. Mensen die minder uren beschikbaar hebben – door een andere opdracht ernaast of gewoonweg door hobby’s, kinderen of andere bezigheden -, krijgen niet de kans om deze opdracht te gaan doen. Oók niet als zij zeker weten dat zij in minder tijd hetzelfde of zelfs meer resultaat opleveren.</p>
+    <p>De klant is met regelmaat dus te duur uit en de bemiddelde zzp-er is dief van zijn eigen portemonnee als hij minder uren schrijft. Een ander nadeel is, als je afspraken maakt over tijd, het nog steeds moet passen in het budget van de organisatie. Als je het aantal uren voor een opdracht centraal stelt binnen een bepaald budget, is de kandidaat met een lager uurtarief dus altijd passender. Ofwel, de organisatie heeft een te zware opdracht gedefinieerd voor een onervaren, want goedkopere, kandidaat. Dat komt de kwaliteit ook niet ten goede.<br></p>
+    <h2>Een beetje minder</h2>
+    <p>Als zzp-er speelt je moreel kompas ook een rol. Zowel in werktijd als in financiële opbrengst. Natuurlijk hebben alle zzp-ers het excuus, dat zij hun eigen vakanties, pensioenen en verzekeringen moeten verdisconteren in hun tarief. En natuurlijk moet je in je eigen onderhoud voorzien in tijden dat je geen of minder opdrachten hebt. Maar genoeg is genoeg. En je bent ondernemer geworden omdat je vindt dat je kwaliteit levert en risico’s durft aan te gaan. Dan moet financiële zekerheid niet bovenaan je lijstje staan. Staat dat wel bovenaan, dan is rijk worden over de rug van onwetende klanten je drijfveer. Een beetje minder mag ook wel.</p>
+    <h2>Kwaliteit centraal</h2>
+    <p>Het wordt tijd, dat we niet meer kijken naar het aantal uren dat een opdrachtgever denkt dat jij nodig hebt, maar naar kwaliteit. Lever jij hetzelfde resultaat in minder tijd? Organiseer het dan zo met je opdrachtgever zoals hij ook met vaste medewerkers doet die tijd over houden. Spreek een vast maandtarief af waarin tijd geen rol speelt. Intermediairs kunnen dit systeem volgen, door voor de succesvolle bemiddeling een eenmalige fee te vragen of door hun marge te verdisconteren in het vaste maandtarief. Dat scheelt meteen een hoop inefficiënte tijd voor controle op al die urenregistratie. En het verzamelen van alle benodigde handtekeningen, die toch wel gezet worden, omdat niemand precies weet wat je deed terwijl je wel aanwezig was, maar niets opleverde! Een eerlijker systeem, dat de waarde voor je expertise reëler maakt en minder fraudegevoelig is. Dat wil iedere ondernemer toch?</p>
+</div>
+
 Styleguide 5.99
 */
-
 
 .data-medium-element sup {
   vertical-align: super;
@@ -289,6 +306,7 @@ Styleguide 5.99
 }
 
 .medium-editor {
+  line-height: 1.5;
   position: relative;
   min-height: 200px;
 }
@@ -458,7 +476,6 @@ Styleguide 5.99
     margin-top: to-unit(2, 1em, $_context);
     font-weight: 300;
     font-size: to-unit($_context, 1em);
-    line-height: to-unit(5/3, 1em, $_context);
     &+h2,
     &+h3 {
       margin-top: 0;
@@ -470,7 +487,6 @@ Styleguide 5.99
     margin-top: to-unit(5/3, 1em, $_context);
     font-weight: 100;
     font-size: to-unit($_context, 1em);
-    line-height: to-unit(5/3, 1em, $_context);
   }
 
   blockquote {
@@ -481,7 +497,6 @@ Styleguide 5.99
     padding-right: $gutter-width * 2;
     font-weight: 100;
     font-size: to-unit($_context, 1em);
-    line-height: to-unit(4/3, 1em, $_context);
     position: relative;
     &::before {
       text-indent: -1 * $gutter-width;
@@ -576,13 +591,11 @@ Styleguide 5.99
 
     $_font-size: 16px;
     font-size: to-unit($_font-size, 1em);
-    line-height: to-unit(7/6, 1em, $_font-size);
 
     h1, h2 {
       $_context: 36px;
       margin-top: to-unit(6/3, 1em, $_context);
       font-size: to-unit($_context, 1em, $_font-size);
-      line-height: to-unit(6/3, 1em, $_context);
     }
 
     h3 {
@@ -590,7 +603,6 @@ Styleguide 5.99
       margin-top: to-unit(6/3, 1em, $_context);
       bottom: to-unit(1/3, 1em, $_context);
       font-size: to-unit($_context, 1em, $_font-size);
-      line-height: to-unit(6/3, 1em, $_context);
     }
 
     figcaption {
@@ -630,7 +642,6 @@ Styleguide 5.99
 
     $_font-size: 18px;
     font-size: to-unit($_font-size, 1em);
-    line-height: to-unit(8/6, 1em, $_font-size);
 
     p {
       margin-top: to-unit(1/3, 1em);
@@ -640,7 +651,6 @@ Styleguide 5.99
       $_context: 42px;
       margin-top: to-unit(6/3, 1em, $_context);
       font-size: to-unit($_context, 1em, $_font-size);
-      line-height: to-unit(8/3, 1em, $_context);
     }
 
     h3 {
@@ -648,7 +658,6 @@ Styleguide 5.99
       margin-top: to-unit(6/3, 1em, $_context);
       bottom: to-unit(1/3, 1em, $_context);
       font-size: to-unit($_context, 1em, $_font-size);
-      line-height: to-unit(7/3, 1em, $_context);
     }
 
     blockquote {
@@ -675,10 +684,6 @@ Styleguide 5.99
       float: right;
     }
   }
-
-  /*
-   * Large viewport
-   */
 }
 
 .medium-editor.medium-editor--short {
@@ -690,37 +695,6 @@ Styleguide 5.99
      color: inherit;
   }
 }
-//.medium-editor.medium-editor--short {
-//  h1, h2 {
-//    font-weight: 400;
-//    $_context: 24px;
-//    line-height: to-unit(4/3, 1em, $_context);
-//    margin-bottom: to-unit(2/3, 1em, $_context);
-//  }
-//  h1, h2, p {
-//    margin-top: 0;
-//    padding-top: 0;
-//    padding-bottom: 0;
-//    a {
-//      color: inherit;
-//    }
-//  }
-//  .medium-insert-images {
-//    margin-top: rhythm(1/3);
-//    margin-bottom: rhythm(2/3);
-//  }
-//  blockquote {
-//    font-size: $default-font-size;
-//    line-height: to-unit($default-line-height, 1%);
-//  }
-//
-//  @include breakpoint($gtsmall) {
-//
-//    $_font-size: 18px;
-//    font-size: to-unit($_font-size, 1em, $_font-size);
-//
-//  }
-//}
 
 [id="^warning"] {
   display: none !important;
