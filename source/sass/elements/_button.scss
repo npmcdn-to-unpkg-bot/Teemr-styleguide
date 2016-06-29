@@ -2,9 +2,9 @@
 Button
 
 .btn - Bland button with least amount of styling possible. Used as a base for button.
-.btn.btn--theme - .
-.btn.btn--l - .
-.btn.btn--theme.btn--l - .
+.btn.btn--theme - Button with theme styling.
+.btn.btn--l - Full width, bland button.
+.btn.btn--theme.btn--l - Full width, theme styled button.
 
 markup:
 <button class="{$modifiers}">{$modifiers} button tag</button>
