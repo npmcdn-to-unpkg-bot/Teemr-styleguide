@@ -11,7 +11,7 @@ markup:
 		<span class="count">202</span>
 	</p>
 	<p class="txt-meta">Urban Photography</p>
-	<div class="catch-phrase catch-phrase-edit leader--half">
+	<div class="catch-phrase editable leader--half">
 		<p class="quote--edit">
 			Add a catchy tag phrase, your motto, a poem or your favourite food...
 		</p>
@@ -37,11 +37,6 @@ Styleguide 4.1
 .catch-phrase {
 	font-size: to-unit(28px);
 	line-height: rhythm(5);
-	&-edit {
-		color: mix($teemr-brown, $color-highlight, 60%);
-		border-top: 1px dashed mix($teemr-brown, $color-highlight, 60%);
-		border-bottom: 1px dashed mix($teemr-brown, $color-highlight, 60%);
-	}
 	.quote,
 	.quote--edit {
 		@include column-width(14/20);

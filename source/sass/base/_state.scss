@@ -2,9 +2,10 @@
 States
 
 .is-narrative - Hidden from screen, screen reader friendly
+.is-editable - Editable content
 
 markup:
-<span class="{$modifiers}">{$modifiers}</span>
+<p class="{$modifiers}">{$modifiers}</p>
 
 Styleguide 1.5
 */
@@ -12,4 +13,13 @@ Styleguide 1.5
 .is-narrative {
 	position: absolute;
 	left: -999em;
+}
+
+.is-editable {
+	width: 100%;
+	padding: rhythm();
+	border: 0;
+	border-top: 1px dashed mix($teemr-brown, $color-highlight, 60%);
+	border-bottom: 1px dashed mix($teemr-brown, $color-highlight, 60%);
+	color: mix($teemr-brown, $color-highlight, 60%);
 }
