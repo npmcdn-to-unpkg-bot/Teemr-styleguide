@@ -109,7 +109,8 @@ gulp.task('styleguide:generate', function() {
             '<link rel="stylesheet" type="text/css" href="/screen.css">',
             '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>',
             '<script src="/javascript/jquery.plugins.js"></script>',
-            '<script src="/javascript/jquery.modules.js"></script>'
+            '<script src="/javascript/jquery.modules.js"></script>',
+            '<script src="/javascript/fonts.js"></script>'
         ],
         beforeBody: '<div></div>',
         afterBody: '<div></div>'
