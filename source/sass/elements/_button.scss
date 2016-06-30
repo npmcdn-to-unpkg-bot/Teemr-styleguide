@@ -1,17 +1,17 @@
 /*
 Button
 
-.btn - Bland button with least amount of styling possible. Used as a base for button.
-.btn.btn--theme - Button with theme styling.
-.btn.btn--l - Full width, bland button.
-.btn.btn--theme.btn--l - Full width, theme styled button.
+.btn - Bland button with least amount of styling possible. Used as a base for button
+.btn.btn--theme - Button with theme styling
+.btn.btn--social - Button with social styling
+.btn.btn--trust - Button with trust styling
+.btn.btn--assist - Button with assist styling
+.btn.btn--stretch - Full width, bland button
+.btn.btn--theme.btn--stretch - Full width, theme styled button
 
 markup:
-<button class="{$modifiers}">{$modifiers} button tag</button>
-<a class="{$modifiers}" href="javascript:void(0);">{$modifiers} a tag</a>
-<p class="{$modifiers}">{$modifiers} p tag</p>
-<input class="{$modifiers}" type="submit" value="{$modifiers} input tag" />
-<span class="{$modifiers}">{$modifiers} span tag</span>
+<button class="{$modifiers}">{$modifiers} in button tag</button>
+<a class="{$modifiers}" href="javascript:void(0);">{$modifiers} in a tag</a>
 
 Styleguide 3.5
 */
@@ -23,26 +23,39 @@ Styleguide 3.5
     background: none;
     border: none;
     margin: 0;
-    &--l {
+    &--stretch {
         width: 100%;
     }
     &--theme {
         border: 1px solid $color-theme;
+        color: $color-theme;
+    }
+    &--social {
+        border: 1px solid $color-social;
+        color: $color-social;
+    }
+    &--trust {
+        border: 1px solid $color-trust;
+        color: $color-trust;
+    }
+    &--assist {
+        border: 1px solid $color-assist;
+        color: $color-assist;
     }
 }
 
 /* 
 Pill
 
-.pill--assist - Brown, rounded pill
-.pill--social - Orange, rounded pill
-.pill--growth - Green, rounded pill
-.pill--trust - Blue, rounded pill
+.pill - Basic pill. Green, growth color
+.pill.pill--assist - Brown, rounded pill
+.pill.pill--social - Orange, rounded pill
+.pill.pill--trust - Blue, rounded pill
 .pill.pill--l - Pill with double padding
 .pill.pill--stretch - Full width pill
 
 markup:
-<a class="pill {$modifiers}" href="javascript:void(0);">I am a {$modifiers}</a>
+<a class="{$modifiers}" href="javascript:void(0);">I am a {$modifiers}</a>
 
 Styleguide 3.5.1
 */
@@ -73,14 +86,6 @@ Styleguide 3.5.1
 	color: $color-social;
 	&:hover {
 		background: $color-social;
-	}	
-}
-
-.pill--growth {
-	border-color: $color-growth;
-	color: $color-growth;
-	&:hover {
-		background: $color-growth;
 	}	
 }
 
