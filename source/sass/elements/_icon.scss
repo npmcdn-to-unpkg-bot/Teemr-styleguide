@@ -1,60 +1,32 @@
-/*
-Icon
-
-Placeholder icon used..!
-
-.icn.icn--s - 16 x 16 pixels icon
-.icn - 21 x 21 pixels icon
-.icn.icn--l - 25 x 25 pixels icon
-
-markup:
-<img class="{$modifiers}" src="https://app.getfloop.com/img/dashboard/app/placeholder-app-icon.png" />
-
-Styleguide 3.9
-*/
-
-.icn {
-	display: inline-block;
-	vertical-align: middle;
-	height: 21px;
-	width: 21px;
-	&--l {
-		height: 25px;
-		width: 25px;
-	}
-	&--s {
-		height: 16px;
-		width: 16px;
-	}
+.icon {
 	&-label {
 		display: inline-block; /* Aligning label next to icon */
 		vertical-align: middle;
 		&--light {
-			color: $white; /* Light text on dark background to increase readability */
+			color: $white; 
 		}
 	}
 }
 
-.icn + .icn-label {
+.icon + .icon-label {
 	padding-left: rhythm();
 }
-.icn-label + .icn {
+.icon-label + .icon {
 	margin-left: rhythm();
 }
 
-.icn--s + .icn-label {
+.icon--s + .icon-label {
 	font-size: to-unit(12px);
 }
 
-.icn--l + .icn-label {
+.icon--l + .icon-label {
 	font-size: to-unit(16px);
 }
-
 
 /*
 Icon
 
-Placeholder icon used..!
+Door middel van het gebruik van transform: scale(2.0) op svg tag.
 
 #icon-comment - Comment cloud
 #icon-heart - Heart (like)
@@ -68,7 +40,7 @@ Placeholder icon used..!
 markup:
 <button class="reset icon">
 	<svg class="icon__shape"><use xlink:href="{$modifiers}"></use></svg>
-	<span class="icon__label txt-meta">{$modifiers}</span>
+	<span class="icon__label txt--meta">{$modifiers}</span>
 </button>
 
 sg-wrapper:
@@ -116,7 +88,7 @@ sg-wrapper:
   </svg>
 <sg-wrapper-content/>
 
-Styleguide 3.9.11
+Styleguide 3.9
 */
 
 .icon {
@@ -137,6 +109,14 @@ Styleguide 3.9.11
 		&.is-disabled {
 			fill: #B29C7D; // Replace with proper variable
 		}
+    &--s {
+      width: 16px;
+      height: 16px;
+    }
+    &--l {
+      width: 25px;
+      height: 25px;
+    }
 	}
 	&__label {
 		line-height: 21px;
@@ -146,8 +126,6 @@ Styleguide 3.9.11
 /*
 Icon States
 
-Placeholder icon used..!
-
 .icon - Regular, inactive state
 .icon.is-disabled - Disabled state
 .icon.is-active - Active state
@@ -155,7 +133,7 @@ Placeholder icon used..!
 markup:
 <button class="reset {$modifiers}">
 	<svg class="icon__shape"><use xlink:href="#icon-star"></use></svg>
-	<span class="icon__label txt-meta">Pin</span>
+	<span class="icon__label txt--meta">Pin</span>
 </button>
 
 sg-wrapper:
@@ -203,11 +181,5 @@ sg-wrapper:
   </svg>
 <sg-wrapper-content/>
 
-Styleguide 3.9.12
+Styleguide 3.9.1
 */
-
-// Move to reset!!!
-button.reset {
-	border: 0;
-	background: none;
-}
