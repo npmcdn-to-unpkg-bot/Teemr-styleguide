@@ -1,62 +1,60 @@
 /*
 Author Meta
 
-.media-object: for normal avatars - 63 x 63 pixels
+.media-object - for normal avatars 63 x 63 pixels
 
 markup:
-<div class="media-object">
-  <sg-insert>3.12.1-2</sg-insert>
-  <p class="author-meta">Firstname Lastname <br />
-  <span class="author-text"> This is my job</span></p>
+<div class="{$modifiers}">
+    <sg-insert>3.12.1-2</sg-insert>
+    <p class="author-meta">Firstname Lastname <br />
+    <span class="author-text"> This is my job</span></p>
 </div>
-<div class="media-object">
-   <sg-insert>3.12-2</sg-insert>
-  <p class="author-meta">Firstname Lastname <br />
-  <span class="author-text"> This is my job</span></p>
+<div class="{$modifiers}">
+    <sg-insert>3.12-2</sg-insert>
+    <p class="author-meta">Firstname Lastname <br />
+    <span class="author-text"> This is my job</span></p>
 </div>
-
 
 Styleguide 4.12
 */
 .media-object {
-  width:100%;
-  display:table;
+    display: inline-block;
+    .author-meta {
+        vertical-align: middle;
+    }
+    .avatar {
+        margin-right: 5px;
+        float: left;
+    }
 }
-
-.avatar .author-meta {
-  display:table-cell;
-  vertical-align: middle;
-}
-
-.avatar{
-  margin-right: 5px;
-  float:left;
-}
-
 
 /*
-Author Meta -- small
+Author Meta small
 
-.media-object--s  : for small avatars     - 21 x 21 pixels <br />
+.media-object.media-object--s - for small avatars  21 x 21 pixels
 
 markup:
-<div class="media-object--s">
-  <sg-insert>3.12.1-1</sg-insert>
-  <p class="author-meta--s">Firstname Lastname</p>
+<div class="{$modifiers}">
+    <sg-insert>3.12.1-1</sg-insert>
+    <p>Firstname Lastname</p>
 </div>
-<div class="media-object--s">
-   <sg-insert>3.12-1</sg-insert>
-  <p class="author-meta--s">Firstname Lastname </p>
+<div class="{$modifiers}">
+    <sg-insert>3.12-1</sg-insert>
+    <p>Firstname Lastname </p>
 </div>
-<div class="media-object--s">
-   <sg-insert>3.12.1-1</sg-insert>
-  <p class="author-meta--s">and 2035 others</p>
+<div class="{$modifiers}">
+    <sg-insert>3.12.1-1</sg-insert>
+    <p>and 2035 others</p>
 </div>
 
 Styleguide 4.12.1
 */
 
+.media-object--s,
+.media-object {
+    width: 100%;
+}
 .media-object--s {
-  width:100%;
-  font-size: 12px;
+    display: inline;
+    font-size: $font-size--xs;
 }

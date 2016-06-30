@@ -25,8 +25,7 @@ Styleguide 3.1
 			color: mix($teemr-green, $color-highlight, 80%);
 		}
 	}
-}
-
-.anchor--main {
-	text-decoration: underline;
+	&--main {
+		text-decoration: underline;
+	}
 }

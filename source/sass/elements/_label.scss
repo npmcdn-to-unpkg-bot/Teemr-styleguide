@@ -4,15 +4,30 @@ Label
 .lbl - Grey label
 
 markup:
-<a class="{$modifiers}" href="javascript:void(0)">{$modifiers}</a>
+<a class="{$modifiers}" href="javascript:void(0)">Urban Photography</a>
+<a class="{$modifiers}" href="javascript:void(0)">City Architecture</a>
+<a class="{$modifiers}" href="javascript:void(0)">Skyscrapers</a>
 
 Styleguide 3.7
 */
 
 .lbl {
-	color: $black;
-	background: mix($color-highlight, $color-shadow, 90%);
+	@extend .box; /* Gives a light grey background */
+	display: inline-block;
+	padding: 0 rhythm(2);
+	margin: 0 3px;
 	border-radius: rhythm(3);
-	padding: 0 rhythm();
+	color: $black;
 	font-size: $font-size--xs;
+	&:first-child {
+		margin-left: 0;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+/* Remove border from button tag */
+button.lbl {
+	border: 0;
 }
