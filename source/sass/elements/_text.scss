@@ -62,4 +62,5 @@ Styleguide 3.3
 
 .txt--meta {
 	color: mix($teemr-brown, $color-highlight, 60%);
+	@include font-family($roboto-regular);
 }
