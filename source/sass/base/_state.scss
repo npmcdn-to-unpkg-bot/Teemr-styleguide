@@ -1,4 +1,4 @@
-/* 
+/*
 States
 
 .is-narrative - Hidden from screen, screen reader friendly
@@ -9,7 +9,8 @@ markup:
 Styleguide 1.5
 */
 
-.is-narrative {
+.is-narrative,
+.is-hidden {
 	position: absolute;
 	left: -999em;
 }
