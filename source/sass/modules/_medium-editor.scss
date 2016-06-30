@@ -224,7 +224,6 @@ Styleguide 5.99
     margin-left: percentage(1/12);
     margin-right: percentage(1/12);
     @include gutters();
-
   // -----------------------------------
   // wings/breakpoints
   // -----------------------------------
@@ -238,7 +237,6 @@ Styleguide 5.99
       margin-right: percentage(1/16);
     }
   }
-  
   @include breakpoint($gtmedium) {
     margin-left: percentage(3/18);
     margin-right: percentage(3/18);
@@ -422,24 +420,6 @@ Styleguide 5.99
 .medium-editor ol li {
   list-style-type: decimal;
 }
-.medium-insert-images {
-
-}
-.medium-insert-images-wide {
-
-}
-.medium-insert-images-wide figcaption {
-
-}
-.medium-insert-images-left {
-
-}
-.medium-insert-images-right {
-
-}
-.medium-insert-images-grid {
-
-}
 .medium-editor p br {
   display: block;
   border-top: 1px solid black;
@@ -481,14 +461,12 @@ Styleguide 5.99
       margin-top: 0;
     }
   }
-
   h3 {
     $_context: 22px;
     margin-top: to-unit(5/3, 1em, $_context);
     font-weight: 100;
     font-size: to-unit($_context, 1em);
   }
-
   blockquote {
     $_context: 20px;
     margin-top: to-unit(6/3, 1em, $_context);
@@ -510,17 +488,14 @@ Styleguide 5.99
       content: "”";
     }
   }
-
   figcaption {
     @extend %type-meta-data;
     color: color-get(highlight, d60);
   }
-
   .medium-insert-images {
     margin-top: to-unit(1);
     margin-bottom: to-unit(1);
   }
-
   .medium-insert-images-wide {
       margin-left: 0;
       margin-right: 0;
@@ -531,7 +506,6 @@ Styleguide 5.99
       @include winging-it();
     }
   }
-
   figure.medium-insert-images-grid,
   .medium-insert-images-grid figure {
     margin-left: 0;
@@ -546,36 +520,6 @@ Styleguide 5.99
       padding-left: 0;
     }
   }
-
-  //    &.medium-insert-images-left {
-  //        max-width: 33.33%;
-  //        float: left;
-  //        margin: 0 30px 20px 0;
-  //    }
-  //    &.medium-insert-images-right {
-  //        max-width: 33.33%;
-  //        float: right;
-  //        margin: 0 0 20px 30px;
-  //    }
-  //    &.medium-insert-images-grid {
-  //        display: flex;
-  //        flex-wrap: wrap;
-  //        align-items: flex-start;
-  //        justify-content: center;
-  //        margin: 0.5em -0.5em;
-  //        figure {
-  //            width: 33.33%;
-  //            display: inline-block;
-  //            img {
-  //                max-width: calc(100% - 1em);
-  //                margin: 0.5em;
-  //            }
-  //        }
-  //    }
-
-  .medium-insert-images-wide {
-
-  }
   .medium-insert-buttons {
     left: 0 !important;
   }
@@ -584,49 +528,40 @@ Styleguide 5.99
    * Medium viewport - e.g. tablet portrait
    */
   @include breakpoint($gtsmall) {
-
     p {
       margin-top: to-unit(1/3, 1em);
     }
-
     $_font-size: 16px;
     font-size: to-unit($_font-size, 1em);
-
     h1, h2 {
       $_context: 36px;
       margin-top: to-unit(6/3, 1em, $_context);
       font-size: to-unit($_context, 1em, $_font-size);
     }
-
     h3 {
       $_context: 30px;
       margin-top: to-unit(6/3, 1em, $_context);
       bottom: to-unit(1/3, 1em, $_context);
       font-size: to-unit($_context, 1em, $_font-size);
     }
-
     figcaption {
       font-size: to-unit(14px, 1em, $_font-size);
     }
-
     .medium-insert-images {
       margin-top: to-unit(2, 1em, $_font-size);
       margin-bottom: to-unit(2, 1em, $_font-size);
     }
-
     .medium-insert-images-left,
     .medium-insert-images-right {
       width: 40%;
       display: inline-block;
     }
-
     .medium-insert-images-left {
       margin-left: 0;
       margin-right: to-unit(2, 1em, $_font-size);
       float: left;
       text-align: right;
     }
-
     .medium-insert-images-right {
       margin-right: 0;
       margin-left: to-unit(2, 1em, $_font-size);
@@ -639,27 +574,22 @@ Styleguide 5.99
    * Normal viewport - e.g. tablet landscape & small desktop
    */
   @include breakpoint($gtmedium) {
-
     $_font-size: 18px;
     font-size: to-unit($_font-size, 1em);
-
     p {
       margin-top: to-unit(1/3, 1em);
     }
-
     h1, h2 {
       $_context: 42px;
       margin-top: to-unit(6/3, 1em, $_context);
       font-size: to-unit($_context, 1em, $_font-size);
     }
-
     h3 {
       $_context: 36px;
       margin-top: to-unit(6/3, 1em, $_context);
       bottom: to-unit(1/3, 1em, $_context);
       font-size: to-unit($_context, 1em, $_font-size);
     }
-
     blockquote {
       padding-left: $gutter-width * 4;
       padding-right: $gutter-width * 4;
@@ -667,7 +597,6 @@ Styleguide 5.99
         text-indent: -2 * $gutter-width;
       }
     }
-
     .medium-insert-images-left,
     .medium-insert-images-right {
       margin-left: to-unit(2, 1em, $_font-size);
@@ -675,11 +604,9 @@ Styleguide 5.99
       width: 40%;
       display: inline-block;
     }
-
     .medium-insert-images-left {
       float: left;
     }
-
     .medium-insert-images-right {
       float: right;
     }
