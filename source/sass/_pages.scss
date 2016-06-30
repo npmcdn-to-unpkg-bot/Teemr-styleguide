@@ -13,8 +13,47 @@ Styleguide 6.0
 /* 6.3 Profile */
 @import "pages/profile";
 
-/* 6.4 Blogs */
-@import "pages/blogs";
+/*
+Blogs
 
-/* 6.5 Dashboard */
+Styleguide 6.4
+*/
+
+/* 6.4.1 Column */
+@import "pages/blog/column";
+
+/* 6.4.2 Case */
+@import "pages/blog/case";
+
+/* 6.6 Dashboard */
 @import "pages/dashboard";
+
+/*
+Account
+
+Styleguide 6.7
+*/
+
+/* 6.7.1 Login */
+@import "pages/account/registration";
+
+/* 6.7.2 Login */
+@import "pages/account/login";
+
+/* 6.7.3 Password reset */
+@import "pages/account/password-reset";
+
+/*
+Messages
+
+Styleguide 6.9
+*/
+
+/* 6.9.1 Messages - Inbox */
+@import "pages/messages/inbox";
+
+/* 6.9.2 Messages - Compose */
+@import "pages/messages/compose";
+
+/* 6.9.3 Messages - Reply */
+@import "pages/messages/reply";

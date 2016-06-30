@@ -1,7 +1,7 @@
 
 // Imports
 
-var gulp        = require('gulp'); 
+var gulp        = require('gulp');
 var sass        = require('gulp-sass');
 var styleguide  = require('sc5-styleguide');
 
@@ -105,6 +105,7 @@ gulp.task('styleguide:generate', function() {
         nextSection: true,
         disableHtml5Mode: true,
         extraHead: [
+            '<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>',
             '<link rel="stylesheet" type="text/css" href="/screen.css">',
             '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>',
             '<script src="/javascript/jquery.plugins.js"></script>',

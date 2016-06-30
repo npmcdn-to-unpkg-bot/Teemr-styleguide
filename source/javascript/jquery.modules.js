@@ -1,5 +1,5 @@
-jQuery("document").ready(function($){   
+jQuery("document").ready(function($){
 
-    $("[data-toggle]").toggle();  
+    $("[data-toggle]").toggle();
 
 });
