@@ -10,7 +10,7 @@ Text
 .txt--xxl - Extra, extra large text
 .txt--xxxl - Extra, extra, extra large text
 .txt--whisper - Whisper text
-.txt-meta - Meta text
+.txt--meta - Meta text
 
 markup:
 <div class="{$modifiers}">{$modifiers}</div>
@@ -60,6 +60,6 @@ Styleguide 3.3
 	font-size: $font-size--xs;
 }
 
-.txt-meta {
+.txt--meta {
 	color: mix($teemr-brown, $color-highlight, 60%);
 }

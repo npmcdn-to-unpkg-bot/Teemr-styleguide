@@ -14,8 +14,8 @@ markup:
 			</svg>
 		</a>
 	</div>
-	<div class="search search--masthead">
-		<input placeholder="Find people, teams, projects and posts" />
+	<div class="search--masthead">
+		<input class="search" placeholder="Find people, teams, projects and posts" />
 	</div>
 	<div class="masthead--user">
         <a href="javascript:void(0);">
@@ -30,18 +30,6 @@ markup:
 Styleguide 5.1
 */
 
-/*
-Masthead
-
-.masthead - .
-
-markup:
-<div class="{$modifiers}">{$modifiers}</div>
-
-Styleguide 5.1.1
-*/
-
-
 #teemr-svg {
     fill: $teemr-green;
 }
@@ -49,24 +37,21 @@ Styleguide 5.1.1
 .masthead {
     height: rhythm(7);
     border-bottom: 1px solid $teemr-green;
-    align-items: center;
+    align-items: center; /* Vertically aligns all items with flexbox */
     &--logo {
-    	flex: 1;
-    	flex-grow: 0;
     	padding-right: rhythm(2);
     	border-right: 1px solid $teemr-green;
     	height: 100%;
     	padding-top: rhythm(1.5); /* vertical positioning */
     }
     &--brand {
-        height: rhythm(2/3);
-        width: 60px;
-        @include breakpoint($gtsmall) {
-            height: rhythm(3);
-            width: 85px;
-        }
         svg {
-            height: rhythm(3);
+            height: rhythm(2);
+        }
+        @include breakpoint($gtsmall) {
+            svg {
+                height: rhythm(3)
+            }
         }
     }
     &--user {
@@ -76,11 +61,10 @@ Styleguide 5.1.1
     }
 }
 
-
 /*
 Masthead white
 
-To be used on homepage.
+To be used on homepage. (Added grey wrapper for visibility)
 
 markup:
 <div class="masthead masthead--light wings container--flex">
@@ -94,17 +78,19 @@ markup:
         </a>
     </div>
     <div class="masthead--user">
-        <a href="javascript:void(0);">
-            Login
-        </a>
+        <a href="javascript:void(0);">Login</a>
     </div>
 </div>
 
-Styleguide 5.1.2
+sg-wrapper:
+<div style="background: grey;">
+    <sg-wrapper-content/>
+</div>
+
+Styleguide 5.1.1
 */
 
 .masthead--light {
-    min-width: 100%;
     border: 0;
     #teemr-svg {
         fill: $white;
@@ -114,6 +100,7 @@ Styleguide 5.1.2
         padding-top: rhythm(2);
     }
     .masthead--user {
+        display: inline-block;
         flex-grow: 1;
         text-align: right;
         a {
@@ -124,12 +111,7 @@ Styleguide 5.1.2
         svg {
             height: rhythm(2);
         }
-    }
-}
-
-@include breakpoint($gtlarge) {
-    .masthead--light {
-        .masthead--brand {
+        @include breakpoint($gtlarge) {
             svg {
                 height: rhythm(3);
             }
