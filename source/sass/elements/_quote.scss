@@ -1,0 +1,23 @@
+/*
+Quote
+
+.quote - Adds quotation marks around content
+.h-title.quote - .
+.h-paragraph.quote - .
+.heading.quote - .
+.catch-phrase.quote - ,
+
+markup:
+<p class="{$modifiers}">{$modifiers}</p>
+
+Styleguide 3.11
+*/
+
+.quote {
+	&:before {
+		content: "“";
+	}
+	&:after {
+		content: "”";
+	}
+}
