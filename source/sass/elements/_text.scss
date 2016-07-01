@@ -56,11 +56,11 @@ Styleguide 3.3
 
 
 .txt--whisper {
-	color: mix($teemr-brown, $color-highlight, 30%);
+	color: $color-structure--02;
 	font-size: $font-size--xs;
 }
 
 .txt--meta {
-	color: $color-structure--02;
+	color: $color-structure--03;
 	@include font-family($roboto-regular);
 }
