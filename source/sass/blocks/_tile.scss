@@ -7,7 +7,7 @@ markup:
 <div class="tile tile--edit">
 	<img class="avatar avatar--l" src="https://images.unsplash.com/photo-1466065478348-0b967011f8e0?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1291&h=868&q=80" />
 	<p class="h-paragraph tile--name">Pete McCormick</p>
-	<sg-insert>3.9.3.3-19</sg-insert>
+	<sg-insert>3.9.3.3.1-19</sg-insert>
 	<p class="txt--meta">Urban Photography</p>
 	<textarea class="catch-phrase is-editable leader--half" placeholder="Add a catchy tag phrase, your motto, a poem or your favourite food..."></textarea>
 </div>
@@ -47,10 +47,18 @@ What it looks like when someone else takes a look at your personal profile
 markup:
 <div class="tile">
 	<img class="avatar avatar--l" src="https://images.unsplash.com/photo-1466065478348-0b967011f8e0?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1291&h=868&q=80" />
-	<p class="h-paragraph">Pete McCormick</p>
+	<p class="h-paragraph tile--name">Pete McCormick</p>
+	<sg-insert>3.9.3.3.2-7</sg-insert>
+	<sg-insert>3.9.3.4.2-1</sg-insert>
 	<p class="txt--meta">Urban Photography</p>
 	<p class="quote catch-phrase leader--half">Photography is the only language that can be understood anywhere in the world.</p>
 </div>
 
 Styleguide 4.1.1
 */
+
+.icon + .icon {
+    margin-left: rhythm();
+}
+
+
