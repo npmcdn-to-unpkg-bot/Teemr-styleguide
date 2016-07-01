@@ -1,65 +1,19 @@
 /*
 Button
 
-.btn - Bland button with least amount of styling possible. Used as a base for button
-.btn.btn--theme - Button with theme styling
-.btn.btn--social - Button with social styling
-.btn.btn--trust - Button with trust styling
-.btn.btn--structure - Button with assist styling
-.btn.btn--stretch - Full width, bland button
-.btn.btn--theme.btn--stretch - Full width, theme styled button
-
-markup:
-<button class="{$modifiers}">{$modifiers} in button tag</button>
-<a class="{$modifiers}" href="javascript:void(0);">{$modifiers} in a tag</a>
-
-Styleguide 3.5
-*/
-
-.btn {
-    display: inline-block;
-    text-align: center;
-    padding: rhythm() rhythm(3);
-    background: none;
-    border: none;
-    margin: 0;
-    &--stretch {
-        width: 100%;
-    }
-    &--theme {
-        border: 1px solid $color-structure--03;
-        color: $color-structure--03;
-    }
-    &--social {
-        border: 1px solid $color-social;
-        color: $color-social;
-    }
-    &--trust {
-        border: 1px solid $color-trust;
-        color: $color-trust;
-    }
-    &--structure {
-        border: 1px solid $color-structure;
-        color: $color-structure;
-    }
-}
-
-/*
-Pill
-
-.pill - Basic pill. Green, growth color
-.pill.pill--social - Orange, rounded pill
-.pill.pill--trust - Blue, rounded pill
-.pill.pill--l - Pill with double padding
-.pill.pill--stretch - Full width pill
+.button - Basic button. Green, growth color
+.button.button--social - Orange, rounded button
+.button.button--trust - Blue, rounded button
+.button.button--l - button with double padding
+.button.button--stretch - Full width button
 
 markup:
 <a class="{$modifiers}" href="javascript:void(0);">I am a {$modifiers}</a>
 
-Styleguide 3.5.1
+Styleguide 3.5
 */
 
-.pill {
+.button {
 	@extend %roboto-light;
 	display: inline-block;
 	padding: 0 rhythm(4);
@@ -80,7 +34,7 @@ Styleguide 3.5.1
     }
 }
 
-.pill--social {
+.button--social {
 	border-color: $color-social;
 	color: $color-social;
 	&:hover {
@@ -88,7 +42,7 @@ Styleguide 3.5.1
 	}
 }
 
-.pill--trust {
+.button--trust {
 	border-color: $color-trust;
 	color: $color-trust;
 	&:hover {
@@ -98,15 +52,15 @@ Styleguide 3.5.1
 
 
 /*
-Pill with icon
+button with icon
 
 markup:
-<a class="pill pill-icon" href="javascript:void(0);">I am a pill</a>
+<a class="button button-icon" href="javascript:void(0);">I am a button</a>
 
-Styleguide 3.5.1.1
+Styleguide 3.5.1
 */
 
-.pill-icon {
+.button-icon {
     &:before {
         content: "\fd43"; /* Placeholder icon */
         margin-left: rhythm(-1);
@@ -133,7 +87,7 @@ Styleguide 3.5.2
     position: relative;
     width: 38px;
     height: 21px;
-    background: mix($color-shadow, $color-highlight, 20%);
+    background: $color-structure--02;
     cursor: pointer;
     &:after {
         content: "";
@@ -142,14 +96,14 @@ Styleguide 3.5.2
         left: 2px;
         width: 17px;
         height: 17px;
-        background: mix($color-shadow, $color-highlight, 10%);
+        background: $color-structure;
     }
     &--on {
-        background: mix($teemr-green, $color-highlight, 40%);
+        background: $color-growth--02;
         &:after {
             left: auto; /* Forcing icon into the correct position */
             right: 2px;
-            background: mix($teemr-green, $color-highlight, 70%);
+            background: $color-growth;
         }
     }
 }
