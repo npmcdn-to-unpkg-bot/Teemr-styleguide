@@ -38,26 +38,15 @@ Styleguide 5.1
 .masthead {
     height: rhythm(7);
     border-bottom: 1px solid $color-growth--01;
-    align-items: center; /* Vertically aligns all items with flexbox */
+    /* Vertically aligns all items with flexbox */
+    align-items: center;
     &--logo {
     	padding-right: rhythm(2);
-    	border-right: 1px solid $color-growth--01;
-    	height: 100%;
-    	padding-top: rhythm(1.5); /* vertical positioning */
-    }
-    &--brand {
-        svg {
-            height: rhythm(2);
-        }
-        @include breakpoint($gtsmall) {
-            svg {
-                height: rhythm(3)
-            }
-        }
     }
     &--search {
         flex: 1;
         padding-left: rhythm(2);
+        border-left: 1px solid $color-growth--01;
         display: flex;
         height: 100%;
         align-items: center;
@@ -74,6 +63,17 @@ Styleguide 5.1
     	flex-grow: 0;
         height: 100%;
         align-items: center;
+    }
+}
+
+.masthead--brand {
+    svg {
+        height: rhythm(2);
+    }
+    @include breakpoint($gtsmall) {
+        svg {
+            height: rhythm(3)
+        }
     }
 }
 
@@ -113,7 +113,6 @@ Styleguide 5.1.1
     }
     .masthead--logo {
         border: 0;
-        padding-top: rhythm(2);
     }
     .masthead--user {
         height: auto;
