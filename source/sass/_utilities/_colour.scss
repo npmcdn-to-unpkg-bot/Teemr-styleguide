@@ -1,0 +1,3 @@
+@function shade($color: $color-theme, $percentage: 20%, $mix-with: $color-highlight) {
+    @return mix($mix-with, $color, $percentage);
+}
