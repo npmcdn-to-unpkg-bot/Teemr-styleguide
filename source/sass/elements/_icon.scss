@@ -123,3 +123,67 @@ markup:
 
 Styleguide 3.9.3.1
 */
+
+/*
+Heart
+
+.icon - .
+.icon.icon--s - .
+.icon.icon--l - .
+.icon.icon--reverse - .
+.icon.icon--s.icon--reverse - .
+.icon.icon--l.icon--reverse - .
+.txt--meta.icon - .
+.txt--meta.icon.icon--s - .
+.txt--meta.icon.icon--l - .
+.txt--meta.icon.icon--reverse - .
+.txt--meta.icon.icon--s.icon--reverse - .
+.txt--meta.icon.icon--l.icon--reverse - .
+
+
+markup:
+<span class="{$modifiers}">
+	<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
+	<span class="icon__label">104</span>
+</span>
+
+Styleguide 3.9.3.2
+*/
+
+/*
+star
+
+.icon - 1
+.icon.icon--s - 2
+.icon.icon--l - 3
+.icon.icon--reverse - 4
+.icon.icon--s.icon--reverse - 5
+.icon.icon--l.icon--reverse - 6
+.txt--meta.icon - 7
+.txt--meta.icon.icon--s - 8
+.txt--meta.icon.icon--l - 9
+.txt--meta.icon.icon--reverse - 10
+.txt--meta.icon.icon--s.icon--reverse - 11
+.txt--meta.icon.icon--l.icon--reverse - 12
+.is-disabled.icon - 13
+.is-disabled.icon.icon--s - 14
+.is-disabled.icon.icon--l - 15
+.is-disabled.icon.icon--reverse - 16
+.is-disabled.icon.icon--s.icon--reverse - 17
+.is-disabled.icon.icon--l.icon--reverse - 18
+.is-disabled.txt--meta.icon - 19
+.is-disabled.txt--meta.icon.icon--s - 20
+.is-disabled.txt--meta.icon.icon--l - 21
+.is-disabled.txt--meta.icon.icon--reverse - 22
+.is-disabled.txt--meta.icon.icon--s.icon--reverse - 23
+.is-disabled.txt--meta.icon.icon--l.icon--reverse - 24
+
+markup:
+<span class="{$modifiers}">
+	<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+	<span class="icon__label">104</span>
+</span>
+
+Styleguide 3.9.3.3
+*/
+
