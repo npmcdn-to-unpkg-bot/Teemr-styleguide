@@ -127,31 +127,11 @@ Styleguide 3.9.3.1
 /*
 Heart
 
-.icon - .
-.icon.icon--s - .
-.icon.icon--l - .
-.icon.icon--reverse - .
-.icon.icon--s.icon--reverse - .
-.icon.icon--l.icon--reverse - .
-.txt--meta.icon - .
-.txt--meta.icon.icon--s - .
-.txt--meta.icon.icon--l - .
-.txt--meta.icon.icon--reverse - .
-.txt--meta.icon.icon--s.icon--reverse - .
-.txt--meta.icon.icon--l.icon--reverse - .
-
-
-markup:
-<span class="{$modifiers}">
-	<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
-	<span class="icon__label">104</span>
-</span>
-
 Styleguide 3.9.3.2
 */
 
 /*
-star
+Hearth with text
 
 .icon - 1
 .icon.icon--s - 2
@@ -177,6 +157,96 @@ star
 .is-disabled.txt--meta.icon.icon--reverse - 22
 .is-disabled.txt--meta.icon.icon--s.icon--reverse - 23
 .is-disabled.txt--meta.icon.icon--l.icon--reverse - 24
+.is-active.icon - 25
+.is-active.icon.icon--s - 26
+.is-active.icon.icon--l - 27
+.is-active.icon.icon--reverse - 28
+.is-active.icon.icon--s.icon--reverse - 29
+.is-active.icon.icon--l.icon--reverse - 30
+.is-active.txt--meta.icon - 31
+.is-active.txt--meta.icon.icon--s - 32
+.is-active.txt--meta.icon.icon--l - 33
+.is-active.txt--meta.icon.icon--reverse - 34
+.is-active.txt--meta.icon.icon--s.icon--reverse - 35
+.is-active.txt--meta.icon.icon--l.icon--reverse - 36
+
+markup:
+<span class="{$modifiers}">
+	<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
+	<span class="icon__label">104</span>
+</span>
+
+Styleguide 3.9.3.2.1
+*/
+
+/*
+Heart without text
+
+.icon - 1
+.icon.icon--s - 2
+.icon.icon--l - 3
+.is-disabled.icon - 4
+.is-disabled.icon.icon--s - 5
+.is-disabled.icon.icon--l - 6
+.is-active.icon - 7
+.is-active.icon.icon--s - 8
+.is-active.icon.icon--l - 9
+
+markup:
+<span class="{$modifiers}">
+	<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
+</span>
+
+Styleguide 3.9.3.2.2
+*/
+
+/*
+Star
+
+markup:
+
+Styleguide 3.9.3.3
+*/
+
+/*
+Star with text
+
+.icon - 1
+.icon.icon--s - 2
+.icon.icon--l - 3
+.icon.icon--reverse - 4
+.icon.icon--s.icon--reverse - 5
+.icon.icon--l.icon--reverse - 6
+.txt--meta.icon - 7
+.txt--meta.icon.icon--s - 8
+.txt--meta.icon.icon--l - 9
+.txt--meta.icon.icon--reverse - 10
+.txt--meta.icon.icon--s.icon--reverse - 11
+.txt--meta.icon.icon--l.icon--reverse - 12
+.is-disabled.icon - 13
+.is-disabled.icon.icon--s - 14
+.is-disabled.icon.icon--l - 15
+.is-disabled.icon.icon--reverse - 16
+.is-disabled.icon.icon--s.icon--reverse - 17
+.is-disabled.icon.icon--l.icon--reverse - 18
+.is-disabled.txt--meta.icon - 19
+.is-disabled.txt--meta.icon.icon--s - 20
+.is-disabled.txt--meta.icon.icon--l - 21
+.is-disabled.txt--meta.icon.icon--reverse - 22
+.is-disabled.txt--meta.icon.icon--s.icon--reverse - 23
+.is-disabled.txt--meta.icon.icon--l.icon--reverse - 24
+.is-active.icon - 25
+.is-active.icon.icon--s - 26
+.is-active.icon.icon--l - 27
+.is-active.icon.icon--reverse - 28
+.is-active.icon.icon--s.icon--reverse - 29
+.is-active.icon.icon--l.icon--reverse - 30
+.is-active.txt--meta.icon - 31
+.is-active.txt--meta.icon.icon--s - 32
+.is-active.txt--meta.icon.icon--l - 33
+.is-active.txt--meta.icon.icon--reverse - 34
+.is-active.txt--meta.icon.icon--s.icon--reverse - 35
+.is-active.txt--meta.icon.icon--l.icon--reverse - 36
 
 markup:
 <span class="{$modifiers}">
@@ -184,6 +254,105 @@ markup:
 	<span class="icon__label">104</span>
 </span>
 
-Styleguide 3.9.3.3
+Styleguide 3.9.3.3.1
 */
+
+/*
+Star without text
+
+.icon - 1
+.icon.icon--s - 2
+.icon.icon--l - 3
+.is-disabled.icon - 4
+.is-disabled.icon.icon--s - 5
+.is-disabled.icon.icon--l - 6
+.is-active.icon - 7
+.is-active.icon.icon--s - 8
+.is-active.icon.icon--l - 9
+
+markup:
+<span class="{$modifiers}">
+	<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+</span>
+
+Styleguide 3.9.3.3.2
+*/
+
+
+/*
+Comment
+
+Styleguide 3.9.3.4
+*/
+
+/*
+Comment bubble with text
+
+.icon - 1
+.icon.icon--s - 2
+.icon.icon--l - 3
+.icon.icon--reverse - 4
+.icon.icon--s.icon--reverse - 5
+.icon.icon--l.icon--reverse - 6
+.txt--meta.icon - 7
+.txt--meta.icon.icon--s - 8
+.txt--meta.icon.icon--l - 9
+.txt--meta.icon.icon--reverse - 10
+.txt--meta.icon.icon--s.icon--reverse - 11
+.txt--meta.icon.icon--l.icon--reverse - 12
+.is-disabled.icon - 13
+.is-disabled.icon.icon--s - 14
+.is-disabled.icon.icon--l - 15
+.is-disabled.icon.icon--reverse - 16
+.is-disabled.icon.icon--s.icon--reverse - 17
+.is-disabled.icon.icon--l.icon--reverse - 18
+.is-disabled.txt--meta.icon - 19
+.is-disabled.txt--meta.icon.icon--s - 20
+.is-disabled.txt--meta.icon.icon--l - 21
+.is-disabled.txt--meta.icon.icon--reverse - 22
+.is-disabled.txt--meta.icon.icon--s.icon--reverse - 23
+.is-disabled.txt--meta.icon.icon--l.icon--reverse - 24
+.is-active.icon - 25
+.is-active.icon.icon--s - 26
+.is-active.icon.icon--l - 27
+.is-active.icon.icon--reverse - 28
+.is-active.icon.icon--s.icon--reverse - 29
+.is-active.icon.icon--l.icon--reverse - 30
+.is-active.txt--meta.icon - 31
+.is-active.txt--meta.icon.icon--s - 32
+.is-active.txt--meta.icon.icon--l - 33
+.is-active.txt--meta.icon.icon--reverse - 34
+.is-active.txt--meta.icon.icon--s.icon--reverse - 35
+.is-active.txt--meta.icon.icon--l.icon--reverse - 36
+
+markup:
+<span class="{$modifiers}">
+	<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-comment"></use></svg>
+	<span class="icon__label">104</span>
+</span>
+
+Styleguide 3.9.3.4.1
+*/
+
+/*
+Comment bubble without text
+
+.icon - 1
+.icon.icon--s - 2
+.icon.icon--l - 3
+.is-disabled.icon - 4
+.is-disabled.icon.icon--s - 5
+.is-disabled.icon.icon--l - 6
+.is-active.icon - 7
+.is-active.icon.icon--s - 8
+.is-active.icon.icon--l - 9
+
+markup:
+<span class="{$modifiers}">
+	<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-comment"></use></svg>
+</span>
+
+Styleguide 3.9.3.4.2
+*/
+
 
