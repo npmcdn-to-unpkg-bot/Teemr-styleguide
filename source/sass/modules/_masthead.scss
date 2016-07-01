@@ -1,4 +1,4 @@
-/* 
+/*
 Masthead
 
 Placeholder icon used
@@ -15,7 +15,7 @@ markup:
 		</a>
 	</div>
 	<div class="search--masthead">
-		<input class="search" placeholder="Find people, teams, projects and posts" />
+		<input class="search txt--meta" placeholder="Find people, teams, projects and posts" />
 	</div>
 	<div class="masthead--user">
         <a href="javascript:void(0);">
@@ -31,16 +31,16 @@ Styleguide 5.1
 */
 
 #teemr-svg {
-    fill: $teemr-green;
+    fill: $color-growth;
 }
 
 .masthead {
     height: rhythm(7);
-    border-bottom: 1px solid $teemr-green;
+    border-bottom: 1px solid $color-growth--01;
     align-items: center; /* Vertically aligns all items with flexbox */
     &--logo {
     	padding-right: rhythm(2);
-    	border-right: 1px solid $teemr-green;
+    	border-right: 1px solid $color-growth--01;
     	height: 100%;
     	padding-top: rhythm(1.5); /* vertical positioning */
     }

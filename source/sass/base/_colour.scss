@@ -1,3 +1,14 @@
+
+
+// Base colours
+$teemr-blue: #005678;
+$teemr-green: #19988B;
+$teemr-orange: #E06B2F;
+
+// #9f784c
+$brown: mix( mix($teemr-orange, $teemr-green, 70%), $teemr-blue, 97%);
+$teemr-brown: #9f784c; // Brown
+
 /*
 Colours
 
@@ -7,10 +18,10 @@ Styleguide 1.1
 /*
 Base colours
 
-$color-trust - Blue, trusting (business) elements
-$color-growth - Green, educative elements
-$color-social - Orange, social elements
-$color-assist - Brown, productive elements
+$color-shadow - Shadow colour
+$color-highlight - Highlight colour
+$color-structure - Brown, support and structural elements
+$color-body - A mix of color-shadow with 80% color-highlight
 
 markup:
 <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
@@ -18,150 +29,105 @@ markup:
 Styleguide 1.1.1
 */
 
-@function shade($color: $color-theme, $percentage: 20%, $mix-with: $color-highlight) {
-    @return mix($mix-with, $color, $percentage);
-}
-
-// Base colours
-$teemr-blue: #005678;
-$teemr-green: #19988B;
-$teemr-orange: #E06B2F;
-$teemr-brown: #A3774B;
-
-// Tags colours
-$color-tag: #a3d5cc;
-$tag-social: $teemr-orange;
-
-// Map colours to meaning
-$color-trust: $teemr-blue;
-$color-growth: $teemr-green;
-$color-social: $teemr-orange;
-$color-assist: $teemr-brown;
-
-$color-alert: #f50051;
-$color-notify: $color-alert;
-
-// Mix with these for colour ranges
-$white: #ffffff;
 $color-highlight: #FFFEF8;
 $color-shadow: #001822;
+$color-structure: $teemr-brown;
 
-$color-anchor: $teemr-green !default;
-
-$color-anchor--hover: darken($color-anchor, 20%) !default;
-
-$color-anchor--active: lighten($color-anchor, 15%) !default;
-
-$color-anchor--visited: darken($color-anchor, 30%) !default;
-
-$colors: (
-    trust: (    
-        l80: mix($teemr-blue, $color-highlight, 20%),
-        l60: mix($teemr-blue, $color-highlight, 40%),
-        l40: mix($teemr-blue, $color-highlight, 60%),
-        l20: mix($teemr-blue, $color-highlight, 80%),
-        100: $teemr-blue,
-        d20: mix($teemr-blue, $color-shadow, 80%),
-        d40: mix($teemr-blue, $color-shadow, 60%),
-        d60: mix($teemr-blue, $color-shadow, 40%),
-        d80: mix($teemr-blue, $color-shadow, 20%)
-    ),
-    growth: (       
-        l80: mix($teemr-green, $color-highlight, 20%),
-        l60: mix($teemr-green, $color-highlight, 40%),
-        l40: mix($teemr-green, $color-highlight, 60%),
-        l20: mix($teemr-green, $color-highlight, 80%),
-        100: $teemr-green,
-        d20: mix($teemr-green, $color-shadow, 80%),
-        d40: mix($teemr-green, $color-shadow, 60%),
-        d60: mix($teemr-green, $color-shadow, 40%),
-        d80: mix($teemr-green, $color-shadow, 20%)
-    ),
-    social: (
-        l80: mix($teemr-orange, $color-highlight, 20%),
-        l60: mix($teemr-orange, $color-highlight, 40%),
-        l40: mix($teemr-orange, $color-highlight, 60%),
-        l20: mix($teemr-orange, $color-highlight, 80%),
-        100: $teemr-orange,
-        d20: mix($teemr-orange, $color-shadow, 80%),
-        d40: mix($teemr-orange, $color-shadow, 60%),
-        d60: mix($teemr-orange, $color-shadow, 40%),
-        d80: mix($teemr-orange, $color-shadow, 20%)
-    ),
-    assist: (
-        l80: mix($teemr-brown, $color-highlight, 20%),
-        l60: mix($teemr-brown, $color-highlight, 40%),
-        l40: mix($teemr-brown, $color-highlight, 60%),
-        l20: mix($teemr-brown, $color-highlight, 80%),
-        100: $teemr-brown,
-        d20: mix($teemr-brown, $color-shadow, 80%),
-        d40: mix($teemr-brown, $color-shadow, 60%),
-        d60: mix($teemr-brown, $color-shadow, 40%),
-        d80: mix($teemr-brown, $color-shadow, 20%)
-    ),
-    highlight: (
-        l80: mix($color-highlight, $white, 20%),
-        l60: mix($color-highlight, $white, 40%),
-        l40: mix($color-highlight, $white, 60%),
-        l20: mix($color-highlight, $white, 80%),
-        100: $color-highlight,
-        d20: mix($color-highlight, $color-shadow, 80%),
-        d40: mix($color-highlight, $color-shadow, 60%),
-        d60: mix($color-highlight, $color-shadow, 40%),
-        d80: mix($color-highlight, $color-shadow, 20%)),
-    shadow: (
-        l80: mix($color-shadow, $color-highlight, 20%),
-        l60: mix($color-shadow, $color-highlight, 40%),
-        l40: mix($color-shadow, $color-highlight, 60%),
-        l20: mix($color-shadow, $color-highlight, 80%),
-        100: $color-shadow
-    )
-);
-
-// Notification colours
-$color-notification: mix($teemr-blue, $color-highlight, 20%);
-$color-close: #1AACBD;
+// #33464d
+// @debug mix($color-shadow, $color-highlight, 80%);
+$color-body: #33464d;
 
 
-/* Background colors */
-%bg--light {
-    background-color: mix($color-highlight, $white, 20%); // Light grey
-}
-%bg--default {
-    background-color: mix($color-highlight, $white, 20%); // Grey
-}
-%bg--dark {
-    background-color: mix($teemr-blue, $color-shadow, 60%); // Slightly darker blue
-}
-%bg--content {
-    background-color: $white; // White
-}
-%bg--focus {
-    background-color: $color-growth // Green
-}
-%bg--top-bar {
-    background-color: mix($teemr-blue, $color-shadow, 80%); // Slightly lighter blue
-}
-%bg--search-bar {
-    @extend %bg--content; //white
-}
+/*
+Spot colours
 
+$color-trust - Blue, trusting (business) elements
+$color-growth - Green, educative elements
+$color-social - Orange, social elements
 
-/* 
-Applied colours
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
 
 Styleguide 1.1.2
 */
 
-$color-body: mix($color-shadow, $color-highlight, 80%);
-$color-footer: shade($color-trust, 80%, $color-shadow);
-$color-theme: $color-growth;
-$color-alert: $color-social;
-$color-page: $white;
-$color-search: $color-page;
-$color-browse__user: $color-trust;
-$color-browse__context: $white;
-$color-browse: $white;
-$color-content: $white;
-$color-content__brief: $white;
+$color-trust: $teemr-blue;
+$color-growth: $teemr-green;
+$color-social: $teemr-orange;
 
+/*
+Shades
+
+$color-structure--01 - Very light
+$color-structure--02 - Light
+$color-structure--03 - Moderately lighter
+$color-trust--01 - Very light
+$color-trust--02 - Light
+$color-trust--03 - Moderately lighter
+$color-growth--01 - Very light
+$color-growth--02 - Light
+$color-growth--03 - Moderately lighter
+$color-social--01 - Very light
+$color-social--02 - Light
+$color-social--03 - Moderately lighter
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 1.1.3
+*/
+
+// #ece4db
+// @debug mix($color-structure, #FFF, 20%);
+// #d9c9b7
+// @debug mix($color-structure, #FFF, 40%);
+// #c5ae94
+// @debug mix($color-structure, #FFF, 60%);
+
+$color-structure--01: #ece4db;
+$color-structure--02: #d9c9b7;
+$color-structure--03: #c5ae94;
+
+// #ccdcde
+// @debug mix($color-trust, $color-highlight, 20%);
+// #99bbc5
+// @debug mix($color-trust, $color-highlight, 40%);
+// #6699ab
+// @debug mix($color-trust, $color-highlight, 60%);
+
+$color-trust--01: #ccdcde;
+$color-trust--02: #99bbc5;
+$color-trust--03: #6699ab;
+
+// #d1eae2
+// @debug mix($color-growth, $color-highlight, 20%);
+// #a3d5cc
+// @debug mix($color-growth, $color-highlight, 40%);
+// #75c1b7
+// @debug mix($color-growth, $color-highlight, 60%);
+
+$color-growth--01: #d1eae2;
+$color-growth--02: #a3d5cc;
+$color-growth--03: #75c1b7;
+
+
+// #f9e1d0
+// @debug mix($color-social, $color-highlight, 20%);
+// #f3c3a8
+// @debug mix($color-social, $color-highlight, 40%);
+// #eca67f
+// @debug mix($color-social, $color-highlight, 60%);
+
+$color-social--01: #f9e1d0;
+$color-social--02: #f3c3a8;
+$color-social--03: #eca67f;
+
+// Anchor colours
+$color-anchor: $color-growth;
+$color-anchor--hover: $color-growth--02;
+$color-anchor--active: $color-growth--02;
+$color-anchor--visited: $color-growth--03;
+
+// Notification colours
+$color-notification: $color-trust--01;
+$color-alert: $color-social;

@@ -5,7 +5,7 @@ Button
 .btn.btn--theme - Button with theme styling
 .btn.btn--social - Button with social styling
 .btn.btn--trust - Button with trust styling
-.btn.btn--assist - Button with assist styling
+.btn.btn--structure - Button with assist styling
 .btn.btn--stretch - Full width, bland button
 .btn.btn--theme.btn--stretch - Full width, theme styled button
 
@@ -27,8 +27,8 @@ Styleguide 3.5
         width: 100%;
     }
     &--theme {
-        border: 1px solid $color-theme;
-        color: $color-theme;
+        border: 1px solid $color-structure--03;
+        color: $color-structure--03;
     }
     &--social {
         border: 1px solid $color-social;
@@ -38,17 +38,16 @@ Styleguide 3.5
         border: 1px solid $color-trust;
         color: $color-trust;
     }
-    &--assist {
-        border: 1px solid $color-assist;
-        color: $color-assist;
+    &--structure {
+        border: 1px solid $color-structure;
+        color: $color-structure;
     }
 }
 
-/* 
+/*
 Pill
 
 .pill - Basic pill. Green, growth color
-.pill.pill--assist - Brown, rounded pill
 .pill.pill--social - Orange, rounded pill
 .pill.pill--trust - Blue, rounded pill
 .pill.pill--l - Pill with double padding
@@ -64,13 +63,13 @@ Styleguide 3.5.1
 	@extend %roboto-light;
 	display: inline-block;
 	padding: 0 rhythm(4);
-	color: $color-theme;
-	border: $border-thin solid $color-theme;
+	color: mix($color-structure--03, $color-structure, 60%);
+	border: $border-thin solid $color-structure--03;
 	border-radius: 2em;
 	line-height: 2.5;
     text-align: center;
 	&:hover {
-		background: $color-theme;
+		background: $color-structure--03;
 		color: $white;
 	}
     &--l {
@@ -86,7 +85,7 @@ Styleguide 3.5.1
 	color: $color-social;
 	&:hover {
 		background: $color-social;
-	}	
+	}
 }
 
 .pill--trust {
@@ -94,14 +93,6 @@ Styleguide 3.5.1
 	color: $color-trust;
 	&:hover {
 		background: $color-trust;
-	}	
-}
-
-.pill--assist {
-	border-color: $color-assist;
-	color: $color-assist;
-	&:hover {
-		background: $color-assist;
 	}
 }
 

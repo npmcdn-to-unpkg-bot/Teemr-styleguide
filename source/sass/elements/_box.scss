@@ -3,43 +3,26 @@ Box
 
 Important! Added 75px height to showcase box.
 
-.box - Grey background
-.box--light - Light grey background
-.box--dark - Dark grey background
-.box--trust - Trust color background
-.box--social - Social color background
-.box--growth - Growth color background
+.box - Light brown background
+.box--01 - Same as box
+.box--02 - Lighter brown background
+.box--03 - Moderately light brown background
 
 markup:
-<div style="height: 75px;" class="{$modifiers}">{$modifiers}</div>	
+<div style="height: 75px;" class="{$modifiers}">{$modifiers}</div>
 
 Styleguide 3.10
 */
 
 .box {
-	background: mix($color-highlight, $color-shadow, 90%);
-	&--light {
-		background: mix($color-highlight, $color-shadow, 95%);
+	&,
+	&--01 {
+		background: $color-structure--01;
 	}
-	&--dark {
-		background: mix($color-highlight, $color-shadow, 80%);
+	&--02 {
+		background: $color-structure--02;
 	}
-	&--trust {
-		background: mix($teemr-blue, $color-highlight, 80%);
-	}
-	&--social {
-		background: mix($teemr-orange, $color-highlight, 80%);
-	}
-	&--growth {
-		background: mix($teemr-green, $color-highlight, 80%);
-	}
-	&--dark,
-	&--trust,
-	&--social,
-	&--growth {
-		color: $white;
-	}
-	&--light {
-		color: $black;
+	&--03 {
+		background: $color-structure--03;
 	}
 }

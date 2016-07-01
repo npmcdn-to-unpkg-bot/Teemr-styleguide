@@ -57,7 +57,7 @@ html {
 
 
 /* HTML5 display definitions
-   ========================================================================== 
+   ==========================================================================
 */
 
 /*
@@ -412,7 +412,7 @@ input[type="search"]::-webkit-search-decoration {
  */
 
 fieldset {
-  border: 1px solid $color-theme;
+  border: 1px solid $color-growth--01;
   margin: 0 rhythm();
   padding: gutters() rhythm(2);
   &--reset {
