@@ -13,17 +13,5 @@ Styleguide 4.8
 	line-height: rhythm(4);
 	border: 1px solid mix($color-highlight, $color-shadow, 90%);
 	border-radius: $border-radius;
-	&--masthead { /* Search bar inside masthead */
-		flex: 1;
-		padding-left: rhythm(2);
-	}
 }
 
-.search--masthead {
-	height: 100%;
-	input {
-		border: 0;
-		height: 100%;
-		width: 100%;
-	}
-}

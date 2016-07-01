@@ -14,7 +14,8 @@ markup:
 			</svg>
 		</a>
 	</div>
-	<div class="search--masthead">
+	<div class="masthead--search">
+        <sg-insert>3.9.3.5.1-1</sg-insert>
 		<input class="search txt--meta" placeholder="Find people, teams, projects and posts" />
 	</div>
 	<div class="masthead--user">
@@ -52,6 +53,19 @@ Styleguide 5.1
             svg {
                 height: rhythm(3)
             }
+        }
+    }
+    &--search {
+        flex: 1;
+        padding-left: rhythm(2);
+        display: flex;
+        height: 100%;
+        align-items: center;
+        input {
+            flex-grow: 1;
+            padding: 0 rhythm(2);
+            height: 100%;
+            border: 0;
         }
     }
     &--user {

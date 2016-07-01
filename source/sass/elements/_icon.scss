@@ -71,8 +71,6 @@ Styleguide 3.9
 /*
 Icon
 
-Door middel van het gebruik van transform: scale(2.0) op svg tag.
-
 #icon-comment - Comment cloud
 #icon-facebook - Facebook (follow)
 #icon-heart - Heart (like)
@@ -426,4 +424,33 @@ markup:
 </span>
 
 Styleguide 3.9.3.4.2
+*/
+
+/*
+Loop
+
+markup:
+
+Styleguide 3.9.3.5
+*/
+
+/*
+Loop
+
+.icon - 1
+.icon.icon--s - 2
+.icon.icon--l - 3
+.is-disabled.icon - 4
+.is-disabled.icon.icon--s - 5
+.is-disabled.icon.icon--l - 6
+.is-active.icon - 7
+.is-active.icon.icon--s - 8
+.is-active.icon.icon--l - 9
+
+markup:
+<span class="{$modifiers}">
+	<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-loop"></use></svg>
+</span>
+
+Styleguide 3.9.3.5.1
 */
