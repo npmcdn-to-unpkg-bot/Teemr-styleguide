@@ -21,7 +21,7 @@ Styleguide 4.10
 .preview {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	// width: 100%;
 	min-height: rhythm(75);
 	padding: 0 15%;
 	color: $white;
@@ -42,15 +42,11 @@ Styleguide 4.10
 	flex: 1;
 }
 
-.right {
-	text-align: right;
-}
-
 /*
 Article preview without image
 
 markup:
-<div class="article leader">
+<div class="article">
 	<div class="preview--title">Detroit</div><!--
 	--><div class="article-count right leader-inside">
 		<span class="icon is-active">
@@ -69,11 +65,10 @@ Styleguide 4.10.1
 	padding: 0 15%;
 	.preview--title {
 		display: inline-block;
-		vertical-align: middle;
 		width: 50%;
 	}
 	&-count {
-		width: 50%;
 		display: inline-block;
+		width: 50%;
 	}
 }

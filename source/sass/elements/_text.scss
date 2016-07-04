@@ -54,7 +54,6 @@ Styleguide 3.3
 	line-height: 1.5;
 }
 
-
 .txt--whisper {
 	color: $color-structure--02;
 	font-size: $font-size--xs;
@@ -63,4 +62,8 @@ Styleguide 3.3
 .txt--meta {
 	color: $color-structure--03;
 	@include font-family($roboto-regular);
+}
+
+.right {
+	text-align: right;
 }

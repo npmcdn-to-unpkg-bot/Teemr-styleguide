@@ -24,7 +24,7 @@ Styleguide 3.9
 		float: left;
 	}
 	&__label {
-		padding-left: .25em;
+		padding-left: .5em;
 	}
 	&--s {
 		font-size: px( 18px, 1em, 14px );
@@ -34,7 +34,7 @@ Styleguide 3.9
 	}
 	&--reverse &__label {
 		padding-left: 0;
-		padding-right: .25em;
+		padding-right: .5em;
 	}
 	&--reverse &__label,
 	&--reverse &__shape {

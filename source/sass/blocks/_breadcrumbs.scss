@@ -23,7 +23,7 @@ Styleguide 4.7
 	li {
 		&:after {
 			content: ">";
-			color: mix($color-highlight, $color-shadow, 80%);
+			color: mix($color-highlight, $color-structure, 70%);
 		}
 	}
 }
