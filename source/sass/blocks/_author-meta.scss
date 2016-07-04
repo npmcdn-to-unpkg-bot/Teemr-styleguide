@@ -1,19 +1,13 @@
 /*
 Author Meta
 
-.media-object - for normal avatars 63 x 63 pixels
+.media.author - .
+.media.author.author-meta--stacked - Items are stacked
 
 markup:
 <div class="{$modifiers}">
-    <sg-insert>3.12.1-2</sg-insert>
-    <div class="author-meta">
-        <p>Firstname Lastname</p>
-        <p>This is my job</p>
-    </div>    
-</div>
-<div class="{$modifiers}">
     <sg-insert>3.12-2</sg-insert>
-    <div class="author-meta">
+    <div class="media--body">
         <p>Firstname Lastname</p>
         <p>Job title</p>
     </div>    
@@ -21,43 +15,15 @@ markup:
 
 Styleguide 4.12
 */
-.media-object {
-    display: flex;
-    align-items: center;
-    .author-meta {
-        flex: 1;
-        margin-left: rhythm();
+
+// .author {
+// }
+// .author-meta {
+// }
+
+.author-meta--stacked {
+    &.media {
+    flex-direction: column;
+    align-items: flex-start;
     }
-}
-
-/*
-Author Meta small
-
-.media-object.media-object--s - for small avatars  21 x 21 pixels
-
-markup:
-<div class="{$modifiers}">
-    <sg-insert>3.12.1-1</sg-insert>
-    <div class="author-meta">
-        <p>Firstname Lastname</p>
-    </div>
-</div>
-<div class="{$modifiers}">
-    <sg-insert>3.12-1</sg-insert>
-    <div class="author-meta">
-        <p>Firstname Lastname</p>
-    </div>
-</div>
-<div class="{$modifiers}">
-    <sg-insert>3.12.1-1</sg-insert>
-    <div class="author-meta">
-        <p>Firstname Lastname</p>
-    </div>
-</div>
-
-Styleguide 4.12.1
-*/
-
-.media-object--s {
-    font-size: $font-size--xs;
 }

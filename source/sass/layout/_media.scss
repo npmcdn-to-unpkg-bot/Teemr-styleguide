@@ -1,5 +1,24 @@
 /*
 Media
 
+.media - Media
+.media.media__subject - Left part of media
+.media.media__body - Right part of media
+.media.media--stretch - .media__subject will take up the remaining space
+
+markup:
+
 Styleguide 2.4
 */
+
+.media {
+    display: flex;
+    align-items: center;
+	// &__subject {
+	// }
+	// &__body {
+	// }
+	&--stretch &__subject {
+		flex-grow: 1;
+	}
+}
