@@ -2,10 +2,10 @@
 Quote
 
 .quote - Adds quotation marks around content
-.h-title.quote - .
-.h-paragraph.quote - .
-.heading.quote - .
-.catch-phrase.quote - ,
+.h-title.quote - Title heading with quotation marks
+.h-paragraph.quote - Parapgraph heading with quotation marks
+.heading.quote - Heading with quotation marks
+.catch-phrase.quote - Catch phrase with quotation marks
 
 markup:
 <p class="{$modifiers}">{$modifiers}</p>

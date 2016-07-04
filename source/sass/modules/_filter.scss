@@ -3,11 +3,11 @@ Filter
 
 markup:
 <div class="container box" id="filter">
-	<div class="filter">
-		<p class="leader--double h-page">Filter</p>
+	<div class="filter leader--double ">
+		<p class="h-page">Filter</p>
 		<p class="leader h-paragraph">Show/Hide</p>
 	</div>
-	<div class="box--light">
+	<div class="filter--light">
 		<div class="filter--show">
 			<div class="filter--even">Projects</div><!--
 			--><div class="filter--even filter--switch">
@@ -24,7 +24,7 @@ markup:
 	<div class="filter">
 		<p class="leader h-paragraph">Limit posts</p>
 	</div>
-	<div class="box--light">
+	<div class="filter--light">
 		<div class="filter--show">
 			<div class="filter--even">Blogs</div><!--
 			--><div class="filter--even filter--switch">
@@ -35,7 +35,7 @@ markup:
 	<div class="filter">
 		<p class="leader h-paragraph">Keyword</p>
 	</div>
-	<div class="box--light">
+	<div class="filter--light">
 		<div class="filter--show">
 			<input class="filter__input">
 		</div>
@@ -63,8 +63,9 @@ Styleguide 5.5
 	}
 	&--show {
 		padding: rhythm(2) rhythm(12);
-		border-bottom: 1px solid  mix($color-highlight, $color-shadow, 80%);
+		border-bottom: 1px solid  mix($color-highlight, $color-structure, 70%);
+	}
+	&--light {
+		background: mix($color-highlight, $color-structure, 90%);
 	}
 }
-
-

@@ -6,13 +6,17 @@ Author Meta
 markup:
 <div class="{$modifiers}">
     <sg-insert>3.12.1-2</sg-insert>
-    <p class="author-meta">Firstname Lastname <br />
-    <span class="author-text"> This is my job</span></p>
+    <div class="author-meta">
+        <p>Firstname Lastname</p>
+        <p>This is my job</p>
+    </div>    
 </div>
 <div class="{$modifiers}">
     <sg-insert>3.12-2</sg-insert>
-    <p class="author-meta">Firstname Lastname <br />
-    <span class="author-text"> This is my job</span></p>
+    <div class="author-meta">
+        <p>Firstname Lastname</p>
+        <p>Job title</p>
+    </div>    
 </div>
 
 Styleguide 4.12
@@ -22,9 +26,7 @@ Styleguide 4.12
     align-items: center;
     .author-meta {
         flex: 1;
-    }
-    .avatar {
-        margin-right: 5px;
+        margin-left: rhythm();
     }
 }
 
@@ -36,25 +38,26 @@ Author Meta small
 markup:
 <div class="{$modifiers}">
     <sg-insert>3.12.1-1</sg-insert>
-    <p>Firstname Lastname</p>
+    <div class="author-meta">
+        <p>Firstname Lastname</p>
+    </div>
 </div>
 <div class="{$modifiers}">
     <sg-insert>3.12-1</sg-insert>
-    <p>Firstname Lastname </p>
+    <div class="author-meta">
+        <p>Firstname Lastname</p>
+    </div>
 </div>
 <div class="{$modifiers}">
     <sg-insert>3.12.1-1</sg-insert>
-    <p>and 2035 others</p>
+    <div class="author-meta">
+        <p>Firstname Lastname</p>
+    </div>
 </div>
 
 Styleguide 4.12.1
 */
 
-// .media-object--s,
-// .media-object {
-//     width: 100%;
-// }
-// .media-object--s {
-//     display: inline;
-//     font-size: $font-size--xs;
-// }
+.media-object--s {
+    font-size: $font-size--xs;
+}
