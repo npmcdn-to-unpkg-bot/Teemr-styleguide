@@ -176,6 +176,13 @@ h1 {
 }
 
 /*
+ * reset headers.
+ */
+ h1, h2, h3, h4, h5, h6 {
+   @include font-weight($type-heading);
+ }
+
+/*
  * Address styling not present in IE 8/9.
  */
 
@@ -235,11 +242,12 @@ svg:not(:root) {
    ========================================================================== */
 
 /*
- * Address margin not present in IE 8/9 and Safari.
+ * Reset figure tag
  */
 
 figure {
-  margin: 1em 40px;
+  display: block;
+  margin: 0;
 }
 
 /*
