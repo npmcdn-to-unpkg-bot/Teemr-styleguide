@@ -1,0 +1,84 @@
+/*
+Ballot
+
+The ballot object lists counts, for example of viewers, number of likesor followers. It uses the icon element, and for the viewers-ballot it uses the avatar element.
+
+Styleguide 4.4
+*/
+
+.ballot {
+  &__count {
+    // The styling for the avatar in the context of a ballot object is contextual, and thus nested in the ballot object.
+    .avatar + & {
+      padding-right: .25em;
+      .icon--reverse & {
+        padding-right: 0;
+        padding-left: .25em;
+      }
+    }
+  }
+}
+
+/*
+Followers Ballot
+
+.icon.ballot - Counter
+.icon.icon--is-active.ballot - Counter
+.icon.icon--reverse.ballot - Counter
+
+markup:
+<span class="{$modifiers}">
+  <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+  <span class="icon__label ballot__count txt--meta">688</span>
+</span>
+
+Styleguide 4.4.1
+*/
+
+
+/*
+Likes Ballot
+
+.icon.ballot - Counter
+.icon.icon--reverse.ballot - Counter
+
+markup:
+<span class="{$modifiers}">
+  <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
+  <span class="icon__label ballot__count txt--meta">4K</span>
+</span>
+
+Styleguide 4.4.2
+*/
+
+/*
+Comments Ballot
+
+.icon.ballot - Counter
+.icon.icon--reverse.ballot - Counter
+
+markup:
+<span class="{$modifiers}">
+  <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-comment"></use></svg>
+  <span class="icon__label ballot__count txt--meta">12</span>
+</span>
+
+Styleguide 4.4.3
+*/
+
+/*
+Views Ballot
+
+The views ballot uses the avatar element, and has slightly different markup.
+
+.icon.ballot - Counter
+.icon.icon--reverse.ballot - Counter
+
+markup:
+<span class="{$modifiers}">
+  <sg-insert>3.12.1-1</sg-insert>
+  <span class="icon__label ballot__count txt--meta"> and 1234 others</span>
+</span>
+
+Styleguide 4.4.4
+*/
