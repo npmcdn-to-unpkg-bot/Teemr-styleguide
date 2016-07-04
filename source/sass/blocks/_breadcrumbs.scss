@@ -15,11 +15,17 @@ Styleguide 4.7
 */
 
 .breadcrumbs > :last-child {
-	@extend .anchor--gentle;
+	color: mix($color-highlight, $color-shadow, 80%);
+	&:hover {
+		color: mix($teemr-green, $color-highlight, 80%);
+	}
 }
 
 .breadcrumbs {
-	@extend .anchor;
+	color: mix($teemr-green, $color-highlight, 80%);
+	&:hover {
+		color: inherit;
+	}
 	li {
 		&:after {
 			content: ">";

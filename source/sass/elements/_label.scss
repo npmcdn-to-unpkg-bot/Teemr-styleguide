@@ -1,7 +1,7 @@
 /*
 Label
 
-.lbl - Grey label
+.label - Grey label
 
 markup:
 <a class="{$modifiers}" href="javascript:void(0)">Urban Photography</a>
@@ -11,8 +11,8 @@ markup:
 Styleguide 3.7
 */
 
-.lbl {
-	@extend .box; /* Gives a light grey background */
+.label {
+	background: $color-structure--01;
 	display: inline-block;
 	padding: 0 rhythm(2);
 	margin: 0 3px;
@@ -28,6 +28,6 @@ Styleguide 3.7
 }
 
 /* Remove border from button tag */
-button.lbl {
+button.label {
 	border: 0;
 }
