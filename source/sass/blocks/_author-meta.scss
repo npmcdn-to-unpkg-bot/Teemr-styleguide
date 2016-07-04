@@ -18,13 +18,13 @@ markup:
 Styleguide 4.12
 */
 .media-object {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     .author-meta {
-        vertical-align: middle;
+        flex: 1;
     }
     .avatar {
         margin-right: 5px;
-        float: left;
     }
 }
 
@@ -50,11 +50,11 @@ markup:
 Styleguide 4.12.1
 */
 
-.media-object--s,
-.media-object {
-    width: 100%;
-}
-.media-object--s {
-    display: inline;
-    font-size: $font-size--xs;
-}
+// .media-object--s,
+// .media-object {
+//     width: 100%;
+// }
+// .media-object--s {
+//     display: inline;
+//     font-size: $font-size--xs;
+// }
