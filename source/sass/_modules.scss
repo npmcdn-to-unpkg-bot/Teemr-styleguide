@@ -10,8 +10,14 @@ Styleguide 5.0
 /* 5.2 Footer */
 @import "modules/footer";
 
-/* 5.3 Lead article */
-@import "modules/lead-article";
+/*
+Posts
+
+Styleguide 5.3
+*/
+
+  /* 5.3.1 Featured post */
+  @import "modules/post/post-featured";
 
 /* 5.4 Channels */
 @import "modules/channels";
