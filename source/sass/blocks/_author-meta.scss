@@ -6,10 +6,12 @@ Author Meta
 
 markup:
 <div class="{$modifiers}">
-    <sg-insert>3.12-2</sg-insert>
-    <div class="media--body">
-        <p>Firstname Lastname</p>
-        <p>Job title</p>
+    <div class="media__subject">
+      <sg-insert>3.12-2</sg-insert>
+    </div>
+    <div class="media__body">
+        <p><a href="javascript:void();">Firstname Lastname</a></p>
+        <p class="txt--meta">Job title</p>
     </div>
 </div>
 
@@ -21,9 +23,20 @@ Styleguide 4.12
 // .author-meta {
 // }
 
-.author-meta--stacked {
-    &.media {
-    flex-direction: column;
-    align-items: flex-start;
-    }
+.author-meta {
+  .media__body {
+    padding-left: rhythm();
+  }
+  &--stacked {
+      .media__body {
+        padding-left: 0;
+      }
+      &.media {
+        flex-direction: column;
+        align-items: flex-start;
+        .avatar {
+          margin-bottom: rhythm();
+        }
+      }
+  }
 }

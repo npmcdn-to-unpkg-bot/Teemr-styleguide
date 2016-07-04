@@ -10,10 +10,10 @@ Styleguide 4.4
   &__count {
     // The styling for the avatar in the context of a ballot object is contextual, and thus nested in the ballot object.
     .avatar + & {
-      padding-right: .25em;
+      padding-right: .5em;
       .icon--reverse & {
         padding-right: 0;
-        padding-left: .25em;
+        padding-left: .5em;
       }
     }
   }

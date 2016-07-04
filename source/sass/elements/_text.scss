@@ -59,6 +59,14 @@ Styleguide 3.3
 	font-size: $font-size--xs;
 }
 
+.txt--inverse.txt--inverse {
+	color: #FFF;
+	& a,
+	a {
+		color: mix($color-anchor, $cyan, 70%);
+	}
+}
+
 .txt--meta {
 	color: $color-structure--03;
 	@include font-family($roboto-regular);
