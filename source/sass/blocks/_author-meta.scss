@@ -1,8 +1,8 @@
 /*
 Author Meta
 
-.media.author - .
-.media.author.author-meta--stacked - Items are stacked
+.media.author-meta - .
+.media.author-meta.author-meta--stacked - Items are stacked
 
 markup:
 <div class="{$modifiers}">
@@ -10,7 +10,7 @@ markup:
     <div class="media--body">
         <p>Firstname Lastname</p>
         <p>Job title</p>
-    </div>    
+    </div>
 </div>
 
 Styleguide 4.12
