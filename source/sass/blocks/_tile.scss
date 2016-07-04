@@ -5,9 +5,12 @@ What it looks like when you look at your own personal profile.
 
 markup:
 <div class="tile tile--edit">
-	<img class="avatar avatar--l" src="https://images.unsplash.com/photo-1466065478348-0b967011f8e0?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1291&h=868&q=80" />
+	<img class="avatar avatar--l" src="https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=320&h=180&q=80" />
 	<p class="h-paragraph tile--name">Pete McCormick</p>
-	<sg-insert>3.9.3.3.1-19</sg-insert>
+	<span class="icon is-disabled">
+		<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+		<span class="icon__label">202</span>
+	</span>	
 	<p class="txt--meta">Urban Photography</p>
 	<textarea class="catch-phrase is-editable leader--half" placeholder="Add a catchy tag phrase, your motto, a poem or your favourite food..."></textarea>
 </div>
@@ -31,7 +34,10 @@ Styleguide 4.1
 	display: inline-block;
 	vertical-align: baseline;
 	font-size: to-unit(20px);
-	padding-right: rhythm(2);
+}
+
+.tile--name + .icon {
+	padding-left: rhythm(2);
 }
 
 .catch-phrase {
@@ -46,10 +52,14 @@ What it looks like when someone else takes a look at your personal profile
 
 markup:
 <div class="tile">
-	<img class="avatar avatar--l" src="https://images.unsplash.com/photo-1466065478348-0b967011f8e0?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1291&h=868&q=80" />
+	<img class="avatar avatar--l" src="https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&w=320&h=180&q=80" />
 	<p class="h-paragraph tile--name">Pete McCormick</p>
-	<sg-insert>3.9.3.3.2-7</sg-insert>
-	<sg-insert>3.9.3.4.2-1</sg-insert>
+	<span class="icon is-active">
+		<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+	</span>	
+	<span class="icon">
+		<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-comment"></use></svg>
+	</span>	
 	<p class="txt--meta">Urban Photography</p>
 	<p class="quote catch-phrase leader--half">Photography is the only language that can be understood anywhere in the world.</p>
 </div>

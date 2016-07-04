@@ -1,8 +1,6 @@
 /*
 Masthead
 
-Placeholder icon used
-
 markup:
 <div class="masthead wings container--flex">
 	<div class="masthead--logo">
@@ -15,15 +13,19 @@ markup:
 		</a>
 	</div>
 	<div class="masthead--search">
-        <sg-insert>3.9.3.5.1-1</sg-insert>
+    <span class="icon">
+        <svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-loop"></use></svg>
+    </span> 
 		<input class="search txt--meta" placeholder="Find people, teams, projects and posts" />
 	</div>
 	<div class="masthead--user">
         <a href="javascript:void(0);">
-            <sg-insert>3.9.3.1.2-1</sg-insert>
+            <span class="icon">
+                <svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-pen"></use></svg>
+            </span> 
         </a>
 		<a class="gutters gutters--no-right" href="javascript:void(0);">
-			<img class="avatar avatar--s" src="https://images.unsplash.com/photo-1462910211773-a9847b1f0e40?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=320&h=180&q=80" />
+			<img class="avatar avatar--s" src="https://images.unsplash.com/photo-1462910211773-a9847b1f0e40?dpr=1&auto=format&crop=entropy&fit=crop&w=320&h=180&q=80" />
 		</a>
 	</div>
 </div>
