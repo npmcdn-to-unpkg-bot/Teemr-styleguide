@@ -25,6 +25,7 @@ Followers Ballot
 .icon.ballot - Counter
 .icon.icon.is-active.ballot - Counter
 .icon.icon--reverse.ballot - Counter
+.icon.icon--reverse.icon.is-active.ballot - Counter
 
 markup:
 <span class="{$modifiers}">
@@ -40,7 +41,9 @@ Styleguide 4.4.1
 Likes Ballot
 
 .icon.ballot - Counter
+.icon.icon.is-active.ballot - Counter
 .icon.icon--reverse.ballot - Counter
+.icon.icon--reverse.icon.is-active.ballot - Counter
 
 markup:
 <span class="{$modifiers}">
@@ -55,7 +58,9 @@ Styleguide 4.4.2
 Comments Ballot
 
 .icon.ballot - Counter
+.icon.icon.is-active.ballot - Counter
 .icon.icon--reverse.ballot - Counter
+.icon.icon--reverse.icon.is-active.ballot - Counter
 
 markup:
 <span class="{$modifiers}">
