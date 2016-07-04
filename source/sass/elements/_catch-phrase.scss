@@ -1,0 +1,15 @@
+/*
+Catch phrase
+
+.catch-phrase - Catch phrase
+
+markup:
+<textarea class="{$modifiers} is-editable" placeholder="Add a catchy tag phrase, your motto, a poem or your favourite food..."></textarea>
+
+Styleguide 3.13
+*/
+
+.catch-phrase {
+	font-size: to-unit(28px);
+	line-height: rhythm(6);
+}

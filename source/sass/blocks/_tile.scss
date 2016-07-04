@@ -12,7 +12,6 @@ markup:
 		<span class="icon__label">202</span>
 	</span>	
 	<p class="txt--meta">Urban Photography</p>
-	<textarea class="catch-phrase is-editable leader--half" placeholder="Add a catchy tag phrase, your motto, a poem or your favourite food..."></textarea>
 </div>
 
 Styleguide 4.1
@@ -38,11 +37,6 @@ Styleguide 4.1
 
 .tile--name + .icon {
 	padding-left: rhythm(2);
-}
-
-.catch-phrase {
-	font-size: to-unit(28px);
-	line-height: rhythm(6);
 }
 
 /*
