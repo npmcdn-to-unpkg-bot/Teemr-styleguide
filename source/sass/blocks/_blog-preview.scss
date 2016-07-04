@@ -4,12 +4,12 @@ Blog preview
 Preview with background image
 
 markup:
-<div class="preview">
+<div class="preview article">
 	<div class="blog-count right leader-inside--double">
-		<span class="icon is-active">
+		<a class="icon is-active" href="javascript:void(0);">
 			<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
 			<span class="icon__label">106</span>
-		</span>
+		</a>
 	</div>
 	<div class="preview--title">Detroit</div>
 	<div class="preview--text leader trailer--double">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
@@ -23,7 +23,6 @@ Styleguide 4.10
 	flex-direction: column;
 	// width: 100%;
 	min-height: rhythm(75);
-	padding: 0 15%;
 	color: $white;
 	text-shadow: -1px 1px black;
 	background: url(https://images.unsplash.com/photo-1465205568425-23fdd3805e49?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1211&h=807&q=80) center no-repeat;
@@ -38,6 +37,27 @@ Styleguide 4.10
 	}
 }
 
+@include breakpoint($gtsmall) {
+	.article {
+		padding-left: percentage(2/16);
+		padding-right: percentage(2/16);
+	}
+}
+
+@include breakpoint($gtmedium) {
+	.article {
+		padding-left: percentage(2/18);
+		padding-right: percentage(2/18);
+	}
+}
+
+@include breakpoint($gtlarge) {
+	.article {
+		padding-left: percentage(2/20);
+		padding-right: percentage(2/20);
+	}
+}
+
 .blog-count {
 	flex: 1;
 }
@@ -49,10 +69,10 @@ markup:
 <div class="article">
 	<div class="preview--title">Detroit</div><!--
 	--><div class="article-count right leader-inside">
-		<span class="icon is-active">
+		<a class="icon is-active" href="javascript:void(0);">
 			<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
 			<span class="icon__label">106</span>
-		</span>	
+		</a>
 	</div>
 	<div class="preview--text leader trailer--double">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
 </div>
@@ -61,8 +81,6 @@ Styleguide 4.10.1
 */
 
 .article {
-	width: 100%;
-	padding: 0 15%;
 	.preview--title {
 		display: inline-block;
 		width: 50%;
@@ -72,3 +90,22 @@ Styleguide 4.10.1
 		width: 50%;
 	}
 }
+
+/*
+Read more
+
+markup:
+<div class="article">
+	<div class="preview--title">Detroit</div><!--
+	--><div class="article-count right leader-inside">
+		<a class="icon is-active" href="javascript:void(0);">
+			<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+			<span class="icon__label">106</span>
+		</a>	
+	</div>
+	<div class="preview--text leader trailer--double">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	<a class="anchor--main" href="javascript:void(0)";>See other posts by Pete McCormick</a>
+</div>
+
+Styleguide 4.10.2
+*/

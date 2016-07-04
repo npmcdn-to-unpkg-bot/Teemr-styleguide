@@ -54,12 +54,12 @@ markup:
 <div class="tile">
 	<img class="avatar avatar--l" src="https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&w=320&h=180&q=80" />
 	<p class="h-paragraph tile--name">Pete McCormick</p>
-	<span class="icon is-active">
+	<a class="icon is-active" href="javascript:void(0);">
 		<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
-	</span>	
-	<span class="icon">
+	</a>	
+	<a class="icon" href="javascript:void(0);">
 		<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-comment"></use></svg>
-	</span>	
+	</a>	
 	<p class="txt--meta">Urban Photography</p>
 	<p class="quote catch-phrase leader--half">Photography is the only language that can be understood anywhere in the world.</p>
 </div>
