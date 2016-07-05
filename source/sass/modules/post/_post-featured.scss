@@ -3,7 +3,9 @@
 .post {
   &--featured {
     position: relative;
+    /*
     top: .5 * rhythm(9); // Offset
+    */
     margin-top: .5 * rhythm(9); // Negate offset
     .author-meta {
       margin-bottom: -.25 * rhythm(9); // Negate offset

@@ -1,5 +1,119 @@
 /*
 Dashboard
 
+markup:
+<div class="box trailer-inside--double">
+	<div class="leader-inside--double trailer-inside--large wings">
+		<sg-insert>4.1</sg-insert>
+	</div>
+	<div class="wings case">
+		<div class="case__unit">
+			<div class="case__sample case__sample--stats case--large trailer-inside--large leader-inside gutters">
+				<p class="h-paragraph">Your numbers</p>
+				<p class="leader">336 Views since your last visit (Monday 24 April 2016)</p>
+				<div class="media author-meta">
+				    <div class="media__subject">
+				      <sg-insert>3.12.1-1</sg-insert>
+				    </div>
+				    <div class="media__body">
+				        <p><a class="anchor--main" href="javascript:void();">Show all 336</a></p>
+				    </div>
+				</div>
+				<p class="leader">336 Views since your last visit (Monday 24 April 2016)</p>
+				<p class="leader">336 Views since your last visit (Monday 24 April 2016)</p>
+				<p class="leader">336 Views since your last visit (Monday 24 April 2016)</p>
+			</div>
+		</div>
+		<div class="case__unit">
+			<div class="case__sample trailer-inside leader-inside gutters">
+				<p class="h-paragraph trailer">Your top scoring posts</p>
+				<div class="media media--stretch author-meta leader--half">
+				    <a class="media__subject top-post" href="javascript:void(0)">Detroit</a>
+				    <div class="media__body">
+				        <span class="icon icon--reverse is-disabled">
+							<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
+							<span class="icon__label txt--meta">4K</span>
+						</span>
+				    </div>
+				</div>
+				<p class="txt--meta">Two years ago</p>
+				<div class="media media--stretch author-meta leader--half">
+				    <a class="media__subject top-post" href="javascript:void(0)">Michigan</a>
+				    <div class="media__body">
+				        <span class="icon icon--reverse is-disabled">
+							<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
+							<span class="icon__label txt--meta">306</span>
+						</span>
+				    </div>
+				</div>
+				<p class="txt--meta">Yesterday</p>
+				<div class="media media--stretch author-meta leader--half">
+				    <a class="media__subject top-post" href="javascript:void(0)">Chicago</a>
+				    <div class="media__body">
+				        <span class="icon icon--reverse is-disabled">
+							<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
+							<span class="icon__label txt--meta">36</span>
+						</span>
+				    </div>
+				</div>
+				<p class="txt--meta">Two days ago</p>
+				<div class="center leader--double">
+					<a class="button button--growth" href="javascript:void(0)">Show all posts</a>
+				</div>
+			</div>
+			<div class="case__sample trailer-inside leader-inside gutters">
+				<p class="h-paragraph trailer">Badges</p>
+			</div>			
+		</div>
+		<div class="case__unit">
+			<div class="case__sample case--large trailer-inside leader-inside gutters">
+				<p class="h-paragraph trailer">Content</p>
+			</div>
+		</div>
+	</div>
+</div>
+
 Styleguide 6.5
 */
+
+.top-post {
+	color: $black;
+	font-size: to-unit(20px);
+	font-weight: 600; /* Requires refining */
+}
+
+/*
+Dashboard test
+
+markup:
+<div class="box trailer-inside--double">
+	<div class="wings case">
+		<div class="case__unit">
+			<div class="case__sample case__sample--stats case--large trailer-inside--large leader-inside gutters">
+				<p class="h-paragraph">Your numbers</p>
+				<p class="leader">336 Views since your last visit (Monday 24 April 2016)</p>
+				<div class="media author-meta">
+				    <div class="media__subject">
+				      <sg-insert>3.12.1-1</sg-insert>
+				    </div>
+				    <div class="media__body">
+				        <p><a class="anchor--main" href="javascript:void();">Show all 336</a></p>
+				    </div>
+				</div>
+				<p class="leader">336 Views since your last visit (Monday 24 April 2016)</p>
+				<p class="leader">336 Views since your last visit (Monday 24 April 2016)</p>
+				<p class="leader">336 Views since your last visit (Monday 24 April 2016)</p>
+			</div>
+		</div>
+		<div class="case__unit">
+			<div class="case__sample case--large trailer-inside leader-inside gutters">
+				<p class="h-paragraph trailer">Content</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+Styleguide 6.5.1
+*/
+
+

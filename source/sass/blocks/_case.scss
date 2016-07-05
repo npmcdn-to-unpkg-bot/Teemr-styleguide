@@ -1,0 +1,52 @@
+/*
+Case
+
+.case - flex container
+.case__unit - Located inside case, 3 columns
+.case__sample - 100% width, white background and a box shadow
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 4.5
+*/
+
+
+.case {
+	display: flex;
+	flex-direction: column;
+	&__unit {
+		display: flex;
+		flex-direction: column;
+	}
+	&__sample {
+		width: 100%;
+		background: white;
+		border-radius: 2px;
+		box-shadow: 0px 0px 4px 0px $color-structure;
+	}
+}
+
+/* Makes the side boxes same height */
+.case--large {
+	flex: 1;
+}
+
+.case__sample + .case__sample {
+	margin-top: rhythm(4);
+}
+
+@include breakpoint($gtsmall) {
+	.case {
+		flex-direction: row;
+		justify-content: space-between;
+	}	
+	.case__unit {
+		width: 31%;
+		display: flex;
+		flex-direction: column;	
+	}
+	.case__sample--stats {
+		padding-right: rhythm(17);
+	}
+}
