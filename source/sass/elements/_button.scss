@@ -1,8 +1,9 @@
 /*
 Button
 
-.button - Basic button. Green, growth color
+.button - Basic button. Brown, growth color
 .button.button--social - Orange, rounded button
+.button.button--growth - Green, rounded button
 .button.button--trust - Blue, rounded button
 .button.button--l - button with double padding
 .button.button--stretch - Full width button
@@ -40,6 +41,14 @@ Styleguide 3.5
 	&:hover {
 		background: $color-social;
 	}
+}
+
+.button--growth {
+    border-color: $color-growth;
+    color: $color-growth;
+    &:hover {
+        background: $color-growth;
+    }
 }
 
 .button--trust {
