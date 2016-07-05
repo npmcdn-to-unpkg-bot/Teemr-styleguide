@@ -81,39 +81,3 @@ Styleguide 6.5
 	font-size: to-unit(20px);
 	font-weight: 600; /* Requires refining */
 }
-
-/*
-Dashboard test
-
-markup:
-<div class="box trailer-inside--double">
-	<div class="wings case">
-		<div class="case__unit">
-			<div class="case__sample case__sample--stats case--large trailer-inside--large leader-inside gutters">
-				<p class="h-paragraph">Your numbers</p>
-				<p class="leader">336 Views since your last visit (Monday 24 April 2016)</p>
-				<div class="media author-meta">
-				    <div class="media__subject">
-				      <sg-insert>3.12.1-1</sg-insert>
-				    </div>
-				    <div class="media__body">
-				        <p><a class="anchor--main" href="javascript:void();">Show all 336</a></p>
-				    </div>
-				</div>
-				<p class="leader">336 Views since your last visit (Monday 24 April 2016)</p>
-				<p class="leader">336 Views since your last visit (Monday 24 April 2016)</p>
-				<p class="leader">336 Views since your last visit (Monday 24 April 2016)</p>
-			</div>
-		</div>
-		<div class="case__unit">
-			<div class="case__sample case--large trailer-inside leader-inside gutters">
-				<p class="h-paragraph trailer">Content</p>
-			</div>
-		</div>
-	</div>
-</div>
-
-Styleguide 6.5.1
-*/
-
-
