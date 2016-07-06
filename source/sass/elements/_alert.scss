@@ -1,0 +1,19 @@
+/*
+Alert
+
+.alert - .
+
+markup:
+<a class="{$modifiers} txt--meta" href="javascript:void(0)">{$modifiers}</a>
+
+Styleguide 3.14
+*/
+
+
+.alert {
+	border: 1px solid $color-structure--02;
+	border-radius: $border-radius;
+	padding: rhythm() rhythm(3);
+	font-size: to-unit(10px);
+	line-height: rhythm(3);
+}
