@@ -1,0 +1,16 @@
+/*
+Notification
+
+.notification - Notification bar
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 4.13
+*/
+
+.notification {
+	text-align: center;
+	width: 100%;
+	background: $color-growth--01;
+}
