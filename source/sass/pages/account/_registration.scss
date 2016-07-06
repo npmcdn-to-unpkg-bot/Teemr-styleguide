@@ -1,5 +1,5 @@
 /*
-Registration
+Registration - Step 1
 
 markup:
 <div class="container wings">
@@ -25,4 +25,44 @@ markup:
 </div>
 
 Styleguide 6.7.2
+*/
+
+/*
+Registration - Step 2
+
+markup:
+<div class="notification leader-inside--double trailer-inside--double">
+	<p>Almost done!</p>
+	<p>Please complete your registration by entering the secret token we've just sent you by E-mail.</p>
+	<a class="button leader--double" href="javascript:void(0)">Resend the token</a>
+</div>
+<div class="container wings">
+	<div class="container container--even wings leader">
+		<sg-insert>4.7</sg-insert>
+		<p class="h-poster leader--double trailer--large">Hi username :-)</p>
+		<p>We have sent you an E-mail container a secret token. Please complete your registration by entering it below.</p>
+		<sg-insert>4.9.3</sg-insert>
+		<a class="button button--stretch button--trust leader--double" href="javascript:void(0)">Complete registration</a>
+	</div>
+</div>
+
+Styleguide 6.7.2.1
+*/
+
+/*
+Registration - Step 3
+
+markup:
+<div class="notification leader-inside--double trailer-inside">
+	<p class="trailer--large">That's a match. Now, login and start enjoying Teemr!</p>
+	<a href="javascript:void(0)">Close</a>
+</div>
+<div class="container wings">
+	<div class="container container--even wings leader">
+		<sg-insert>4.7</sg-insert>
+		<sg-insert>6.7.1</sg-insert>
+	</div>
+</div>
+
+Styleguide 6.7.2.2
 */
