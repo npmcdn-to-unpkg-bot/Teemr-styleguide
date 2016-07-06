@@ -1,5 +1,25 @@
 /*
 Login
 
+markup:
+<p class="h-poster leader--double trailer--large">Login</p>
+<div class="media media--stretch trailer--tiny leader author-meta">
+    <p class="media__subject">E-mail address</p>
+</div>
+<input class="form" value="email@teemr.com" />
+<div class="media media--stretch trailer--tiny leader author-meta">
+    <p class="media__subject">Password</p>
+</div>
+<input class="form" type="password" value="qwewtet" />
+<a class="button button--trust button--stretch leader--double trailer--double" href="javascript:void(0)">Login<a>
+<ul>
+	<li>
+		<a href="javascript:void(0)">Forgot your password?</a>
+	</li>
+	<li>
+		New to teemr? <span><a href="javascript:void(0)">Sign up</a></span>
+	</li>
+</ul>
+
 Styleguide 6.7.1
 */
