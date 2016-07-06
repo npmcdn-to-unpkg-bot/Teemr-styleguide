@@ -4,13 +4,13 @@ Search
 .search - Search bar
 
 markup:
-<input class="{$modifiers}" placeholder="{$modifiers}" />
+<input class="form" placeholder="{$modifiers}" />
 
 Styleguide 4.8
 */
 
-.search {
-	line-height: rhythm(4);
-	border: 1px solid mix($color-highlight, $color-shadow, 90%);
-	border-radius: $border-radius;
-}
+// .search {
+// 	line-height: rhythm(4);
+// 	border: 1px solid mix($color-highlight, $color-shadow, 90%);
+// 	border-radius: $border-radius;
+// }
