@@ -1,7 +1,16 @@
 /*
 Notice
 
+.notice - Inform users about notice
+
+markup:
+<div class="{$modifiers}">Content about {$modifiers} goes here</div>
+
 Styleguide 4.2
 */
 
-.notice {}
+.notice {
+	border: 1px solid $color-structure--02;
+	border-radius: $border-radius;
+	padding: rhythm(2);
+}
