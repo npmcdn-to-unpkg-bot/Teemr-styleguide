@@ -1,7 +1,32 @@
 /*
 Form
 
+.form - Form
+
+markup:
+<input class="{$modifiers}" />
+
 Styleguide 3.4
 */
 
-.form {}
+.form {
+	width: 100%;
+	line-height: rhythm(4);
+	border: 1px solid $color-structure--02;
+	border-radius: $border-radius;
+	padding: 0 rhythm();
+}
+
+.is-correct {
+	& + .form {
+		color: darkseagreen;
+		border-color: darkseagreen;
+	}
+}
+
+.is-false {
+	& + .form {
+		color: red;
+		border-color: red;
+	}
+}
