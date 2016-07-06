@@ -1,0 +1,41 @@
+/*
+Username
+
+markup:
+<div class="media media--stretch is-false trailer--tiny leader author-meta">
+    <p class="media__subject">Username</p>
+    <div class="media__body">
+		That name is available!
+    </div>
+</div>
+<input class="form" value="Firstname Lastname" />
+
+Styleguide 4.9
+*/
+
+/*
+Email
+
+markup:
+<div class="media media--stretch trailer--tiny leader author-meta">
+    <p class="media__subject">E-mail address</p>
+</div>
+<input class="form" value="account@teemr.com" />
+
+Styleguide 4.9.1
+*/
+
+/*
+Password
+
+markup:
+<div class="media media--stretch is-correct trailer--tiny leader author-meta">
+    <p class="media__subject">Password</p>
+    <div class="media__body">
+		Strong
+    </div>
+</div>
+<input class="form" type="password" value="qwertyuiop" />
+
+Styleguide 4.9.2
+*/
