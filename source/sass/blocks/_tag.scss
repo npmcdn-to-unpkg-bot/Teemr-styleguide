@@ -29,3 +29,11 @@ Styleguide 4.3
 		margin: -4px;
 	}
 }
+
+/* tag--close doesn't fit */
+.tag--theme {
+	border: 1px solid $color-growth--02;
+	&--close {
+		background: $color-growth--02;
+	}
+}
