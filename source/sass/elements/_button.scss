@@ -119,3 +119,27 @@ Styleguide 3.5.2
 .switch, .switch:after {
 	border-radius: 1em;
 }
+
+/*
+Square button
+
+.button__tile - Square button
+
+markup:
+<a class="{$modifiers}" href="javascript:void(0)">+</a>
+
+Styleguide 3.5.3
+*/
+
+.button__tile {
+    text-align: center;
+    display: inline-block;
+    margin-right: 7px;
+    width: rhythm(4.5);
+    height: rhythm(4.5);
+    background: $color-growth;
+    color: white;
+    line-height: rhythm(4.5);
+    font-weight: bold;
+    border-radius: $border-radius;
+}

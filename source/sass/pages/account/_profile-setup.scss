@@ -121,7 +121,7 @@ markup:
 		<div class="media leader author-meta">
 		    <p class="media__subject temp">&nbsp;</p>
 		    <div class="media__body grow">
-				<a class="tile txt--l" href="javascript:void(0)">+</a>
+				<a class="button__tile txt--l" href="javascript:void(0)">+</a>
 				<a class="" href="javascript:void(0)">Add skill</a>
 		    </div>
 		</div>
@@ -139,15 +139,3 @@ markup:
 
 Styleguide 6.7.4.2
 */
-
-.tile {
-	display: inline-block;
-	margin-right: 7px;
-	width: rhythm(4.5);
-	height: rhythm(4.5);
-	background: $color-growth;
-	color: white;
-	line-height: rhythm(4.5);
-	font-weight: bold;
-	border-radius: $border-radius;
-}
