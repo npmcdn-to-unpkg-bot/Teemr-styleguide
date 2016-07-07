@@ -1,6 +1,8 @@
 /*
 Filter
 
+@todo: switch must be checkbox (or radio button - consult with Dave)
+
 markup:
 <div class="container box" id="filter">
 	<div class="filter leader--double ">
@@ -48,8 +50,8 @@ Styleguide 5.5
 .filter__input {
 	width: 100%;
 	border: 1px solid #D9D5CD;
-	border-radius: 3px;
-	line-height: rhythm(4);
+	border-radius: $border-radius;
+	line-height: rhythm(3);
 }
 
 .filter {
@@ -62,10 +64,10 @@ Styleguide 5.5
 		text-align: right;
 	}
 	&--show {
-		padding: rhythm(2) rhythm(12);
-		border-bottom: 1px solid  mix($color-highlight, $color-structure, 70%);
+		padding: rhythm(1) rhythm(12);
+		border-bottom: 2px solid  $color-structure--01;
 	}
 	&--light {
-		background: mix($color-highlight, $color-structure, 90%);
+		background: mix(#FFF, $color-structure--01, 40%);
 	}
 }
