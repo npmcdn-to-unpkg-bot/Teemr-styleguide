@@ -69,6 +69,7 @@ Styleguide 2.1.1
   }
 	.container--aside {
 		@include column-width(5/16);
+    border-left: 1px solid $color-growth--01;
 		.page--sidebar & {
 			@include column-width(5/16);
 		}
