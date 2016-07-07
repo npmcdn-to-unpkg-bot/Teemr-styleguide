@@ -2,22 +2,20 @@
 Profile
 
 markup:
-<sg-insert>5.1</sg-insert>
-<div class="wings leader trailer">
-	<sg-insert>4.7</sg-insert>
-	<div class="wings">
-		<sg-insert>4.1.1</sg-insert>
-	</div>
-	<a class="icon is-active" href="javascript:void(0);">
-		<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-rows"></use></svg>
-	</a>
-	<a class="icon" href="javascript:void(0);">
-		<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-tiles"></use></svg>
-	</a>
-</div>
-<sg-insert>4.10</sg-insert>
-<sg-insert>4.10.1</sg-insert>
-<sg-insert>4.10.2</sg-insert>
+<header role="banner">
+	<sg-insert>5.1</sg-insert>
+</header>
+<main class="container-cluster container-cluster--level">
+	<section class="container container--main">
+		<sg-insert>5.2.1</sg-insert>
+		<div class="wings leader">
+			<sg-insert>5.6</sg-insert>
+		</div>
+		<sg-insert>5.3.1.2-1</sg-insert>
+		<sg-insert>5.3.1-1</sg-insert>
+	</section><section class="container container--aside box">
+	</section>
+</main>
 
 Styleguide 6.3
 */

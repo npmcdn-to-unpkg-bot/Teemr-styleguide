@@ -1,7 +1,10 @@
 
 
 .post {
-  &--post--has-cover &__cover {
+  &--has-cover {
+    &::after {
+      
+    }
   }
   &--featured {
     position: relative;
@@ -97,7 +100,7 @@ Featured post is used in column post listings.
 .post.post--has-cover.post--featured - Regular post for listings
 
 markup:
-<article class="{$modifiers}" style="background: url('https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80')">
+<article class="{$modifiers}" style="background-image: url('https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80')">
   <figure class="post__cover cover is-narrative">
     <img class="cover" src="https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80" alt="London, Canada. Photo by Scott Webb." />
     <figcaption class="is-narrative">London, Canada <a href="https://unsplash.com/photos/kAJE-3_4zHE">Photo by Scott Webb.</a></figcaption>
