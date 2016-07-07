@@ -54,6 +54,19 @@ Styleguide 2.1.1
 */
 
 @include breakpoint($gtsmall) {
+  /*
+   * @todo: wacky code, container class needs refactor
+   */
+  .container-cluster {
+    position: relative;
+    min-height: 100%;
+    .container--aside {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
 	.container--aside {
 		@include column-width(5/16);
 		.page--sidebar & {
