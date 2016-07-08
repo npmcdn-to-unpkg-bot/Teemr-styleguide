@@ -70,7 +70,7 @@ Featured post is used in column post listings
 
 markup:
 <article class="{$modifiers}">
-  <div class="post__header container container--medium-editor gutters">
+  <div class="post__header wings wings--post gutters">
     <sg-insert>4.12-2</sg-insert>
     <header class="media media--stretch">
       <h2 class="h-page media__subject">London, Canada</h2>
@@ -105,7 +105,7 @@ markup:
     <img class="cover" src="https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80" alt="London, Canada. Photo by Scott Webb." />
     <figcaption class="is-narrative">London, Canada <a href="https://unsplash.com/photos/kAJE-3_4zHE">Photo by Scott Webb.</a></figcaption>
   </figure>
-  <div class="post__header container container--medium-editor gutters">
+  <div class="post__header wings wings--post gutters">
     <sg-insert>4.12-2</sg-insert>
     <header class="media media--stretch">
       <h2 class="h-page media__subject">London, Canada</h2>
@@ -136,7 +136,7 @@ Featured post is used in column post listings
 
 markup:
 <article class="{$modifiers}">
-  <div class="post__header container container--medium-editor gutters">
+  <div class="post__header wings wings--post gutters">
     <header class="media media--stretch">
       <h2 class="h-page media__subject">London, Canada</h2>
       <div class="media__body"><sg-insert>4.4.1-4</sg-insert></div>
@@ -170,7 +170,7 @@ markup:
     <img class="cover" src="https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80" alt="London, Canada. Photo by Scott Webb." />
     <figcaption class="is-narrative">London, Canada <a href="https://unsplash.com/photos/kAJE-3_4zHE">Photo by Scott Webb.</a></figcaption>
   </figure>
-  <div class="post__header container container--medium-editor gutters">
+  <div class="post__header wings wings--post gutters">
     <header class="media media--stretch">
       <h2 class="h-page media__subject">London, Canada</h2>
       <div class="media__body"><sg-insert>4.4.1-4</sg-insert></div>

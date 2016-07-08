@@ -9,16 +9,18 @@ Containers need to be wrapped inside a `container-cluster` for the layout to tak
 
 markup:
 <main class="{$modifiers}">
-  <section class="container container--main">Large container</section>
-  <section class="container container--aside">Small container</section>
+  <section class="container container--main">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</section>
+  <section class="container container--aside"></section>
 </main>
 
 sg-wrapper:
-<div class="debug-breakpoints">
+<div class="debug-layout debug-rhythm">
+<div class="debug-breakpoint">
   <sg-wrapper-content/>
 </div>
+</div>
 
-Styleguide 2.1.1
+Styleguide 2.1
 */
 
 .container-cluster {
@@ -37,7 +39,7 @@ Styleguide 2.1.1
     }
     &-cluster--even & {
       width: percentage(8/16);
-      flex: 1 0 percentage(8/16);
+      flex: 0 0 percentage(8/16);
     }
   }
 
@@ -48,7 +50,7 @@ Styleguide 2.1.1
     }
     &-cluster--sidebar &,
     &-cluster--split & {
-      flex: 1 0;
+      flex-shrink: 0;
     }
     &-cluster--sidebar & + &,
     &-cluster--split & + & {
@@ -57,10 +59,18 @@ Styleguide 2.1.1
     &-cluster--sidebar & {
       width: percentage(14/18);
       flex-basis: percentage(14/18);
+      // & + & {
+      //   width: percentage(4/18);
+      //   flex-basis: percentage(4/18);
+      // }
     }
     &-cluster--split & {
       width: percentage(12/18);
       flex-basis: percentage(12/18);
+      // & + & {
+      //   width: percentage(6/18);
+      //   flex-basis: percentage(6/18);
+      // }
     }
   }
 
@@ -68,10 +78,18 @@ Styleguide 2.1.1
     &-cluster--sidebar & {
       width: percentage(16/20);
       flex-basis: percentage(16/20);
+      // & + & {
+      //   width: percentage(4/20);
+      //   flex-basis: percentage(4/20);
+      // }
     }
     &-cluster--split & {
       width: percentage(14/20);
       flex-basis: percentage(14/20);
+      // & + & {
+      //   width: percentage(6/20);
+      //   flex-basis: percentage(6/20);
+      // }
     }
   }
 }

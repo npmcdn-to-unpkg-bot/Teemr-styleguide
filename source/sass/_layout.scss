@@ -10,8 +10,9 @@ Debug layout
 Styleguide 2.0.1
 */
 
-// $debug-layout: true;
-// $debug-rhythm: true;
+$debug-layout: true;
+$debug-rhythm: true;
+$debug-breakpoint: true;
 
 // @mixin debug-rhythm($rhythm: $rhythm)
 // {
@@ -94,6 +95,42 @@ Styleguide 2.0.1
 //         @include debug-rhythm();
 //     }
 // }
+
+
+
+@if $debug-breakpoint {
+	.debug-breakpoint {
+	    position: relative;
+	    &::after {
+	      position: absolute;
+	      z-index: 10;
+	      display: inline-block;
+	      right: 0;
+	      content: "<768px";
+	      padding: 10px;
+	      background: #2C3E50;
+	      color: #FFF;
+	    }
+	  @include breakpoint($gt-large-handheld) {
+	    &::after {
+	      content: ">=768px";
+	      background: #FF1493;
+	    }
+	  }
+	  @include breakpoint($gt-small-desktop) {
+	    &::after {
+	      content: ">=1024px";
+	      background: #4B0082;
+	    }
+	  }
+	  @include breakpoint($gt-large-desktop) {
+	    &::after {
+	      content: ">=1440px";
+	      background: #00FFFF;
+	    }
+	  }
+	}
+}
 
 /* 2.1 Container */
 @import "layout/container";
