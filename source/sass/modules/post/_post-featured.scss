@@ -1,39 +1,3 @@
-
-/*
- * 1. Lift on top of overlay
- */
-.post {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: rhythm(6) 0;
-  &--has-cover {
-    position: relative;
-    color: #FFF !important;
-    min-height: rhythm(60); /* Add breakpoints */
-    background: $black no-repeat center;
-    background-size: cover;
-    &:after {
-      content: "";
-      display: block;
-      background: rgba(0,0,0,.5);
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-    }
-  }
-  &--has-cover &__child {
-    position: relative; /* 1. */
-    z-index: 1; /* 1. */
-  }
-  &__body {
-    flex-grow: 1;
-  }
-  &__summary,
-  &__footer {
-    margin-bottom: rhythm(2);
-  }
-}
-
 /*
 Featured post - no lead image
 
