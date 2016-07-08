@@ -20,7 +20,7 @@ Styleguide 4.3
 
 .tag__close {
 	padding: rhythm() rhythm(1.5);
-	background: $color-structure--01;
+	background: $color-structure--02;
 	color: $white;
 	border-radius: 0 $border-radius $border-radius 0;
 	svg {
@@ -30,7 +30,7 @@ Styleguide 4.3
 
 .tag__skill,
 .tag__close {
-	border: 1px solid $color-structure--01;
+	border: 1px solid $color-structure--02;
 }
 
 .tag__skill + .tag__close {
