@@ -12,14 +12,15 @@ Styleguide 3.12
 */
 
 .avatar {
+    $size: 6;
+    box-sizing: content-box;
+    position: relative;
     display: inline-block;
-	border-radius: 50%;
-    $size: 9;
+    margin: -2px;
     height: rhythm($size);
     width: rhythm($size);
-    border: 3px solid $white;
-    box-sizing: content-box;
-    margin: -3px;
+    border: 2px solid $white;
+    border-radius: 50%;
     & + & {
         margin-left: rhythm(-3);
     }

@@ -41,6 +41,9 @@ Styleguide 2.1
       width: percentage(8/16);
       flex: 0 0 percentage(8/16);
     }
+    &-cluster--even & + & {
+      flex-shrink: 1;
+    }
   }
 
   @include breakpoint($gt-small-desktop) {
@@ -51,6 +54,10 @@ Styleguide 2.1
     &-cluster--sidebar &,
     &-cluster--split & {
       flex-shrink: 0;
+    }
+    &-cluster--sidebar & + &,
+    &-cluster--split & + & {
+      flex-shrink: 1;
     }
     &-cluster--sidebar & + &,
     &-cluster--split & + & {
