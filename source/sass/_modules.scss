@@ -7,8 +7,14 @@ Styleguide 5.0
 /* 5.1 Header */
 @import "modules/masthead";
 
-/* 5.2 Footer */
-@import "modules/footer";
+/*
+Profile
+
+Styleguide 5.2
+*/
+
+  /* 5.2.1 Profile-header */
+  @import "modules/profile/profile-header";
 
 /*
 Posts
@@ -30,6 +36,10 @@ Styleguide 5.3
 
 /* 5.7 Related posts */
 @import "modules/related-post";
+
+
+/* 5.7 Footer */
+@import "modules/footer";
 
 /* 5.99 Medium editor */
 @import "modules/medium-editor";

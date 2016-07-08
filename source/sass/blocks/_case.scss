@@ -36,7 +36,7 @@ Styleguide 4.5
 	margin-top: rhythm(4);
 }
 
-@include breakpoint($gtsmall) {
+@include breakpoint($gt-medium-handheld) {
 	.case {
 		flex-direction: row;
 		justify-content: space-between;

@@ -37,21 +37,21 @@ Styleguide 4.10
 	}
 }
 
-@include breakpoint($gtsmall) {
+@include breakpoint($gt-medium-handheld) {
 	.article {
 		padding-left: percentage(2/16);
 		padding-right: percentage(2/16);
 	}
 }
 
-@include breakpoint($gtmedium) {
+@include breakpoint($gt-large-handheld) {
 	.article {
 		padding-left: percentage(2/18);
 		padding-right: percentage(2/18);
 	}
 }
 
-@include breakpoint($gtlarge) {
+@include breakpoint($gt-medium-desktop) {
 	.article {
 		padding-left: percentage(2/20);
 		padding-right: percentage(2/20);

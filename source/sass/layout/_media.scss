@@ -21,4 +21,8 @@ Styleguide 2.4
 	&--stretch &__subject {
 		flex-grow: 1;
 	}
+	&__subject--grow,
+	&__body--grow {
+		flex-grow: 1;
+	}
 }

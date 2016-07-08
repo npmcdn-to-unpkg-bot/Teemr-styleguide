@@ -227,7 +227,7 @@ Styleguide 5.99
   // -----------------------------------
   // wings/breakpoints
   // -----------------------------------
-  @include breakpoint($gtsmall) {
+  @include breakpoint($gt-medium-handheld) {
     margin-left: percentage(1/16);
     margin-right: percentage(1/16);
     &--left {
@@ -237,7 +237,7 @@ Styleguide 5.99
       margin-right: percentage(1/16);
     }
   }
-  @include breakpoint($gtmedium) {
+  @include breakpoint($gt-large-handheld) {
     margin-left: percentage(3/18);
     margin-right: percentage(3/18);
     .page--sidebar & {
@@ -272,7 +272,7 @@ Styleguide 5.99
     }
   }
 
-  @include breakpoint($gtlarge) {
+  @include breakpoint($gt-medium-desktop) {
     margin-left: percentage(5/20);
     margin-right: percentage(5/20);
     .page--sidebar & {
@@ -527,7 +527,7 @@ Styleguide 5.99
   /*
    * Medium viewport - e.g. tablet portrait
    */
-  @include breakpoint($gtsmall) {
+  @include breakpoint($gt-medium-handheld) {
     p {
       margin-top: to-unit(1/3, 1em);
     }
@@ -573,7 +573,7 @@ Styleguide 5.99
   /*
    * Normal viewport - e.g. tablet landscape & small desktop
    */
-  @include breakpoint($gtmedium) {
+  @include breakpoint($gt-large-handheld) {
     $_font-size: 18px;
     font-size: to-unit($_font-size, 1em);
     p {

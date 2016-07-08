@@ -1,7 +1,10 @@
 
 
 .post {
-  &--post--has-cover &__cover {
+  &--has-cover {
+    &::after {
+      
+    }
   }
   &--featured {
     position: relative;
@@ -67,7 +70,7 @@ Featured post is used in column post listings
 
 markup:
 <article class="{$modifiers}">
-  <div class="post__header container container--medium-editor gutters">
+  <div class="post__header wings wings--post gutters">
     <sg-insert>4.12-2</sg-insert>
     <header class="media media--stretch">
       <h2 class="h-page media__subject">London, Canada</h2>
@@ -97,12 +100,12 @@ Featured post is used in column post listings.
 .post.post--has-cover.post--featured - Regular post for listings
 
 markup:
-<article class="{$modifiers}" style="background: url('https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80')">
+<article class="{$modifiers}" style="background-image: url('https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80')">
   <figure class="post__cover cover is-narrative">
     <img class="cover" src="https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80" alt="London, Canada. Photo by Scott Webb." />
     <figcaption class="is-narrative">London, Canada <a href="https://unsplash.com/photos/kAJE-3_4zHE">Photo by Scott Webb.</a></figcaption>
   </figure>
-  <div class="post__header container container--medium-editor gutters">
+  <div class="post__header wings wings--post gutters">
     <sg-insert>4.12-2</sg-insert>
     <header class="media media--stretch">
       <h2 class="h-page media__subject">London, Canada</h2>
@@ -122,4 +125,68 @@ markup:
 </article>
 
 Styleguide 5.3.1.2
+*/
+
+/*
+Featured post on a profile page - no lead image
+
+Featured post is used in column post listings
+
+.post.post--featured - Regular post for listings
+
+markup:
+<article class="{$modifiers}">
+  <div class="post__header wings wings--post gutters">
+    <header class="media media--stretch">
+      <h2 class="h-page media__subject">London, Canada</h2>
+      <div class="media__body"><sg-insert>4.4.1-4</sg-insert></div>
+    </header>
+    <p class="post__summary txt--l">London, England’s capital, set on the River Thames, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey, site of British monarch coronations. Across the Thames, the London Eye observation wheel provides panoramic views of the South Bank cultural complex, and the entire city.</p>
+    <footer class="post__footer media media--stretch">
+      <div class="media__subject">
+        <sg-insert>4.4.4-2</sg-insert>
+      </div>
+      <div class="media__body">
+        <sg-insert>4.4.2-4</sg-insert>
+          <sg-insert>4.4.3-3</sg-insert>
+      </div>
+    </footer>
+  </div>
+</article>
+
+Styleguide 5.3.2
+*/
+
+/*
+Featured post post on a profile page - with lead image
+
+Featured post is used in column post listings.
+
+.post.post--has-cover.post--featured - Regular post for listings
+
+markup:
+<article class="{$modifiers}" style="background-image: url('https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80')">
+  <figure class="post__cover cover is-narrative">
+    <img class="cover" src="https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80" alt="London, Canada. Photo by Scott Webb." />
+    <figcaption class="is-narrative">London, Canada <a href="https://unsplash.com/photos/kAJE-3_4zHE">Photo by Scott Webb.</a></figcaption>
+  </figure>
+  <div class="post__header wings wings--post gutters">
+    <header class="media media--stretch">
+      <h2 class="h-page media__subject">London, Canada</h2>
+      <div class="media__body"><sg-insert>4.4.1-4</sg-insert></div>
+    </header>
+    <p class="post__summary txt--l">London, England’s capital, set on the River Thames, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey, site of British monarch coronations. Across the Thames, the London Eye observation wheel provides panoramic views of the South Bank cultural complex, and the entire city.</p>
+    <footer class="post__footer media media--stretch">
+      <div class="media__subject">
+        <sg-insert>4.4.4-2</sg-insert>
+      </div>
+      <div class="media__body">
+        <sg-insert>4.4.2-4</sg-insert>
+          <sg-insert>4.4.3-3</sg-insert>
+      </div>
+    </footer>
+  </div>
+</article>
+
+Styleguide 5.3.2.2
 */

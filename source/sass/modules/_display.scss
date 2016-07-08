@@ -5,11 +5,11 @@ Display Picker
 
 markup:
 <form>
-	<button class="reset icon is-active">
+	<button class="reset icon icon--l is-active">
 		<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-tiles"></use></svg>
 		<span class="icon__label is-narrative">Display als grid</span>
 	</button>
-	<button class="reset icon">
+	<button class="reset icon icon--l">
 		<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-rows"></use></svg>
 		<span class="icon__label is-narrative">Display als list</span>
 	</button>

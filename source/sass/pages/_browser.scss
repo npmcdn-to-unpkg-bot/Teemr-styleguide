@@ -7,7 +7,7 @@ markup:
 <header role="banner">
 	<sg-insert>5.1</sg-insert>
 </header>
-<main class="container-cluster container-cluster--level">
+<main class="container-cluster container-cluster--split">
 	<section class="container container--main">
 		<div class="wings leader">
 			<sg-insert>5.6</sg-insert>
@@ -17,7 +17,6 @@ markup:
 	</section><section class="container container--aside box">
 		<sg-insert>5.5</sg-insert>
 	</section>
-
 </main>
 
 Styleguide 6.2
