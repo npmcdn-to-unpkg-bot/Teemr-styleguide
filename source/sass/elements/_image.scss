@@ -1,6 +1,11 @@
 /*
 Image treatments
 
+.cover - Display block + 100% max-width
+
+markup:
+<img class="{$modifiers}" src="https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=1&auto=format&crop=entropy&fit=crop&w=1543&h=869&q=80" />
+
 Styleguide 3.8
 */
 
