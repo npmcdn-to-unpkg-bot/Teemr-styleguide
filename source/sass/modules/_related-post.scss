@@ -1,0 +1,215 @@
+/*
+related-post posts
+
+markup:
+<div class="box container">
+	<div class="container container--even related leader-inside trailer-inside">
+		<p class="trailer">Other posts by Pete McCormick</p>
+		<div class="related-post">
+			<div class="media author-meta">
+			    <div class="media__subject">
+			      <sg-insert>3.12-1</sg-insert>
+			    </div>
+			    <div class="media__body">
+			    	<div class="comment__poster">
+				    	<a href="javascript:void();">Rafaël Peter</a>
+				    	<span class="icon icon--s is-active ballot"">
+							<svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+							<span class="icon__label ballot__count txt--meta">688</span>
+						</span>
+					</div>
+			    </div>
+			</div>
+			<p class="is-bold">Detroit</p>
+			<div class="media media--stretch author-meta">
+			    <p class="media__subject txt--whisper txt--meta">Two years ago in <a href="javascript:void(0)">Cases</a></p>
+			    <div class="media__body">
+			        <span class="icon icon--s icon--reverse">
+						<svg class="icon__shape" viewBox="0 0 21 21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-comment"></use></svg>
+						<span class="icon__label txt--meta">143</span>
+					</span>		    
+			        <span class="icon icon--s icon--reverse is-active">
+						<svg class="icon__shape" viewBox="0 0 21 21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg>
+						<span class="icon__label txt--meta">4K</span>
+					</span>
+			    </div>
+			</div>
+		</div>
+		<div class="related-post">
+			<div class="media author-meta">
+			    <div class="media__subject">
+			      <sg-insert>3.12-1</sg-insert>
+			    </div>
+			    <div class="media__body">
+			    	<div class="comment__poster">
+				    	<a href="javascript:void();">Rafaël Peter</a>
+				    	<span class="icon icon--s is-active ballot"">
+							<svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+							<span class="icon__label ballot__count txt--meta">688</span>
+						</span>
+					</div>
+			    </div>
+			</div>
+			<p class="is-bold">Detroit</p>
+			<div class="media media--stretch author-meta">
+			    <p class="media__subject txt--whisper txt--meta">Two years ago in <a href="javascript:void(0)">Cases</a></p>
+			    <div class="media__body">
+			        <span class="icon icon--s icon--reverse">
+						<svg class="icon__shape" viewBox="0 0 21 21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-comment"></use></svg>
+						<span class="icon__label txt--meta">143</span>
+					</span>		    
+			        <span class="icon icon--s icon--reverse is-active">
+						<svg class="icon__shape" viewBox="0 0 21 21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg>
+						<span class="icon__label txt--meta">4K</span>
+					</span>
+			    </div>
+			</div>
+		</div>
+		<div class="related-post">
+			<div class="media author-meta">
+			    <div class="media__subject">
+			      <sg-insert>3.12-1</sg-insert>
+			    </div>
+			    <div class="media__body">
+			    	<div class="comment__poster">
+				    	<a href="javascript:void();">Rafaël Peter</a>
+				    	<span class="icon icon--s is-active ballot"">
+							<svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+							<span class="icon__label ballot__count txt--meta">688</span>
+						</span>
+					</div>
+			    </div>
+			</div>
+			<p class="is-bold">Detroit</p>
+			<div class="media media--stretch author-meta">
+			    <p class="media__subject txt--whisper txt--meta">Two years ago in <a href="javascript:void(0)">Cases</a></p>
+			    <div class="media__body">
+			        <span class="icon icon--s icon--reverse">
+						<svg class="icon__shape" viewBox="0 0 21 21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-comment"></use></svg>
+						<span class="icon__label txt--meta">143</span>
+					</span>		    
+			        <span class="icon icon--s icon--reverse is-active">
+						<svg class="icon__shape" viewBox="0 0 21 21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg>
+						<span class="icon__label txt--meta">4K</span>
+					</span>
+			    </div>
+			</div>
+		</div>
+	</div><!--
+	--><div class="container container--even related leader-inside trailer-inside">
+		<p class="trailer">Related posts</p>
+		<div class="related-post">
+			<div class="media author-meta">
+			    <div class="media__subject">
+			      <sg-insert>3.12-1</sg-insert>
+			    </div>
+			    <div class="media__body">
+			    	<div class="comment__poster">
+				    	<a href="javascript:void();">Rafaël Peter</a>
+				    	<span class="icon icon--s is-active ballot"">
+							<svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+							<span class="icon__label ballot__count txt--meta">688</span>
+						</span>
+					</div>
+			    </div>
+			</div>
+			<p class="is-bold">Detroit</p>
+			<div class="media media--stretch author-meta">
+			    <p class="media__subject txt--whisper txt--meta">Two years ago in <a href="javascript:void(0)">Cases</a></p>
+			    <div class="media__body">
+			        <span class="icon icon--s icon--reverse">
+						<svg class="icon__shape" viewBox="0 0 21 21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-comment"></use></svg>
+						<span class="icon__label txt--meta">143</span>
+					</span>		    
+			        <span class="icon icon--s icon--reverse is-active">
+						<svg class="icon__shape" viewBox="0 0 21 21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg>
+						<span class="icon__label txt--meta">4K</span>
+					</span>
+			    </div>
+			</div>
+		</div>
+		<div class="related-post">
+			<div class="media author-meta">
+			    <div class="media__subject">
+			      <sg-insert>3.12-1</sg-insert>
+			    </div>
+			    <div class="media__body">
+			    	<div class="comment__poster">
+				    	<a href="javascript:void();">Rafaël Peter</a>
+				    	<span class="icon icon--s is-active ballot"">
+							<svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+							<span class="icon__label ballot__count txt--meta">688</span>
+						</span>
+					</div>
+			    </div>
+			</div>
+			<p class="is-bold">I believe in equality for everyone, except reporters and photographers</p>
+			<div class="media media--stretch author-meta">
+			    <p class="media__subject txt--whisper txt--meta">Two days ago in <a href="javascript:void(0)">Columns</a></p>
+			    <div class="media__body">
+			        <span class="icon icon--s icon--reverse">
+						<svg class="icon__shape" viewBox="0 0 21 21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-comment"></use></svg>
+						<span class="icon__label txt--meta">143</span>
+					</span>		    
+			        <span class="icon icon--s icon--reverse is-active">
+						<svg class="icon__shape" viewBox="0 0 21 21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg>
+						<span class="icon__label txt--meta">4K</span>
+					</span>
+			    </div>
+			</div>
+		</div>
+		<div class="related-post">
+			<div class="media author-meta">
+			    <div class="media__subject">
+			      <sg-insert>3.12-1</sg-insert>
+			    </div>
+			    <div class="media__body">
+			    	<div class="comment__poster">
+				    	<a href="javascript:void();">Rafaël Peter</a>
+				    	<span class="icon icon--s is-active ballot"">
+							<svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+							<span class="icon__label ballot__count txt--meta">777</span>
+						</span>
+					</div>
+			    </div>
+			</div>
+			<p class="is-bold">The eye should learn to listen before it looks</p>
+			<div class="media media--stretch author-meta">
+			    <p class="media__subject txt--whisper txt--meta">Last week in <a href="javascript:void(0)">Columns</a></p>
+			    <div class="media__body">
+			        <span class="icon icon--s icon--reverse">
+						<svg class="icon__shape" viewBox="0 0 21 21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-comment"></use></svg>
+						<span class="icon__label txt--meta">143</span>
+					</span>		    
+			        <span class="icon icon--s icon--reverse is-active">
+						<svg class="icon__shape" viewBox="0 0 21 21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg>
+						<span class="icon__label txt--meta">4K</span>
+					</span>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+Styleguide 5.7
+*/
+
+.related-post {
+	.is-bold {
+		padding-right: rhythm(11);
+	}
+}
+
+@include breakpoint($gtsmall) {
+	.related {
+		padding-right: rhythm(2);
+	}
+	.related + .related {
+		padding-right: 0;
+		padding-left: rhythm(2);
+	}
+}
+
+.related-post + .related-post {
+	margin-top: rhythm(4);
+}
