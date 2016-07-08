@@ -4,7 +4,7 @@ Form
 .form - Form
 
 markup:
-<input class="{$modifiers}" />
+<input class="{$modifiers}" placeholder="{$modifiers}" />
 
 Styleguide 3.4
 */
@@ -29,4 +29,20 @@ Styleguide 3.4
 		color: red;
 		border-color: red;
 	}
+}
+
+
+/*
+Form large
+
+.form.form--l - Large form element used for comments and textareas
+
+markup:
+<textarea class="{$modifiers}" placeholder="{$modifiers}" />
+
+Styleguide 3.4.1
+*/
+
+.form--l {
+	padding: rhythm(2) rhythm(3);
 }

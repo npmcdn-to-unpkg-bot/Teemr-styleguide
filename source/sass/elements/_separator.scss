@@ -1,0 +1,15 @@
+/*
+Separator
+
+.separator - 2px structure coloured seperator
+
+markup:
+<hr class="{$modifiers}" />
+
+Styleguide 3.15
+*/
+
+.separator {
+	border: 0;
+	border-bottom: 1px solid $color-structure--03;
+}

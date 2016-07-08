@@ -24,7 +24,7 @@ markup:
 		    <div class="media__body grow">
 				<input class="form" placeholder="Lastname" />
 		    </div>
-		</div>		
+		</div>
 	</div><!--
 	--><div class="container container--even align-middle">
 		<div class="media trailer--tiny leader author-meta">
@@ -86,7 +86,7 @@ markup:
 		    <div class="media__body grow">
 				<input class="form" placeholder="E.g. London, UK" />
 		    </div>
-		</div>		
+		</div>
 	</div><!--
 	--><div class="container container--even align-middle">
 		<div class="media trailer--tiny leader author-meta">
@@ -106,7 +106,36 @@ Styleguide 6.7.4.1
 Profile setup - Step 3
 
 markup:
+<div class="wings">
+	<p class="wings h-poster leader trailer">Hi username, let's get you set up...</p>
+</div>
+<div class="wings box container">
+	<div class="container container--even wings trailer--large align-middle">
+		<div class="media trailer--double leader author-meta">
+		    <p class="media__subject temp">&nbsp;</p>
+		    <div class="media__body grow">
+				<p>Step 3 of 3 <span class="is-bold">Skills</span></p>
+				<a class="txt--xs" href="javascript:void(0)">Skip (I'll do it later)</a>
+		    </div>
+		</div>
+		<div class="media leader author-meta">
+		    <p class="media__subject temp">&nbsp;</p>
+		    <div class="media__body grow">
+				<a class="button__tile txt--l" href="javascript:void(0)">+</a>
+				<a class="" href="javascript:void(0)">Add skill</a>
+		    </div>
+		</div>
+	</div><!--
+	--><div class="container container--even align-middle">
+		<div class="media trailer--tiny leader author-meta">
+		    <a class="media__subject setup--icon" href="javascript:void(0)"><svg width="75" height="75" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"/></svg></a>
+		    <div class="media__body grow">
+				<p>Next: <span class="is-bold">That's it -  you're ready to rock and roll...</span></p>
+				<a href="javascript:void(0)">Check out your new profile</a>
+		    </div>
+		</div>
+	</div>
+</div>
 
 Styleguide 6.7.4.2
 */
-

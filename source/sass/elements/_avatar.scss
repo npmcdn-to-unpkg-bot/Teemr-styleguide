@@ -11,15 +11,16 @@ markup:
 Styleguide 3.12
 */
 
-
-/* @todo Images appear smaller than they are supposed to be. Border causes the images to shrink */
 .avatar {
+    $size: 6;
+    box-sizing: content-box;
+    position: relative;
     display: inline-block;
-	border-radius: 50%;
-    $size: 9;
+    margin: -2px;
     height: rhythm($size);
     width: rhythm($size);
-    border: 3px solid $white;
+    border: 2px solid $white;
+    border-radius: 50%;
     & + & {
         margin-left: rhythm(-3);
     }
@@ -28,6 +29,7 @@ Styleguide 3.12
         height: rhythm($size);
         width: rhythm($size);
         border: 2px solid $white;
+        margin: -2px;
         & + & {
             margin-left: rhythm(-1.5);
         }
@@ -37,6 +39,7 @@ Styleguide 3.12
         height: rhythm($size);
         width: rhythm($size);
         border: 4px solid $white;
+        margin: -4px;
         & + & {
             margin-left: rhythm(-6);
         }
