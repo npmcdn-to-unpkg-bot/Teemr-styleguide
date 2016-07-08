@@ -63,18 +63,20 @@ Styleguide 3.5
 /*
 button with icon
 
+.button.button--icon.icon - Button with included icon
+
 markup:
-<a class="button button-icon" href="javascript:void(0);">I am a button</a>
+<a class="{$modifiers}" href="javascript:void(0);">
+    <svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-pen"></use></svg>
+    <span class="icon__label">I am a button</span>
+</a>
 
 Styleguide 3.5.1
 */
 
-.button-icon {
-    &:before {
-        content: "\fd43"; /* Placeholder icon */
-        margin-left: rhythm(-1);
-        padding-right: rhythm(1);
-    }
+.button--icon {
+    /* A bit less padding on the left side makes it look like the text is centered */
+    padding: rhythm() rhythm(4) rhythm() rhythm(3);
 }
 
 /*
