@@ -18,7 +18,7 @@ Styleguide 3.2
 	}
 }
 
-@include breakpoint($gtsmall) {
+@include breakpoint($gt-medium-handheld) {
 	.heading {
 		font-size: to-unit(35px);
 		line-height: rhythm(5);
@@ -28,7 +28,7 @@ Styleguide 3.2
 		}
 	}
 }
-@include breakpoint($gtmedium) {
+@include breakpoint($gt-large-handheld) {
 	.heading {
 		font-size: to-unit(49px);
 		line-height: rhythm(9);
@@ -38,7 +38,7 @@ Styleguide 3.2
 		}
 	}
 }
-@include breakpoint($gtlarge) {
+@include breakpoint($gt-medium-desktop) {
 	.heading {
 		font-size: to-unit(64px);
 		line-height: rhythm(12);

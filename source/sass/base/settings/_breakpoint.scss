@@ -24,13 +24,61 @@ markup:
 Styleguide 1.3.3
 */
 
-$gtsmall: "(min-width: #{to-unit(768px)})"; // Tablet portrait
-$gtmedium: "(min-width: #{to-unit(1024px)})"; // Tablet landscape, old desktops
-$gtlarge: "(min-width: #{to-unit(1280px)})"; // Desktop
+// $font-size: 16px;
 
-$ltsmall: "(max-width: #{to-unit(767px)})"; // Default
-$ltmedium: "(max-width: #{to-unit(1024px)})"; // Default
-$ltlarge: "(max-width: #{to-unit(1280px)})"; // Default
+$lt-small-handheld: "(max-width: #{to-unit(319px,$unit,$font-size)})";
+$gt-small-handheld: "(min-width: #{to-unit(320px,$unit,$font-size)})";
+
+$lt-medium-handheld: "(max-width: #{to-unit(519px,$unit,$font-size)})";
+$gt-medium-handheld: "(min-width: #{to-unit(520px,$unit,$font-size)})";
+
+$lt-large-handheld: "(max-width: #{to-unit(767px,$unit,$font-size)})";
+$gt-large-handheld: "(min-width: #{to-unit(768px,$unit,$font-size)})";
+
+$lt-small-desktop: "(max-width: #{to-unit(1023px,$unit,$font-size)})";
+$gt-small-desktop: "(min-width: #{to-unit(1024px,$unit,$font-size)})";
+
+$lt-medium-desktop: "(max-width: #{to-unit(1259px,$unit,$font-size)})";
+$gt-medium-desktop: "(min-width: #{to-unit(1260px,$unit,$font-size)})";
+
+$lt-large-desktop: "(max-width: #{to-unit(1439px,$unit,$font-size)})";
+$gt-large-desktop: "(min-width: #{to-unit(1440px,$unit,$font-size)})";
 
 $portrait: "(orientation: portrait)";
 $landscape: "(orientation: landscape)";
+
+// $font-size: 14px;
+
+
+
+.debug-breakpoints {
+    position: relative;
+    &::after {
+      position: absolute;
+      z-index: 10;
+      display: inline-block;
+      right: 0;
+      content: "<768px";
+      padding: 10px;
+      background: #2C3E50;
+      color: #FFF;
+    }
+  @include breakpoint($gt-large-handheld) {
+    &::after {
+      content: ">=768px";
+      background: #FF1493;
+    }
+  }
+  @include breakpoint($gt-small-desktop) {
+    &::after {
+      content: ">=1024px";
+      background: #4B0082;
+    }
+  }
+  @include breakpoint($gt-large-desktop) {
+    &::after {
+      content: ">=1440px";
+      background: #00FFFF;
+    }
+  }
+}

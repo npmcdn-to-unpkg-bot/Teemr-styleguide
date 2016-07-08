@@ -1,153 +1,77 @@
 /*
 Container
 
-.container - Creates a 100% width inline-block
-.container.container--label - 25% width container
-.container.container--data - 75% width container
-.container.container--root - Relative position
-.container.container--flex - Display set to flex, additional auto width
-.container.container--even - 50% width container
+Containers need to be wrapped inside a `container-cluster` for the layout to take effect. When flexbox is not available, the container class will fall-back to floats.
+
+.container-cluster.container-cluster--sidebar - Splits view into two columns, one larger and one very small container (used for profile page)
+.container-cluster.container-cluster--split - Splits view into two columns, one larger and one smaller container (used for browser page)
+.container-cluster.container-cluster--even - Splits view into two equal width columns, can be used for different purposes @todo consider moving to grid class
 
 markup:
-<div class="{$modifiers}">{$modifiers}</div>
+<main class="{$modifiers}">
+  <section class="container container--main">Large container</section>
+  <section class="container container--aside">Small container</section>
+</main>
 
-Styleguide 2.1
-*/
-
-.container {
-	@include column-behavior();
-	@include column-width(12/12);
-}
-	.container--label {
-		@include column-width(3/12);
-	}
-	legend .container--label {
-		float: left;
-	}
-	.container--data {
-		@include column-width(9/12);
-	}
-	.container--root {
-		position: relative;
-	}
-	.container--flex {
-		display: flex;
-		width: auto;
-	}
-
-// -----------------------------------
-// container/breakpoints
-// -----------------------------------
-
-/*
-Containers based on viewport
-
-Viewports in the following order: gt-small-handheld / gt-medium-handheld / gt-large-handheld
-
-.container.container--aside - Size in columns - (5/16) / (5/18) / (5/20)
-.container.container--main - Size in columns - (11/16) / (13/18) / (15/20)
-
-markup:
-<div class="{$modifiers}">{$modifiers}</div>
+sg-wrapper:
+<div class="debug-breakpoints">
+  <sg-wrapper-content/>
+</div>
 
 Styleguide 2.1.1
 */
 
-@include breakpoint($gtsmall) {
-  /*
-   * @todo: wacky code, container class needs refactor
-   */
-  .container-cluster {
-    position: relative;
-    min-height: 100%;
-    .container--aside {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
+.container-cluster {
+  @include clearfix();
+  display: flex;
+  flex-wrap: wrap;
+}
+.container {
+  float: left;
+  width: 100%;
+  flex: 1 1 100%;
+
+  @include breakpoint($gt-large-handheld) {
+    &-cluster--even {
+      flex-wrap: nowrap;
+    }
+    &-cluster--even & {
+      width: percentage(8/16);
+      flex: 1 0 percentage(8/16);
     }
   }
-	.container--aside {
-		@include column-width(5/16);
-    border-left: 1px solid $color-growth--01;
-		.page--sidebar & {
-			@include column-width(5/16);
-		}
-	}
-	.container--main {
-		@include column-width(11/16);
-		.page--sidebar & {
-			@include column-width(11/16);
-		}
-		.container--label {
-	    	@include column-width(3/11);
-	    }
-	    .container--data {
-	    	@include column-width(8/11);
-	    }
+
+  @include breakpoint($gt-small-desktop) {
+    &-cluster--sidebar,
+    &-cluster--split {
+      flex-wrap: nowrap;
     }
-    .container--even {
-    	@include column-width(8/16);
+    &-cluster--sidebar &,
+    &-cluster--split & {
+      flex: 1 0;
     }
+    &-cluster--sidebar & + &,
+    &-cluster--split & + & {
+      border-left: 1px solid $color-growth--01;
+    }
+    &-cluster--sidebar & {
+      width: percentage(14/18);
+      flex-basis: percentage(14/18);
+    }
+    &-cluster--split & {
+      width: percentage(12/18);
+      flex-basis: percentage(12/18);
+    }
+  }
+
+  @include breakpoint($gt-large-desktop) {
+    &-cluster--sidebar & {
+      width: percentage(16/20);
+      flex-basis: percentage(16/20);
+    }
+    &-cluster--split & {
+      width: percentage(14/20);
+      flex-basis: percentage(14/20);
+    }
+  }
 }
-
-@include breakpoint($gtmedium) {
-	// The container-cluster--level class allows for child containers to be leveled in height
-	// @todo check on nested containers
-	.container--aside {
-		@include column-width(5/18);
-    	.page--sidebar & {
-      		@include column-width(5/14);
-    	}
-  	}
-  	.container--main {
-    	@include column-width(13/18);
-    	.page--sidebar & {
-      		@include column-width(9/14);
-    	}
-    	.container--label {
-      		@include column-width(4/13);
-    	}
-    	.container--data {
-      		@include column-width(9/13)
-    	}
-  	}
-  	.container--even {
-    	@include column-width(9/18);
-  	}
-}
-
-@include breakpoint($gtlarge) {
-  	.container--aside {
-    	@include column-width(5/20);
-    	.page--sidebar & {
-      		@include column-width(5/16);
-    	}
-  	}
-  	.container--main {
-    	@include column-width(15/20);
-    	.page--sidebar & {
-      		@include column-width(11/16);
-    	}
-    	.container--label {
-      		@include column-width(4/15);
-    	}
-    	.container--data {
-      		@include column-width(11/15)
-    	}
-  	}
-}
-
-/*
-Containers inside main container
-
-.container.container--label - Size in columns - (3/11) / (4/13) / (4/15)
-.container.container--data - Size in columns -  (8/11) / (9/13) / (11/15)
-
-markup:
-<div class="container container--main">
-	<div class="{$modifiers}">{$modifiers}</div>
-</div>
-
-Styleguide 2.1.2
-*/

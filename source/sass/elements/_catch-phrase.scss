@@ -15,14 +15,14 @@ Styleguide 3.13
 }
 
 
-@include breakpoint($gtsmall) {
+@include breakpoint($gt-medium-handheld) {
 	.catch-phrase {
 		font-size: to-unit(24px);
 		line-height: to-unit(rhythm(4), 1%, 24px);
 	}
 }
 
-@include breakpoint($gtmedium) {
+@include breakpoint($gt-large-handheld) {
 	.catch-phrase {
 		font-size: to-unit(28px);
 		line-height: to-unit(rhythm(5), 1%, 28px);

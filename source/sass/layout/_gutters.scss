@@ -15,7 +15,7 @@ Styleguide 2.3
 
 .gutters {
   	@include gutters();
-  	@include breakpoint($gtsmall) {
+  	@include breakpoint($gt-medium-handheld) {
     	&.wings {
 			// This will cause either wings, or gutters to be applied - but never both - so fix:
 			// Highly experimental - avoid applying this in the markup, use an additional tag instead!!!

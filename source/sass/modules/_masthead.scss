@@ -72,7 +72,7 @@ Styleguide 5.1
     svg {
         height: rhythm(2);
     }
-    @include breakpoint($gtsmall) {
+    @include breakpoint($gt-medium-handheld) {
         svg {
             height: rhythm(3)
         }
