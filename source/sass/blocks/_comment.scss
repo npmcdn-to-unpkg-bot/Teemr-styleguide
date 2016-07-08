@@ -1,0 +1,77 @@
+/*
+Comment
+
+.comment - Comment
+
+markup:
+<div class="{$modifiers}">
+	<div class="media author-meta">
+	    <div class="media__subject">
+	      <sg-insert>3.12-1</sg-insert>
+	    </div>
+	    <div class="media__body">
+	    	<div class="comment__poster">
+		    	<a href="javascript:void();">Rafaël Peter</a>
+		    	<span class="icon icon--s ballot"">
+					<svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+					<span class="icon__label ballot__count txt--meta">688</span>
+				</span>
+			</div>
+	        <p class="txt--meta">Just now</p>
+	    </div>
+	</div>
+	<div class="leader--half">
+		<p>As it turns out, giving people the freedom to use beautiful photos for whatever they wanted (personal projects? company websites? album covers? magazine visuals?) is a surefire way to make those photos spread like wildfire.</p>
+	</div>
+	<div class="media media--stretch author-meta leader">
+	    <div class="media__subject">
+	        <span class="icon">
+				<svg class="icon__shape" viewBox="0 0 21 21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg>
+			</span>
+	        <span class="icon">
+				<svg class="icon__shape" viewBox="0 0 21 21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg>
+			</span>			
+	    </div>
+	    <div class="media__body">
+			<div class="media media--stretch author-meta">
+				<a class="media__subject" href="javascript:void(0)">
+					<sg-insert>3.12-1</sg-insert>
+					<sg-insert>3.12-1</sg-insert>
+				</a>
+				<div class="media__body">
+					<span class="txt--meta comment__likes">and 4398 others</span>
+		        	<span class="icon icon--s icon--reverse ballot">
+						<svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+						<span class="icon__label ballot__count txt--meta">143</span>
+					</span>
+		        	<span class="icon icon--s icon--reverse ballot">
+						<svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
+						<span class="icon__label ballot__count txt--meta">4K</span>
+					</span>
+				</div>
+	        </div>
+	    </div>
+	</div>
+	<hr class="separator" />
+</div>
+
+Styleguide 4.14
+*/
+
+.comment {
+	&__poster {
+		display: flex;
+		align-items: center;
+		a {
+			margin-right: rhythm();
+		}
+	}
+	&__likes {
+		vertical-align: super;
+		margin-right: rhythm(1.5);
+	}
+}
+
+.comment + .comment {
+	margin-top: rhythm(4);
+}
