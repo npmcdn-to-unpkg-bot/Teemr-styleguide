@@ -5,8 +5,8 @@ Filter
 
 markup:
 <form>
-	<h1 class="h-page wings">Filter</h1>
-	<fieldset>
+	<h1 class="h-page wings leader--double">Filter</h1>
+	<fieldset class="leader">
 		<legend class="h-paragraph wings">Show/hide</legend>
 		<div class="filter wings">
 			<input class="switch switch--reverse switch--stretch" type="checkbox" name="cb1" id="cb1"/>
@@ -21,7 +21,7 @@ markup:
 		<legend class="h-paragraph wings">Scope</legend>
 		<div class="filter wings">
 			<input class="switch switch--reverse switch--stretch" type="checkbox" name="cb3" id="cb3" checked="checked"/>
-			<label class="txt--label" for="cb3">Show results outside my network</label>
+			<label class="txt--label" for="cb3">Show results outside network</label>
 		</div>
 	</fieldset>
 	<fieldset class="leader">
