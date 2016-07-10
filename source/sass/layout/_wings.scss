@@ -1,9 +1,10 @@
 /*
 Wings
 
-.wings - Percentage padding on left and right side
-.wings--left - Percentage padding on left side
-.wings--right - Percentage padding on right side
+.wings - Full column padding on either side
+.wings--left - Full column padding on left side
+.wings--right - Full column padding on right side
+.wings--post - Multiple column padding on either side
 
 markup:
 <div class="{$modifiers}">{$modifiers}</div>

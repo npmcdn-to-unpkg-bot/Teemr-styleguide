@@ -1,73 +1,37 @@
 /*
 Filter
 
-@todo: switch must be checkbox (or radio button - consult with Dave)
+.
 
 markup:
-<div class="container box" id="filter">
-	<div class="filter leader--double ">
-		<p class="h-page">Filter</p>
-		<p class="leader h-paragraph">Show/Hide</p>
-	</div>
-	<div class="filter--light">
-		<div class="filter--show">
-			<div class="filter--even">Projects</div><!--
-			--><div class="filter--even filter--switch">
-				<i class="switch switch--on"></i>
-			</div>
+<form>
+	<h1 class="h-page wings leader--double">Filter</h1>
+	<fieldset class="leader">
+		<legend class="h-paragraph wings">Show/hide</legend>
+		<div class="filter wings">
+			<input class="switch switch--reverse switch--stretch" type="checkbox" name="cb1" id="cb1"/>
+			<label class="txt--label" for="cb1">Columns</label>
 		</div>
-		<div class="filter--show">
-			<div class="filter--even">Blogs</div><!--
-			--><div class="filter--even filter--switch">
-				<i class="switch switch--off"></i>
-			</div>
+		<div class="filter wings">
+			<input class="switch switch--reverse switch--stretch" type="checkbox" name="cb2" id="cb2"/>
+			<label class="txt--label" for="cb2">Cases</label>
 		</div>
-	</div>
-	<div class="filter">
-		<p class="leader h-paragraph">Limit posts</p>
-	</div>
-	<div class="filter--light">
-		<div class="filter--show">
-			<div class="filter--even">Blogs</div><!--
-			--><div class="filter--even filter--switch">
-				<i class="switch switch--off"></i>
-			</div>
+	</fieldset>
+	<fieldset class="leader">
+		<legend class="h-paragraph wings">Scope</legend>
+		<div class="filter wings">
+			<input class="switch switch--reverse switch--stretch" type="checkbox" name="cb3" id="cb3" checked="checked"/>
+			<label class="txt--label" for="cb3">Show results outside network</label>
 		</div>
-	</div>
-	<div class="filter">
-		<p class="leader h-paragraph">Keyword</p>
-	</div>
-	<div class="filter--light">
-		<div class="filter--show">
-			<input class="filter__input">
+	</fieldset>
+	<fieldset class="leader">
+		<legend class="h-paragraph wings">Filter by keyword</legend>
+		<div class="filter wings">
+			<label class="is-narrative">Filter</label>
+			<input class="fld">
 		</div>
-	</div>
-</div>
+	</fieldset>
+</form>
 
 Styleguide 5.5
 */
-
-// .filter__input {
-// 	width: 100%;
-// 	border: 1px solid #D9D5CD;
-// 	border-radius: $border-radius;
-// 	line-height: rhythm(3);
-// }
-
-.filter {
-	padding: 0 rhythm(12);
-	&--even {
-		display: inline-block;
-		width: 50%;
-	}
-	&--switch {
-		text-align: right;
-	}
-	&--show {
-		padding: rhythm(1) rhythm(12);
-		border-bottom: 2px solid  $color-structure--01;
-	}
-	&--light {
-		background: mix(#FFF, $color-structure--01, 40%);
-	}
-}

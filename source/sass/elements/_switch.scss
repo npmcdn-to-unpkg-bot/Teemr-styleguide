@@ -1,0 +1,73 @@
+/*
+Switch
+
+Checkbox element with label after.
+
+.switch - Switch left
+.switch.switch--reverse - Switch right
+.switch.switch--reverse.switch--stretch - Span full width (used in filter)
+
+markup:
+<input class="{$modifiers}" type="checkbox" name="cb1" id="cb1"/>
+<label class="txt--label" for="cb1">Filter</label>
+
+Styleguide 3.16
+*/
+
+.switch {
+	display: none;
+	& + label {
+		position: relative;
+		padding-left: rhythm(7);
+		&:before,
+		&:after {
+			position: absolute;
+			left: 0;
+			content: "";
+			display: inline-block;
+			border-radius: rhythm(3);
+		}
+		&:before {
+			top: 0;
+			background: $color-structure--01;
+			width: rhythm(6);
+			height: rhythm(3);
+		}
+		&:after {
+			position: absolute;
+			left: 2px;
+			top:  2px;
+			width: 17px;
+			height: 17px;
+			background: $color-structure--02;
+		}
+	}
+	&:checked + label {
+		&:after {
+			left: 23px;
+			background: $color-structure--02;
+			background: $color-growth;
+		}
+	}
+	&--reverse + label {
+		padding-left: 0;
+		padding-right: rhythm(7);
+		&:before {
+			left: auto;
+			right: 0;
+		}
+		&:after {
+			left: auto;
+			right: 23px;
+		}
+	}
+	&--reverse:checked + label {
+		&:after {
+			left: auto;
+			right: 2px;
+		}
+	}
+	&--stretch + label {
+		display: block;
+	}
+}

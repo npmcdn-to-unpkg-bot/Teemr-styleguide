@@ -4,7 +4,7 @@ Display Picker
 Display Picker
 
 markup:
-<form>
+<form class="gutters">
 	<button class="reset icon icon--l is-active">
 		<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-tiles"></use></svg>
 		<span class="icon__label is-narrative">Display als grid</span>

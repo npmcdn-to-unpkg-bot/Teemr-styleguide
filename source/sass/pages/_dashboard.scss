@@ -26,37 +26,8 @@ markup:
 		</div>
 		<div class="case__unit">
 			<div class="case__sample trailer-inside leader-inside gutters">
-				<p class="h-paragraph trailer">Your top scoring posts</p>
-				<div class="media media--stretch author-meta leader--half">
-				    <a class="media__subject top-post" href="javascript:void(0)">Detroit</a>
-				    <div class="media__body">
-				        <span class="icon icon--reverse is-disabled">
-							<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
-							<span class="icon__label txt--meta">4K</span>
-						</span>
-				    </div>
-				</div>
-				<p class="txt--meta">Two years ago</p>
-				<div class="media media--stretch author-meta leader--half">
-				    <a class="media__subject top-post" href="javascript:void(0)">Michigan</a>
-				    <div class="media__body">
-				        <span class="icon icon--reverse is-disabled">
-							<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
-							<span class="icon__label txt--meta">306</span>
-						</span>
-				    </div>
-				</div>
-				<p class="txt--meta">Yesterday</p>
-				<div class="media media--stretch author-meta leader--half">
-				    <a class="media__subject top-post" href="javascript:void(0)">Chicago</a>
-				    <div class="media__body">
-				        <span class="icon icon--reverse is-disabled">
-							<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
-							<span class="icon__label txt--meta">36</span>
-						</span>
-				    </div>
-				</div>
-				<p class="txt--meta">Two days ago</p>
+				<h3 class="h-paragraph trailer">Your top scoring posts</h3>
+				<sg-insert>5.3.2.1</sg-insert>
 				<div class="center leader--double">
 					<a class="button button--growth" href="javascript:void(0)">Show all posts</a>
 				</div>
@@ -66,8 +37,21 @@ markup:
 			</div>			
 		</div>
 		<div class="case__unit">
-			<div class="case__sample case--large trailer-inside leader-inside gutters">
-				<p class="h-paragraph trailer">Content</p>
+			<div class="case__sample case--large trailer-inside leader-inside">
+				<form>
+					<h1 class="h-paragraph wings">Settings</h1>
+					<fieldset class="leader">
+						<legend class="h-paragraph wings">Profile</legend>
+						<div class="filter wings">
+							<input class="switch switch--reverse switch--stretch" type="checkbox" name="cb1" id="cb1"/>
+							<label class="txt--label" for="cb1">A setting</label>
+						</div>
+						<div class="filter wings">
+							<input class="switch switch--reverse switch--stretch" type="checkbox" name="cb2" id="cb2"/>
+							<label class="txt--label" for="cb2">Another setting</label>
+						</div>
+					</fieldset>
+				</form>
 			</div>
 		</div>
 	</div>

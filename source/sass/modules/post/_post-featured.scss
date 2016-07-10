@@ -1,3 +1,39 @@
+
+/*
+ * 1. Lift on top of overlay
+ */
+.post {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: rhythm(6) 0;
+  margin: 1px 0;
+  &--has-cover {
+    position: relative;
+    min-height: rhythm(60); /* Add breakpoints */
+    background: $black no-repeat center;
+    background-size: cover;
+    &:after {
+      content: "";
+      display: block;
+      background: rgba(0,0,0,.5);
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+    }
+  }
+  &--has-cover &__child {
+    position: relative; /* 1. */
+    z-index: 1; /* 1. */
+  }
+  &__body {
+    flex-grow: 1;
+  }
+  &__summary,
+  &__footer {
+    margin-bottom: rhythm(2);
+  }
+}
+
 /*
 Featured post - no lead image
 
@@ -12,12 +48,12 @@ markup:
       <div class="post__meta">
         <sg-insert>4.12-1</sg-insert>
       </div>
-      <header class="post__header media media--stretch">
+      <header class="post__header media media--stretch-subject">
           <h2 class="h-page media__subject leader trailer">London, Canada</h2>
           <div class="media__body"><sg-insert>4.4.1-4</sg-insert></div>
       </header>
       <p class="post__summary txt--l">London, England’s capital, set on the River Thames, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey, site of British monarch coronations. Across the Thames, the London Eye observation wheel provides panoramic views of the South Bank cultural complex, and the entire city.</p>
-      <footer class="post__footer media media--stretch leader trailer">
+      <footer class="post__footer media media--stretch-subject leader trailer">
         <div class="media__subject">
           <sg-insert>4.4.4-2</sg-insert>
         </div>
@@ -38,7 +74,7 @@ Featured post - with lead image
 
 Featured post is used in column post listings.
 
-.post.post--has-cover.post--featured - Regular post for listings
+.post.post--has-cover.post--featured.txt--inverse - Regular post for listings
 
 markup:
 <article class="{$modifiers}" style="background-image: url('https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80')">
@@ -51,12 +87,12 @@ markup:
         <img class="cover" src="https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80" alt="London, Canada. Photo by Scott Webb." />
         <figcaption class="is-narrative">London, Canada <a href="https://unsplash.com/photos/kAJE-3_4zHE">Photo by Scott Webb.</a></figcaption>
       </figure>
-      <header class="post__header media media--stretch">
+      <header class="post__header media media--stretch-subject">
           <h2 class="h-page media__subject leader trailer">London, Canada</h2>
           <div class="media__body"><sg-insert>4.4.1-4</sg-insert></div>
       </header>
       <p class="post__summary txt--l">London, England’s capital, set on the River Thames, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey, site of British monarch coronations. Across the Thames, the London Eye observation wheel provides panoramic views of the South Bank cultural complex, and the entire city.</p>
-      <footer class="post__footer media media--stretch leader trailer">
+      <footer class="post__footer media media--stretch-subject leader trailer">
         <div class="media__subject">
           <sg-insert>4.4.4-2</sg-insert>
         </div>
@@ -82,25 +118,31 @@ Featured post is used in column post listings
 
 markup:
 <article class="{$modifiers}">
-  <div class="post__header wings wings--post gutters">
-    <header class="media media--stretch">
-      <h2 class="h-page media__subject">London, Canada</h2>
-      <div class="media__body"><sg-insert>4.4.1-4</sg-insert></div>
-    </header>
-    <p class="post__summary txt--l">London, England’s capital, set on the River Thames, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey, site of British monarch coronations. Across the Thames, the London Eye observation wheel provides panoramic views of the South Bank cultural complex, and the entire city.</p>
-    <footer class="post__footer media media--stretch">
-      <div class="media__subject">
-        <sg-insert>4.4.4-2</sg-insert>
-      </div>
-      <div class="media__body">
-        <sg-insert>4.4.2-4</sg-insert>
-          <sg-insert>4.4.3-3</sg-insert>
-      </div>
-    </footer>
+  <div class="post__header wings wings--post">
+    <div class="gutters">
+      <button class="reset icon icon--float">
+        <svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-pin"></use></svg>
+        <span class="icon__label">Pin</span>
+      </button>
+      <header class="media media--stretch-subject">
+        <h2 class="h-page media__subject">London, Canada</h2>
+        <div class="media__body"><sg-insert>4.4.1-4</sg-insert></div>
+      </header>
+      <p class="post__summary txt--l">London, England’s capital, set on the River Thames, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey, site of British monarch coronations. Across the Thames, the London Eye observation wheel provides panoramic views of the South Bank cultural complex, and the entire city.</p>
+      <footer class="post__footer media media--stretch-subject">
+        <div class="media__subject">
+          <sg-insert>4.4.4-2</sg-insert>
+        </div>
+        <div class="media__body">
+          <sg-insert>4.4.2-4</sg-insert>
+            <sg-insert>4.4.3-3</sg-insert>
+        </div>
+      </footer>
+    </div>
   </div>
 </article>
 
-Styleguide 5.3.2
+Styleguide 5.3.1.3
 */
 
 /*
@@ -108,7 +150,7 @@ Featured post post on a profile page - with lead image
 
 Featured post is used in column post listings.
 
-.post.post--has-cover.post--featured - Regular post for listings
+.post.post--has-cover.post--featured.txt--inverse - Regular post for listings
 
 markup:
 <article class="{$modifiers}" style="background-image: url('https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80')">
@@ -118,12 +160,16 @@ markup:
         <img class="cover" src="https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80" alt="London, Canada. Photo by Scott Webb." />
         <figcaption class="is-narrative">London, Canada <a href="https://unsplash.com/photos/kAJE-3_4zHE">Photo by Scott Webb.</a></figcaption>
       </figure>
-      <header class="post__header media media--stretch">
+      <button class="reset icon icon--float">
+        <svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-pin"></use></svg>
+        <span class="icon__label">Pin</span>
+      </button>
+      <header class="post__header media media--stretch-subject">
           <h2 class="h-page media__subject leader trailer">London, Canada</h2>
           <div class="media__body"><sg-insert>4.4.1-4</sg-insert></div>
       </header>
       <p class="post__summary txt--l">London, England’s capital, set on the River Thames, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey, site of British monarch coronations. Across the Thames, the London Eye observation wheel provides panoramic views of the South Bank cultural complex, and the entire city.</p>
-      <footer class="post__footer media media--stretch leader trailer">
+      <footer class="post__footer media media--stretch-subject leader trailer">
         <div class="media__subject">
           <sg-insert>4.4.4-2</sg-insert>
         </div>
@@ -137,5 +183,5 @@ markup:
 </article>
 
 
-Styleguide 5.3.2.2
+Styleguide 5.3.1.4
 */

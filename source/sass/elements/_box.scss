@@ -7,6 +7,8 @@ Important! Added 75px height to showcase box.
 .box--01 - Same as box
 .box--02 - Lighter brown background
 .box--03 - Moderately light brown background
+.box--lift - Lifting shadow
+.box--inverse - White background
 
 markup:
 <div style="height: 75px;" class="{$modifiers}">{$modifiers}</div>
@@ -26,3 +28,19 @@ Styleguide 3.10
 		background: $color-structure--03;
 	}
 }
+
+	.box--lift {
+		box-shadow: 0px 0px 4px 0px rgba($color-body,0.40);
+	}
+	.box--inverse {
+		background: #FFF;
+	}
+	.box--soft {
+		border-radius: $border-radius;
+	}
+
+	.box--tile {
+		@extend .box--lift;
+		@extend .box--inverse;
+		@extend .box--soft;
+	}

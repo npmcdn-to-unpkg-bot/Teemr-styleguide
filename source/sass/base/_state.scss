@@ -17,12 +17,22 @@ Styleguide 1.5
 }
 
 .is-editable {
-	width: 100%;
-	padding: rhythm();
-	border: 0;
-	border-top: 1px dashed mix($teemr-brown, $color-highlight, 60%);
-	border-bottom: 1px dashed mix($teemr-brown, $color-highlight, 60%);
-	color: mix($teemr-brown, $color-highlight, 60%);
+	outline: 0;
+	&:empty {
+		border: 1px dashed mix($teemr-brown, $color-highlight, 60%);
+		border-width: 1px 0;
+		color: mix($teemr-brown, $color-highlight, 60%);
+		&:before {
+			content: attr(data-placeholder);
+		}
+	}
+	&:focus {
+		border: 1px dashed $color-body;
+		border-width: 1px 0;
+		&:before {
+			content: "";
+		}
+	}
 }
 
 .is-correct {

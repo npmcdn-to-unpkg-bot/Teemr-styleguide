@@ -54,13 +54,16 @@ Styleguide 3.9
 		stroke-width: 1;
 		.is-active &,
 		&.is-active {
-				fill: url(/#gradient);
-				stroke: url(/#gradient);
+			fill: url(/#gradient);
+			stroke: url(/#gradient);
 		}
 		.is-disabled &,
 		&.is-disabled {
 			fill: $color-structure--03;
 		}
+	}
+	.txt--inverse & {
+		color: $white;
 	}
 }
 
