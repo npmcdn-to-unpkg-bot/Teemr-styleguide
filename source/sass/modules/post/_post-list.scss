@@ -1,0 +1,166 @@
+/*
+Post list
+
+markup:
+<ul class="reset">
+  <li>
+    <article>
+      <div class="author-meta media">
+        <div class="media__subject">
+          <img class="avatar avatar--s" src="https://images.unsplash.com/photo-1460804198264-011ca89eaa43?fit=crop&w=200&h=200&q=80" alt="" />
+        </div>
+        <div class="media__body media txt--meta">
+          <a href="javascript:void();">Firstname Lastname</a>
+          <span class="icon icon--s icon--reverse ballot gutters">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+            <span class="icon__label ballot__count txt--meta">12</span>
+          </span>
+        </div>
+      </div>
+      <h3>London, Canada</h3>
+      <footer class="media media--stretch-subject">
+        <p class="media__subject txt--meta txt--s">Posted two years ago in <a href="javascript:void();">Cases</a></p>
+        <p class="media__body">
+          <span class="icon icon--s icon--reverse ballot">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-comment"></use></svg>
+            <span class="icon__label ballot__count txt--meta">12</span>
+          </span>
+          <span class="icon icon--s icon--reverse icon is-active ballot">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
+            <span class="icon__label ballot__count txt--meta">4K</span>
+          </span>                  
+        </p>
+      </footer>
+    </article>
+  </li>
+  <li>
+    <article class="leader">
+      <div class="author-meta media">
+        <div class="media__subject">
+          <img class="avatar avatar--s" src="https://images.unsplash.com/photo-1428932021471-d172cfe9955b?fit=crop&w=200&h=200&q=80" alt="" />
+        </div>
+        <div class="media__body media txt--meta">
+          <a href="javascript:void();">Firstname Lastname</a>
+          <span class="icon icon--s icon--reverse is-active ballot gutters">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+            <span class="icon__label ballot__count txt--meta">12</span>
+          </span>
+        </div>
+      </div>
+      <h3>The story on Single Sign On (and why you shouldn't use it lightly)</h3>
+      <footer class="media media--stretch-subject">
+        <p class="media__subject txt--meta txt--s">Posted a month ago in <a href="javascript:void();">Columns</a></p>
+        <p class="media__body">
+          <span class="icon icon--s icon--reverse ballot">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-comment"></use></svg>
+            <span class="icon__label ballot__count txt--meta">12</span>
+          </span>
+          <span class="icon icon--s icon--reverse icon is-active ballot">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
+            <span class="icon__label ballot__count txt--meta">4K</span>
+          </span>                  
+        </p>
+      </footer>
+    </article>
+  </li>
+  <li>
+    <article class="leader">
+      <div class="author-meta media">
+        <div class="media__subject">
+          <img class="avatar avatar--s" src="https://images.unsplash.com/photo-1446053030967-d49c7b13a02c?fit=crop&w=200&h=200&q=80" alt="" />
+        </div>
+        <div class="media__body media txt--meta">
+          <a href="javascript:void();">Firstname Lastname</a>
+          <span class="icon icon--s icon--reverse is-active ballot gutters">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-star"></use></svg>
+            <span class="icon__label ballot__count txt--meta">12</span>
+          </span>
+        </div>
+      </div>
+      <h3>Why Wordpress is so popular</h3>
+      <footer class="media media--stretch-subject">
+        <p class="media__subject txt--meta txt--s">Posted two years ago in <a href="javascript:void();">Cases</a></p>
+        <p class="media__body">
+          <span class="icon icon--s icon--reverse ballot">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-comment"></use></svg>
+            <span class="icon__label ballot__count txt--meta">12</span>
+          </span>
+          <span class="icon icon--s icon--reverse icon is-active ballot">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
+            <span class="icon__label ballot__count txt--meta">4K</span>
+          </span>                  
+        </p>
+      </footer>
+    </article>
+  </li>
+</ul>
+
+Styleguide 5.3.2
+*/
+
+
+/*
+Post list
+
+Same, but without author
+
+markup:
+<ul class="reset">
+  <li>
+    <article>
+      <h3>London, Canada</h3>
+      <footer class="media media--stretch-subject">
+        <p class="media__subject txt--meta txt--s">Posted two years ago in <a href="javascript:void();">Cases</a></p>
+        <p class="media__body">
+          <span class="icon icon--s icon--reverse ballot">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-comment"></use></svg>
+            <span class="icon__label ballot__count txt--meta">12</span>
+          </span>
+          <span class="icon icon--s icon--reverse icon is-active ballot">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
+            <span class="icon__label ballot__count txt--meta">4K</span>
+          </span>                  
+        </p>
+      </footer>
+    </article>
+  </li>
+  <li>
+    <article class="leader">
+      <h3>About Styleguides and CSS</h3>
+      <footer class="media media--stretch-subject">
+        <p class="media__subject txt--meta txt--s">Posted a month ago in <a href="javascript:void();">Columns</a></p>
+        <p class="media__body">
+          <span class="icon icon--s icon--reverse ballot">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-comment"></use></svg>
+            <span class="icon__label ballot__count txt--meta">12</span>
+          </span>
+          <span class="icon icon--s icon--reverse icon is-active ballot">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
+            <span class="icon__label ballot__count txt--meta">4K</span>
+          </span>                  
+        </p>
+      </footer>
+    </article>
+  </li>
+  <li>
+    <article class="leader">
+      <h3>Some stories are better left unwritten </h3>
+      <footer class="media media--stretch-subject">
+        <p class="media__subject txt--meta txt--s">Posted two years ago in <a href="javascript:void();">Cases</a></p>
+        <p class="media__body">
+          <span class="icon icon--s icon--reverse ballot">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-comment"></use></svg>
+            <span class="icon__label ballot__count txt--meta">12</span>
+          </span>
+          <span class="icon icon--s icon--reverse icon is-active ballot">
+            <svg class="icon__shape ballot__subject" viewBox="0 0 21 21"><use xlink:href="#icon-heart"></use></svg>
+            <span class="icon__label ballot__count txt--meta">4K</span>
+          </span>                  
+        </p>
+      </footer>
+    </article>
+  </li>
+</ul>
+
+Styleguide 5.3.2.1
+*/
