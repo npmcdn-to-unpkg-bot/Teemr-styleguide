@@ -62,6 +62,9 @@ Styleguide 3.9
 			fill: $color-structure--03;
 		}
 	}
+	.txt--inverse & {
+		color: $white;
+	}
 }
 
 .icon + .icon {

@@ -9,7 +9,6 @@
   padding: rhythm(6) 0;
   &--has-cover {
     position: relative;
-    color: #FFF !important;
     min-height: rhythm(60); /* Add breakpoints */
     background: $black no-repeat center;
     background-size: cover;
@@ -74,7 +73,7 @@ Featured post - with lead image
 
 Featured post is used in column post listings.
 
-.post.post--has-cover.post--featured - Regular post for listings
+.post.post--has-cover.post--featured.txt--inverse - Regular post for listings
 
 markup:
 <article class="{$modifiers}" style="background-image: url('https://images.unsplash.com/photo-1456983933114-c22026990f4b?dpr=1&auto=format&crop=entropy&fit=crop&w=1900&h=420&q=80')">

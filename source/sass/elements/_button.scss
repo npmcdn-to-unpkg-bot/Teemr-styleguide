@@ -79,48 +79,6 @@ Styleguide 3.5.1
     padding: rhythm() rhythm(4) rhythm() rhythm(3);
 }
 
-/*
-Switch
-
-source: <a style="color: #19988B;" target="_blank" href="http://hawkins.io/2013/07/ember-toggle-switch/">http://hawkins.io/2013/07/ember-toggle-switch/</a>
-
-.switch - Switch turned off
-.switch.switch--on - Switch turned on
-
-markup:
-<i class="{$modifiers}"></i>
-
-Styleguide 3.5.2
-*/
-
-.switch {
-    display: inline-block;
-    position: relative;
-    width: 38px;
-    height: 21px;
-    background: $color-structure--01;
-    cursor: pointer;
-    &:after {
-        content: "";
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        width: 17px;
-        height: 17px;
-        background: $color-structure--02;
-    }
-    &--on {
-        background: $color-growth--02;
-        &:after {
-            left: auto; /* Forcing icon into the correct position */
-            right: 2px;
-            background: $color-growth;
-        }
-    }
-}
-.switch, .switch:after {
-	border-radius: 1em;
-}
 
 /*
 Square button
@@ -130,7 +88,7 @@ Square button
 markup:
 <a class="{$modifiers}" href="javascript:void(0)">+</a>
 
-Styleguide 3.5.3
+Styleguide 3.5.2
 */
 
 .button__tile {

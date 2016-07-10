@@ -28,8 +28,6 @@ Styleguide 3.12
         $size: 3;
         height: rhythm($size);
         width: rhythm($size);
-        border: 2px solid $white;
-        margin: -2px;
         & + & {
             margin-left: rhythm(-1.5);
         }
@@ -38,8 +36,6 @@ Styleguide 3.12
         $size: 16;
         height: rhythm($size);
         width: rhythm($size);
-        border: 4px solid $white;
-        margin: -4px;
         & + & {
             margin-left: rhythm(-6);
         }
