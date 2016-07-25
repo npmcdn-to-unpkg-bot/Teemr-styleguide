@@ -1,0 +1,44 @@
+/*
+Filter
+
+A filter is a row in the filter module
+
+Styleguide 4.15
+*/
+
+.filter {
+	background: mix(#FFF, $color-structure--01, 40%);
+	padding-top: rhythm(1);
+	padding-bottom: rhythm(1);
+	border: 1px solid $color-structure--01;
+	border-width: 1px 0;
+}
+
+
+/*
+Filter – Checkbox
+
+A checkbox filter
+
+markup:
+<div class="filter wings">
+	<sg-insert>3.16-3</sg-insert>
+</div>
+
+Styleguide 4.15.1
+*/
+
+
+/*
+Filter – Text input
+
+A text filter
+
+markup:
+<div class="filter wings">
+	<label class="is-narrative">Filter</label>
+	<input class="fld">
+</div>
+
+Styleguide 4.15.2
+*/

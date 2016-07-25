@@ -10,7 +10,25 @@ markup:
 <main class="container-cluster container-cluster--split">
 	<section class="container container--main">
 		<div class="wings leader">
-			<sg-insert>5.6</sg-insert>
+			<ul class="list--inline-block gutters breadcrumbs txt--label leader trailer">
+				<li>
+					<a class="breadcrumb" href="javascript:void(0);">Activity</a>
+				</li>
+				<li>
+					<span>Pete McCormick</span>
+				</li>
+			</ul>
+			<h1 class="h-page gutters">Posts</h1>
+			<form class="gutters">
+				<button class="reset icon icon--l is-active">
+					<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-tiles"></use></svg>
+					<span class="icon__label is-narrative">Display als grid</span>
+				</button>
+				<button class="reset icon icon--l">
+					<svg class="icon__shape" viewBox="0 0 21 21"><use xlink:href="#icon-rows"></use></svg>
+					<span class="icon__label is-narrative">Display als list</span>
+				</button>
+			</form>
 		</div>
 		<sg-insert>5.3.1.2-1</sg-insert>
 		<sg-insert>5.3.1-1</sg-insert>

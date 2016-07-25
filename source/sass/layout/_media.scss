@@ -2,11 +2,19 @@
 Media
 
 .media - Media
-.media.media__subject - Left part of media
-.media.media__body - Right part of media
-.media.media--stretch - .media__subject will take up the remaining space
+.media.media--stretch-subject - Stretch the subject
+.media.media--stretch-body - Stretch the body
 
 markup:
+<div class="{$modifiers}">
+	<div class="media__subject">
+		Subject
+	</div>
+	<div class="media__body">
+		Body
+	</div>
+</div>
+
 
 Styleguide 2.4
 */
@@ -14,15 +22,10 @@ Styleguide 2.4
 .media {
     display: flex;
     align-items: center;
-	// &__subject {
-	// }
-	// &__body {
-	// }
-	&--stretch &__subject {
-		flex-grow: 1;
-	}
-	&__subject--grow,
-	&__body--grow {
+	&--stretch>&__subject,
+	&--stretch>&__body,
+	&--stretch-body>&__body,
+	&--stretch-subject>&__subject {
 		flex-grow: 1;
 	}
 }
